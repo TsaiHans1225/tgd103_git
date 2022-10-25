@@ -33,13 +33,14 @@ body {
   background-color: #002742;
   font-weight: bold;
   padding: 30px 10px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
 
 }
 
 .nav ol {
   position: absolute;
   display: none;
+  z-index: 10;
 }
 
 
