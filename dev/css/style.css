@@ -171,7 +171,9 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
-
+.header-navbar-category a:visited {
+  color: #000000;
+}
 
 
 span:hover .header-navbar-wrap {
@@ -219,6 +221,11 @@ span:hover .header-navbar-wrap {
   align-items: center;
 }
 
+.footer a:visited {
+  color: #000000;
+}
+
+
 /* -----------------------other------------------------ */
 .main {
   max-width: 1920px;
@@ -233,9 +240,9 @@ span:hover .header-navbar-wrap {
   width: 100%;
 }
 
-/* a:visited {
-  color: #000000;
-} */
+a:visited {
+  color: #35A3E0;
+}
 
 a:active {
   color: #FF9148;
@@ -418,46 +425,128 @@ a:active {
 /* ------------------detailBag------------- */
 .detailBag>.banner>h1 {
   width: 100%;
-  font-size: 50px;
+  font-size: 55px;
   text-align: center;
   font-weight: bold;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.detailGroup{
-  margin: 90px;
+.detailGroup {
+  margin: 0 90px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.detailBigPic img{
+
+.detailBigPic img {
   border-radius: 10px;
 }
-.detailText{
-  margin-left: 50px;
+
+.detailText {
+  font-family: initial;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
-.detailText h3{
-  font-size: 50px;
+
+.detailText h3 {
+  font-size: 25px;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
-.detailText p{
-  display: block;
+
+.detailText h4 {
+  margin-top: 30px;
+  color: #35A3E0;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.detailText h5 {
+  color: #35A3E0;
+  width: 150px;
   font-size: 15px;
+  margin-left: 20px;
+  line-height: 20px;
+  margin-top: 10px;
 }
-.detailBtn button{
+
+.detailText>h5>a {
+  text-decoration: none;
+}
+
+.detailText p {
+  font-size: 15px;
+  line-height: 25px;
+  margin-left: 150px;
+}
+
+.detailBtn button {
   background-color: #FF9148;
   border: 0;
   display: block;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 100px;
-  border-radius: 50px;
-  padding: 10px;
+  margin: 30px 0 30px 30px;
+  width: 120px;
+  border-radius: 15px;
+  padding: 5px;
+  color: #ffffff;
 }
+
+.detailsmallpic {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+.detailsmallpic div {
+  margin: 10px;
+}
+
+.detailsmallpic img {
+  border-radius: 10px;
+
+}
+
 .detailBtn button:last-child {
   background-color: #717659;
 }
+
+.colorBtn {
+  justify-content: center;
+  margin-left: 50px;
+}
+
+.colorBtn button {
+  margin: 15px 15px 0 0;
+}
+
+.colorBtn>button:first-child {
+  border-radius: 100%;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 255, 183);
+}
+
+.colorBtn>button:nth-child(2) {
+  border-radius: 100%;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(158, 18, 18);
+}
+
+.colorBtn>button:nth-child(3) {
+  border-radius: 100%;
+  border: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(128, 0, 255);
+}
+
 
 /* ---------------RWD---------------------- */
 @media screen and (max-width: 1224px) {
