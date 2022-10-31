@@ -8,66 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <title>detailBag</title>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-all">
-            <div class="header-logo">
-                <a href="./index.html"> <img src="./img/logo.png" alt=""> </a>
-            </div>
-            <nav class="header-navbar-position">
-                <ul>
-                    <li><a href="#">新品上市</a></li>
-                    <li>
-                        <span>
-                            <a href="./shopBag.html">袋包</a>
-                            <div class="header-navbar-wrap">
-                                <div class="header-navbar-category">
-                                    <ol>
-                                        <li><a href="#">全部袋包</a></li>
-                                        <li><a href="#">托特包</a></li>
-                                        <li><a href="#">腰包</a></li>
-                                        <li><a href="#">後背包</a></li>
-                                        <li><a href="#">手提包</a></li>
-                                        <li><a href="#">水桶包</a></li>
-                                        <li><a href="#">斜背包</a></li>
-                                        <li><a href="#">單肩包</a></li>
-                                        <li><a href="#">公事包</a></li>
-                                        <li><a href="#">郵差包</a></li>
-                                    </ol>
-                                </div>
-                            </div>
-                        </span>
-                    </li>
-                    <li>
-                        <span>
-                            <a href="./shopWallet.html">皮夾</a>
-                            <div class="header-navbar-wrap">
-                                <div class="header-navbar-category">
-                                    <ol>
-                                        <li><a href="#">全部皮夾</a></li>
-                                        <li><a href="#">中/短夾</a></li>
-                                        <li><a href="#">長夾</a></li>
-                                        <li><a href="#">零錢包</a></li>
-
-                                    </ol>
-                                </div>
-                            </div>
-                        </span>
-                    </li>
-                    <li><a href="#">服飾</a></li>
-                    <li><a href="#">註冊/登入</a></li>
-                    <li><a href="#">會員中心</a></li>
-                    <li><a href="#">購物車</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+    <header class="headerpage">
+    </header>
     <!-- ------------------------ -->
     <div class="detailBag">
+
+        
         <nav class="breadcrumb-group">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
@@ -75,12 +28,12 @@
                 <li class="breadcrumb-item active" aria-current="page">全部袋包</li>
             </ol>
         </nav>
-        <div class="banner">
-            <h1>公事包</h1>
+        <div class="shop-title">
+            <h1>袋包</h1>
         </div>
         <div class="detailGroup">
             <div class="detailBigPic">
-                <img src="https://picsum.photos/id/338/400/500" alt="">
+                <img src="https://picsum.photos/id/338/500/600" alt="">
             </div>
             <div class="detailText">
                 <h3>商品描述</h3>
@@ -107,69 +60,46 @@
                 </div>
 
                 <div class="detailBtn">
-                    <button>結帳</button>
-                    <button>加入購物車</button>
+                    <a href="./checkout.html" class="btn1">結帳</a>
+                    <a href="./collection.html" class="btn2">加入購物車</a>
                 </div>
+
             </div>
+        </div>
+        <div class="detailmidPic">
+            <img src="https://picsum.photos/id/838/200/200" alt="">
+            <img src="https://picsum.photos/id/638/200/200" alt="">
+            <img src="https://picsum.photos/id/538/200/200" alt="">
+        </div>
+        <div class="detailsmallPicBtn">
+            <a href="">加價購</a>
+            <a href="">滿額贈</a>
         </div>
         <div class="detailsmallpic">
             <div>
-                <a href=""><img src="https://picsum.photos/id/59/100/100" alt=""></a>
+                <a href=""><img src="https://picsum.photos/id/59/150/150" alt=""></a>
             </div>
             <div>
-                <a href=""><img src="https://picsum.photos/id/495/100/100" alt=""></a>
+                <a href=""><img src="https://picsum.photos/id/495/150/150" alt=""></a>
             </div>
             <div>
-                <a href=""><img src="https://picsum.photos/id/391/100/100" alt=""></a>
+                <a href=""><img src="https://picsum.photos/id/391/150/150" alt=""></a>
             </div>
             <div>
-                <a href=""><img src="https://picsum.photos/id/291/100/100" alt=""></a>
+                <a href=""><img src="https://picsum.photos/id/291/150/150" alt=""></a>
             </div>
             <div>
-                <a href=""><img src="https://picsum.photos/id/191/100/100" alt=""></a>
+                <a href=""><img src="https://picsum.photos/id/191/150/150" alt=""></a>
             </div>
         </div>
     </div>
     <!-- ------------------------ -->
-    <div class="footer">
-        <div>
-            <ul>
-                <li><a href="#">關於我們</a></li>
-                <li><a href="">品牌介紹</a></li>
-                <li><a href="">門市資訊</a></li>
-                <li><a href="">徵才資訊</a></li>
-                <li><a href="">品牌動態</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#">會員服務</a></li>
-                <li><a href="">訂購與退貨</a></li>
-                <li><a href="">訂單查詢</a></li>
-                <li><a href="">會員登入</a></li>
-                <li><a href="">推薦好友</a></li>
-
-
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#">取得協助</a></li>
-                <li><a href="#">常見問題</a></li>
-                <li><a href="#">維修服務</a></li>
-                <li><a href="#">商品保固</a></li>
-                <li><a href="#">聯絡我們</a></li>
-            </ul>
-        </div>
-        <div class="footer-icon">
-            <ul class="footer-icon">
-                <li><a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-line"></i></a></li>
-            </ul>
-        </div>
-
-    </div>
+    <footer class="footerpage">
+    </footer>
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
 </body>
 
 </html>

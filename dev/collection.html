@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>collection</title>
+</head>
+
+<body>
+    <header class="headerpage">    
+    </header>
+    <!-- -----------start------------- -->
+    <div class="collection">
+
+        <div class="threeBtn">
+            <a href="./checkout.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
+            <a href="./collection.html" style="background-color: #000;color: #ffffff;">收藏清單</a>
+            <a href="./record.html">瀏覽紀錄</a>
+        </div>
+        <nav class="breadcrumb-group">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">收藏清單</li>
+            </ol>
+        </nav>
+        <!-- ------------------------ -->
+        <div class="collectionField">
+            <div class="collectionTitle">
+                <h4>商品資訊</h4>
+                <h5>尺寸/顏色</h5>
+                <h5>定價</h5>
+                <h5>小計</h5>
+            </div>
+            <div class="collectionContent">
+                <div class="collectionText">
+                    <img src="https://picsum.photos/id/431/100/100" alt="">
+                    <p>PAWN <br>
+                        托特包<br>
+                        11716-00479
+                    </p>
+                    <label for="">深藍色</label>
+                    <label for="">NT$4,250 </label>
+                    <label for="">NT$4,250 </label>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div class="collectionText">
+                    <img src="https://picsum.photos/id/321/100/100" alt="">
+                    <p>PAWN<br>
+                        托特包<br>
+                        11716-00479
+                    </p>
+                    <label for="">深藍色</label>
+                    <label for="">NT$4,250 </label>
+                    <label for="">NT$4,250 </label>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div class="collectionText">
+                    <img src="https://picsum.photos/id/231/100/100" alt="">
+                    <p>PAWN<br>
+                        托特包<br>
+                        11716-00479
+                    </p>
+                    <label for="">深藍色</label>
+                    <label for="">NT$4,250 </label>
+                    <label for="">NT$4,250 </label>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -----------end------------- -->
+    <footer class="footerpage">
+    </footer>
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
+</body>
+
+</html>
