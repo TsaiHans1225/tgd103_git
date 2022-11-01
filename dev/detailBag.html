@@ -11,8 +11,9 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> 
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    </link>
     <title>detailBag</title>
 </head>
 
@@ -64,7 +65,7 @@
 
                 <div class="detailBtn">
                     <a href="./checkout.html" class="btn1">結帳</a>
-                    <a href="#" id="btn2" class="btn2">加入購物車</a>
+                    <a href="#" id="add" class="btn2">加入購物車</a>
                 </div>
             </div>
         </div>
@@ -117,7 +118,7 @@
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
-        document.getElementById('btn2').addEventListener('click', () => {
+        document.getElementById('add').addEventListener('click', () => {
             swal("已加入購物車");
         });
 
