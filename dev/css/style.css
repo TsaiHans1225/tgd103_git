@@ -40,13 +40,13 @@ body {
   margin-top: 30px;
   margin-left: 30px;
   z-index: 10000;
+  /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 
 .header-logo img {
   width: 60%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 10px;
-  background-color: #00274211;
+
 
 }
 
@@ -322,7 +322,7 @@ a:active {
   margin: 10px;
 }
 
-.breadcrumb-item a{
+.breadcrumb-item a {
   color: #4d4d4d;
   font-size: 20px;
   text-decoration: none;
@@ -399,22 +399,16 @@ a:active {
 
 }
 
+
 .mid>a>img {
   width: 600px;
+  transition: all .7s ease-out;
 }
 
-/* .newProducts {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 90px 0 ;
+.mid>a>img:hover {
+  transform: scale(.99);
 }
 
-.newProducts h1 {
-  font-size: 50px;
-  color: #ff4848;
-  font-weight: 900;
-} */
 
 .menu {
   display: flex;
@@ -428,7 +422,6 @@ a:active {
 }
 
 /* ---------------bot & card--------------- */
-.bot {}
 
 .card {
   display: flex;
@@ -576,19 +569,25 @@ a:active {
 
 .detailBigPic {
   padding: 35px;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .detailBigPic img {
   border-radius: 10px;
+  width: 70%;
 }
 
 .detailText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 180px;
   margin-left: 100px;
+  width: 50%;
 }
 
 .detailText h3 {
@@ -698,10 +697,13 @@ a:active {
 
 .detailBtn .btn1 {
   background-color: #FF9148;
+  line-height: 25px;
+  font-size: 20px;
 }
 
 .detailBtn .btn2 {
   background-color: #002742;
+  line-height: 25px;
 }
 
 .colorBtn {
@@ -810,14 +812,14 @@ a:active {
   flex-grow: 1;
   height: auto;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px 0;
   width: auto;
 }
 
 .checkoutText {
   display: flex;
   width: 100%;
-  margin: 20px;
+  margin: 5px;
 
   text-align: center;
   align-items: center;
@@ -826,7 +828,7 @@ a:active {
 }
 
 .checkoutText img {
-  width: 20%;
+  width: 10%;
 }
 
 .checkoutText p {
@@ -841,6 +843,11 @@ a:active {
   color: #ffffff;
   padding: 5px;
   border-radius: 10px;
+  font-size: 15px;
+}
+
+.checkoutText:last-child span:last-child {
+  background-color: #002742;
 }
 
 .checkoutText input {
@@ -860,13 +867,13 @@ a:active {
 .fa-heart {
   margin-right: 7px;
   color: #AA1111;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .fa-trash {
   margin-right: 7px;
   color: #000;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .fa-heart:hover,
@@ -960,11 +967,16 @@ a:active {
   border: #BCBCBC 3px solid;
   border-bottom: 0;
   flex-direction: row;
-  justify-content: space-around;
-  font-size: 20px;
+  justify-content: flex-start;
+  font-size: 25px;
   background-color: #BCBCBC;
   font-weight: bold;
   text-align: center;
+}
+
+
+.collectionTitle h5 {
+  width: 30%;
 }
 
 .collectionContent {
@@ -998,47 +1010,79 @@ a:active {
 }
 
 .collectionText img {
-  width: 20%;
+  width: 15%;
 }
 
 .collectionText p {
-  width: 20%;
-  display: inline;
-  font-size: 30px;
-}
-
-.collectionText span {
-  line-height: 50px;
-  background-color: #FF9148;
-  color: #ffffff;
-  padding: 5px;
-  border-radius: 10px;
-}
-
-.collectionText input {
   width: 15%;
-  height: 20px;
-  text-align: end;
-  font-size: 17px;
+  display: inline;
+  font-size: 25px;
 }
+
 
 .collectionText label {
-  width: 15%;
+  width: 30%;
   font-size: 25px;
-  padding: 15px;
-
+  padding-right: 20px;
 }
-.notFound{
+
+.collectionText i {
+  width: 10%;
+  font-size: 25px;
+}
+
+.notFound {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 500px;
 }
-.notFound h1{
+
+.notFound h1 {
   font-size: 100px;
   font-weight: 800;
-  
+
 }
+
+/* -----------------record--------------- */
+
+
+.recordCardgroup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+.recordCard {
+  width: 13%;
+  text-align: center;
+  margin: 30px;
+}
+
+.recordCard img {
+  width: 100%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  border-radius: 50px;
+  transition: all .5s;
+}
+
+.recordCard img:hover {
+  opacity: 0.9;
+  border-radius: 0px;
+  transform: scale(1.1);
+}
+
+.recordCard h5 {
+  font-size: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+
 /* ---------------RWD---------------------- */
 @media screen and (max-width: 1224px) {
   .header-navbar-position ul>li:last-child {
