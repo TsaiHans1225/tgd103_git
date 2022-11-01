@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>login</title>
+</head>
+
+<body>
+    <header class="headerpage">
+    </header>
+    <!-- ------------------------ -->
+    <div class="login">
+
+        <nav class="breadcrumb-group">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">會員登入</li>
+            </ol>
+        </nav>
+        <div class="LoginAndSingup">
+            <div class="loginField">
+                <div class="loginTitle">
+                    <h1>會員登入</h1>
+                </div>
+                <div class="loginContent">
+                    <div>
+                        <label for="">帳號</label>
+                        <input type="text" name="1" value="">
+                    </div>
+                    <div>
+                        <label for="">密碼</label>
+                        <input type="text" name="1" value="">
+                    </div>
+
+                    <div>
+                        <label for="">驗證碼</label>
+                        <input type="text" name="1" value="">
+                        <span>A1B2</span>
+                        <a><i class="fa-solid fa-repeat"></i></a>
+                    </div>
+                    <div class="logincontentBtn">
+                        <a href="./notFound.html">登入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="singupField">
+                <div class="singupTitle">
+                    <h1>加入會員</h1>
+                </div>
+                <div class="singupContent">
+                    <div>
+                        <a href="./index.html">加入SHIBAINU</a>
+                        <a href="https://www.facebook.com/" target="_blank">FACEBOOK</a>
+                        <a href="https://line.me/zh-hant/" target="_blank">LINE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ------------------------ -->
+    <footer class="footerpage">
+    </footer>
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
+</body>
+
+</html>
