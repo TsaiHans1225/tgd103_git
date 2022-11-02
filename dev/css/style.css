@@ -106,7 +106,7 @@ body {
 
 .header-navbar-position ul>li {
   margin-right: 15px;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
 }
 
 .header-navbar-position ul>li:nth-child(1) {
