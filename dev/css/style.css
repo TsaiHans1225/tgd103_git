@@ -142,7 +142,7 @@ body {
 }
 
 .header-navbar-category {
-  width: 900px;
+  width: 100%;
 }
 
 .header-navbar-category ol {
@@ -158,7 +158,11 @@ body {
   float: left;
   width: 100px;
 }
-
+.header-navbar-category img{
+  width: 20%;
+  float: right;
+  margin: 3px;
+}
 .header-navbar-category a {
   line-height: 80px;
   font-size: 25px;
@@ -176,7 +180,7 @@ span:hover .header-navbar-wrap {
   position: absolute;
   /* background-color: #f0f0f0; */
   width: 1920px;
-  height: 250px;
+  height: 300px;
   z-index: 1000;
   left: 0px;
   top: 150px;
@@ -351,7 +355,9 @@ a:active {
   justify-content: center;
   align-items: center;
 }
-
+.pagination li{
+  background-color: #f0f0f0;
+}
 .page-item {
   width: 50px;
   background-color: rgb(255, 255, 255);
@@ -494,13 +500,13 @@ a:active {
 .shop-all {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
 }
 .shop-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: flex-start;
   align-items: center;
   max-width: 1920px;
   /* width: 50%; */
@@ -511,7 +517,7 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0 30px;
+  margin-bottom: 25px;
 }
 
 .shop-title h1 {
@@ -584,7 +590,7 @@ a:active {
 .detailBigPic {
   width: 30%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -664,7 +670,7 @@ a:active {
 .detailmidPic {
   display: flex;
   flex-direction: column;
-  width: 10%;
+  width: 17%;
   height: auto;
   justify-content: space-between;
   align-items: center;
@@ -678,7 +684,7 @@ a:active {
 }
 
 .detailmidPic img:hover {
-  transform: scale(1.5);
+  transform: scale(2);
 }
 
 .detailsmallPicBtn {
@@ -896,7 +902,7 @@ a:active {
 .fa-heart {
   margin-right: 7px;
   color: #aa1111;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .fa-trash {
