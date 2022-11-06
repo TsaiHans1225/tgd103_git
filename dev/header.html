@@ -1,4 +1,53 @@
 <div class="header-all">
+    <div class="rwd-header">
+        <span class="rwd-title">
+            <div>
+                <h1>商城</h1>
+            </div>
+        </span>
+        <span class="rwd-list">
+            <a href="./shopNewproduct.html">新品上市</a>
+        </span>
+
+        <span class="rwd-list">
+            <div class="rwd-mark">
+                <h2>袋包</h2> <span class="fa"></span>
+            </div>
+            <div class="rwd-navbar-wrap">
+                <div class="rwd-navbar-category">
+                    <ol>
+                        <li><a href="./shopBag.html">托特包</a></li>
+                        <li><a href="./shopBag.html">腰包</a></li>
+                        <li><a href="./shopBag.html">後背包</a></li>
+                        <li><a href="./shopBag.html">手提包</a></li>
+                        <li><a href="./shopBag.html">水桶包</a></li>
+                        <li><a href="./shopBag.html">斜背包</a></li>
+                    </ol>
+                </div>
+            </div>
+        </span>
+        <span class="rwd-list">
+            <div class="rwd-mark">
+                <h2>皮夾</h2> <span class="fa"></span>
+            </div>
+            <div class="rwd-navbar-wrap">
+                <div class="rwd-navbar-category">
+                    <ol>
+                        <li><a href="./shopWallet.html">中/短夾</a></li>
+                        <li><a href="./shopWallet.html">長夾</a></li>
+                        <li><a href="./shopWallet.html">零錢包</a></li>
+                    </ol>
+                </div>
+            </div>
+        </span>
+        <span class="rwd-list">
+            <a href="./shopShoulderbag.html">單肩包</a>
+        </span>
+        <span class="rwd-list">
+            <a href="./shopBriefcase.html">公事包</a>
+        </span>
+    </div>
+
     <div class="header-logo">
         <a href="./index.html"> <img src="./img/logo.png" alt=""> </a>
     </div>
@@ -50,23 +99,8 @@
             <a href="./login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
             <a href="./checkout.html"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             <a href="./record.html"><i class="fa-solid fa-user"></i></a>
-            <!-- <a href="#"><i class="fa-solid fa-bars"></i></a> -->
-            <span>
-                <div><i class="fa-solid fa-bars"></i></div>
-                <div class="logmacbtn-navbar-wrap-h">
-                    <div class="logmacbtn-navbar-category-h">
-                        <ol>
-                            <li><a href="./shopBag.html">全部袋包</a></li>
-                            <li><a href="#">托特包</a></li>
-                            <li><a href="#">腰包</a></li>
-                            <li><a href="#">後背包</a></li>
-                            <li><a href="#">手提包</a></li>
-                            <li><a href="#">水桶包</a></li>
-                            <li><a href="#">斜背包</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </span>
+            <a href="#" id="fa-bars"><i class="fa-solid fa-bars"></i></a>
+
 
             <div class="logmacbtn-navbar-wrap">
                 <div class="logmacbtn-navbar-category">
@@ -81,3 +115,21 @@
 
     </nav>
 </div>
+<script>
+    let bars = document.getElementById('fa-bars');
+    let rwd_header = document.getElementsByClassName('rwd-header')[0];
+    let abc = rwd_header.style;
+    let fachange=document.getElementsByClassName('fa-bars')[0];
+    console.log(fachange.className);
+    bars.addEventListener('click', () => {
+        if (abc.display !== 'flex') {
+            abc.display = 'flex';
+            fachange.className="fa-sharp fa-solid fa-circle-xmark";
+        }
+        else{
+            abc.display='';
+            fachange.className="fa-solid fa-bars";
+
+        }
+    })
+</script>

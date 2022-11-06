@@ -31,8 +31,6 @@ body {
   position: relative;
 }
 
-/* -----------header-logo-------------- */
-
 .header-logo {
   width: 30%;
   margin-top: 30px;
@@ -43,8 +41,6 @@ body {
 .header-logo img {
   width: 60%;
 }
-
-/* -----------header-nav------------ */
 
 .header-navbar-position {
   width: 70%;
@@ -160,7 +156,7 @@ span:hover .header-navbar-wrap {
 .logmacbtn-navbar-category ol {
   display: flex;
 }
-.logmacbtn-navbar-wrap .logmacbtn-navbar-category a {
+.logmacbtn-navbar-category > ol > li > a {
   background-color: #ff9148;
   text-decoration: none;
   color: #fff;
@@ -169,6 +165,7 @@ span:hover .header-navbar-wrap {
   padding: 15px;
   font-size: 20px;
 }
+
 .logmacbtn i {
   font-size: 22px;
 }
@@ -185,10 +182,12 @@ span:hover .header-navbar-wrap {
   text-align: center;
   border: 1px solid red;
   position: relative;
-  top: 77px;
+  /* display: none; */
   background-color: #fff;
-  height: 800px;
-  background-color: #d9d9d9;
+  height: 100%;
+  width: 414px;
+  z-index: 10000;
+  transition: all 0.5s;
 }
 .logmacbtn-navbar-category-h a {
   text-decoration: none;
@@ -231,10 +230,6 @@ span:hover .header-navbar-wrap {
   justify-content: center;
   align-items: center;
 }
-
-/* .footer a:visited {
-  color: #000000;
-} */
 
 .tibame {
   width: 25%;
@@ -292,7 +287,7 @@ span:hover .header-navbar-wrap {
   border-radius: 50%;
 }
 
-/* -----------------------other------------------------ */
+/* -----------------------common------------------------ */
 .main {
   max-width: 1920px;
   margin: auto;
@@ -375,20 +370,125 @@ a:active {
 .page-item:hover {
   opacity: 0.5;
 }
+/* ----------------------------Slide--------------------------- */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 /* -----------------------通用End------------------------------- */
-/* ------------------------------------------------------------- */
 
-/* --------------------Page-index----------------------- */
-/* ---------------banner& mid & menu--------------- */
-.banner {
+/* --------------------index----------------------- */
+/* ---------------wrapper& mid & menu--------------- */
+.wrapper {
   max-width: 1920px;
   /* background-color: #fff; */
   width: 100%;
-  margin: 30px 0;
+  margin: 2px 0;
 }
 
-.banner img {
+.wrapper img {
   width: 100%;
 }
 
@@ -570,13 +670,6 @@ a:active {
 }
 
 /* ------------------detailBag------------- */
-.detailBag > .banner > h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 55px;
-  font-weight: 900;
-}
 
 .detailGroup {
   display: flex;
@@ -1258,13 +1351,94 @@ a:active {
   border-radius: 3px;
   margin: 30px;
 }
-
+.rwd-header {
+  display: none;
+}
 /* ---------------RWD---------------------- */
 @media screen and (max-width: 414px) {
   .header-logo img {
     width: 130px;
     border-right: 1px solid #c3c3c3;
     padding-right: 20px;
+  }
+  .rwd-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
+    width: 414px;
+    height: 900px;
+    background-color: #fff;
+    z-index: 1000000;
+  }
+  .rwd-header > span {
+    width: 100%;
+    /* margin-bottom: 10px; */
+  }
+  .rwd-title {
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+  .rwd-list {
+    display: block;
+    border-bottom: solid 1px #c3c3c3;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 50px;
+  }
+  .rwd-list h2 {
+    margin-left: 10px;
+  }
+  .rwd-list a {
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding-left: 10px;
+  }
+  .rwd-navbar-wrap {
+    display: none;
+  }
+  .rwd-list:hover .rwd-navbar-wrap {
+    display: flex;
+  }
+  .rwd-list:hover .rwd-mark {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+  }
+  .rwd-list:hover .fa {
+    transform: rotate(-90deg);
+    margin-right: 3px;
+  }
+  span.fa::after {
+    content: "▼";
+    padding: 5px;
+    font-size: 15px;
+  }
+  .rwd-mark {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rwd-mark span {
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  .rwd-navbar-category li {
+    background-color: #ffffff;
+    width: 100%;
+  }
+  .rwd-navbar-category a {
+    text-decoration: none;
+    margin-left: 10px;
   }
   .header-all {
     height: 50px;
@@ -1278,16 +1452,7 @@ a:active {
   .logmacbtn-navbar-wrap {
     display: none;
   }
-  .logmacbtn span {
-    display: flex;
-    position: absolute;
-    right: -100px;
-    top:20px;
-  }
-  .logmacbtn span:hover{
-    position: absolute;
-    right: 100px;
-  }
+
   .header-navbar-position .logmacbtn > a {
     display: flex;
     margin-right: 30px;
