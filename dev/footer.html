@@ -1,5 +1,5 @@
 <div class="footer">
-    <span>
+    <span id="aboutme">
         <div>關於我們</div>
         <div class="footer-navbar-wrap">
             <div class="footer-navbar-category">
@@ -12,7 +12,7 @@
             </div>
         </div>
     </span>
-    <span>
+    <span id="member">
         <div>會員服務</div>
         <div class="footer-navbar-wrap">
             <div class="footer-navbar-category">
@@ -25,9 +25,9 @@
             </div>
         </div>
     </span>
-    <span>
+    <span id="support">
         <div>取得協助</div>
-        <div class="footer-navbar-wrap">
+        <div class="footer-navbar-wrap" >
             <div class="footer-navbar-category">
                 <ol>
                     <li><a href="#">常見問題</a></li>
@@ -57,3 +57,52 @@
         </h1>
     </div>
 </div>
+<script>
+
+    var aboutmeBtn = document.getElementById('aboutme');
+    var memberBtn = document.getElementById('member');
+    var supportBtn = document.getElementById('support');
+    var footer_nav = document.getElementsByClassName('footer-navbar-wrap')[0].style;
+    var footer_nav1 = document.getElementsByClassName('footer-navbar-wrap')[1].style;
+    var footer_nav2 = document.getElementsByClassName('footer-navbar-wrap')[2].style;
+
+
+    aboutmeBtn.addEventListener('click', () => {
+        if (footer_nav.display == "") {
+            footer_nav1.display = "";
+            footer_nav2.display = "";
+            footer_nav.display = "flex";
+            footer_nav.justifyContent = "center";
+        }
+        else {
+            footer_nav.display = "";
+        }
+    });
+
+
+    memberBtn.addEventListener('click', () => {
+        if (footer_nav1.display == "") {
+            footer_nav.display = "";
+            footer_nav2.display = "";
+            footer_nav1.display = "flex";
+            footer_nav1.justifyContent = "center";
+        }
+        else {
+            footer_nav1.display = "";
+        };
+    });
+
+
+    supportBtn.addEventListener('click', () => {
+        if (footer_nav2.display == "") {
+            footer_nav.display = "";
+            footer_nav1.display = "";
+            footer_nav2.display = "flex";
+            footer_nav2.justifyContent = "center";
+        }
+        else {
+            footer_nav2.display = "";
+        };
+    });
+
+</script>
