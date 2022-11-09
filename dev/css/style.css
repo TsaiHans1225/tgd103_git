@@ -45,7 +45,7 @@ body {
   width: 70%;
   display: flex;
   justify-content: space-between;
-  background-color: #d9d9d9;
+  /* background-color: #d9d9d9; */
 }
 
 .header-navbar-position ul {
@@ -53,7 +53,6 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-
 
 .header-navbar-position ul > li {
   width: 70px;
@@ -966,7 +965,6 @@ a:active {
 
 .checkoutText img {
   width: 20%;
-  border-radius: 30px;
 }
 
 .checkoutText p {
@@ -1367,13 +1365,13 @@ a:active {
 .rwd-header {
   display: none;
 }
-.fixedA{
+.fixedA {
   padding: 0 35%;
 }
-.rwd-shop-banner{
+.rwd-shop-banner {
   margin-top: 15px;
 }
-.rwd-shop-banner img{
+.rwd-shop-banner img {
   width: 1400px;
   height: 420px;
 }
@@ -1571,32 +1569,32 @@ a:active {
     transition: all 0.5s;
   }
   /* ---------------------shop------------------------ */
-  .shop-menu  {
+  .shop-menu {
     font-size: 20px;
     line-height: 40px;
     display: none;
     width: 100%;
   }
-  .shop-list{
+  .shop-list {
     margin: auto;
     justify-content: center;
   }
-  .shop-card{
+  .shop-card {
     width: 150px;
   }
-  .shop-card img{
+  .shop-card img {
     width: 70%;
   }
-  .shop-title{
-    margin-top:25px;
+  .shop-title {
+    margin-top: 25px;
   }
-  .shop-card h1{
+  .shop-card h1 {
     font-size: 10px;
   }
-  .shop-card h3{
+  .shop-card h3 {
     font-size: 10px;
   }
-  .rwd-shop-banner{
+  .rwd-shop-banner {
     background-image: url(../img/2000/2000x800-3.png);
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -1604,4 +1602,119 @@ a:active {
     height: 100px;
     margin-top: 50px;
   }
+  .threeBtn {
+    display: flex;
+    flex-direction: row;
+    border-bottom: #000 3px solid;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    width: 100%;
+  }
+  .threeBtn a:first-child {
+    background-color: #000;
+    color: #ffffff;
+    margin-left: 0px;
+  }
+
+  .threeBtn a {
+    width: 100%;
+    text-align: center;
+    background-color: #bcbcbc;
+    color: #000;
+    text-decoration: none;
+    line-height: 30px;
+    margin: 0;
+    font-weight: bold;
+    font-size: 15px;
+    height: 30px;
+  }
+  .fixedcheckoutField {
+    background-color: #f7f5f5;
+    width: 300px;
+    height: 450px;
+    position: sticky;
+    top: 50px;
+    right: 30px;
+    padding: 20px;
+    float: right;
+    display: none;
+  }
+  .checkoutField {
+    width: 100%;
+    margin: 0px;
+  }
+  .checkoutTitle {
+    border: 0;
+  }
+  .checkoutContent {
+    border: 0;
+  }
+  .checkoutText img {
+    width: 10%;
+  }
+  .checkoutText p {
+    width: 20%;
+    display: inline;
+    font-size: 10px;
+  }
+  .checkoutText span {
+    line-height: 0px;
+    background-color: #ff9148;
+    color: #ffffff;
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 5px;
+    width: 10px;
+  }
+  .checkoutText label {
+    width: 15%;
+    font-size: 10px;
+    padding: 0px;
+  }
+  .checkout {
+    width: 97%;
+    margin: auto;
+  }
+  .checkoutText i {
+    font-size: 15px;
+  }
+  .checkoutTextThree div,
+  .checkoutTextFour div,
+  .checkoutTextFive div {
+    margin-bottom: 5px;
+  }
+  .collectionField {
+    width: 100%;
+    margin: auto;
+  }
+  .collectionText {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    align-items: center;
+    /* justify-content: stretch; */
+    border-bottom: 1px solid #bcbcbc;
+    background-color: #fff;
+  }
+  .collectionText p {
+    width: 15%;
+    /* display: inline; */
+    font-size: 15px;
+  }
+  .collectionTitle h5 {
+    width: 30%;
+    font-size: 15px;
+  }
+  .collectionText label {
+    width: 30%;
+    font-size: 15px;
+    padding-right: 20px;
+  }
+  .collectionText i {
+    width: 5%;
+    font-size: 10px;
+    padding-left: 10px;
+}
 }
