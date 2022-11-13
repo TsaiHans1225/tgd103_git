@@ -319,7 +319,7 @@ a:active {
 }
 
 .breadcrumb-group {
-  margin: 30px 0 0 10px;
+  margin: 50px 0 0 10px;
 }
 
 .breadcrumb li {
@@ -450,7 +450,7 @@ a:active {
 
 .active,
 .dot:hover {
-  /* background-color: #717171; */
+  background-color: #717171;
 }
 
 /* Fading animation */
@@ -528,10 +528,6 @@ a:active {
   margin: 100px 0;
 }
 
-.menu a {
-  /* margin-left: 100px; */
-}
-
 .menu img {
   width: 100%;
 }
@@ -550,9 +546,6 @@ a:active {
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
-}
-
-.card-group:last-child {
 }
 
 .card-img {
@@ -651,7 +644,7 @@ a:active {
 .shop-card {
   /* width: 30%; */
   margin: 10px;
-  border: .5px solid rgba(0, 0, 0, 0.081);
+  border: 0.5px solid rgba(0, 0, 0, 0.081);
 }
 
 .shop-card img {
@@ -761,8 +754,9 @@ a:active {
 
 .detailBtn a {
   background-color: #ff9148;
-  display: block;
+  display: inline-block;
   margin-top: 15px;
+  margin-left: 30px;
   width: 120px;
   border-radius: 15px;
   padding: 5px;
@@ -1188,25 +1182,21 @@ a:active {
   height: 500px;
 }
 
-.notFound h1 {
-  font-size: 100px;
-  font-weight: 800;
-}
-
 /* -----------------record--------------- */
 
 .recordCardgroup {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 50px;
 }
 
 .recordCard {
   width: 13%;
   text-align: center;
   margin: 30px;
+  border: 0.5px solid rgba(0, 0, 0, 0.081);
+  height:250px;
 }
 
 .recordCard img {
@@ -1226,7 +1216,7 @@ a:active {
 .recordCard h5 {
   font-size: 20px;
   text-align: center;
-  display: inline-block;
+  display: block;
   margin-top: 10px;
 }
 
@@ -1366,6 +1356,7 @@ a:active {
   text-decoration: none;
   border-radius: 3px;
   margin: 30px;
+  outline: auto black;
 }
 .rwd-header {
   display: none;
@@ -1741,5 +1732,108 @@ a:active {
     width: 5%;
     font-size: 10px;
     padding-left: 10px;
+  }
+  /* ------------login------------ */
+  .LoginAndSingup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  .loginField {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    border-right: 0;
+    padding: 30px 0;
+    border-bottom: 1px solid #bcbcbc;
+  }
+
+  .singupField {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+  }
+  .loginTitle h1 {
+    font-size: 17px;
+    background-color: #c0c0c04e;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+  .singupTitle h1 {
+    display: none;
+  }
+  .loginContent div {
+    margin: 0 0 0 0;
+  }
+  .loginTitle {
+    width: 100%;
+  }
+  .singupTitle {
+    width: 100%;
+  }
+
+  .captcha input {
+    display: block;
+  }
+  .captcha span {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .singupContent a {
+    width: 150px;
+    display: block;
+    background-color: #ff9148;
+    margin: 20px 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+  }
+  /* ----------------record----------------- */
+  .recordCard {
+    border: 0.5px solid rgba(0, 0, 0, 0.081);
+    width: 300px;
+    margin: 10px auto;
+    /* text-align: left; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .recordCard img {
+    max-width: 150px;
+  }
+  .recordCardgroup {
+    margin: 0;
+  }
+  .recordCard h5{
+    font-size: 17px;
+    width: 100px;
+    /* border: 1px solid red; */
+  }
+  .recordInform h2 {
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  /* ---------------detailBag----------------------- */
+  .detailGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }
