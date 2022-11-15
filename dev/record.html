@@ -12,6 +12,8 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
 
@@ -19,110 +21,142 @@
     <header class="headerpage">
     </header>
     <!-- ------------------------ -->
-    <nav class="breadcrumb-group">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-            <li class="breadcrumb-item" aria-current="page">瀏覽紀錄</li>
-        </ol>
-    </nav>
-    <div class="record">
-        <div class="threeBtn">
-            <a href="./checkout.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
-            <a href="./collection.html">收藏清單</a>
-            <a href="./record.html" style="background-color: #000;color: #ffffff;">瀏覽紀錄</a>
-        </div>
-
-        <div class="recordCardgroup">
-            <a href="#">
-                <div class="recordCard">
-                    <a href="./detailBag.html"><img src="./img/shopBag4.png" alt=""></a>
-                    <h5>Liner</h5>
-                    <h5>公事包</h5>
+    <div id="app">
+        <nav class="breadcrumb-group">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item" aria-current="page">瀏覽紀錄</li>
+            </ol>
+        </nav>
+        <div class="record">
+            <div class="threeBtn">
+                <a href="./checkout.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
+                <a href="./collection.html">收藏清單</a>
+                <a href="./record.html" style="background-color: #000;color: #ffffff;">瀏覽紀錄</a>
+            </div>
+            <div class="recordCardgroup">
+                <div class="recordCard" v-for="(record,index) in records">
+                    <div class="index1">{{index+1}}</div>
+                    <a :href='record.href'><img :src='record.src' alt=""></a>
+                    <h5>{{record.title}}</h5>
+                    <h5>{{record.name}}</h5>
                 </div>
-            </a>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopShoulderbag4.png" alt=""></a>
-                <h5>SLING SHOULDER</h5>
-                <h5>單肩包</h5>
             </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopWallet3.png" alt=""></a>
-                <h5>PORTER ENCHASE</h5>
-                <h5>短夾</h5>
+            <div class="recordInform">
+                <h2>‧此頁僅會顯示20項商品。</h2>
+                <h2> ‧商品售價以訂單成立時的價格為準。</h2>
             </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopWallet7.png" alt=""></a>
-                <h5>PORTER WALL</h5>
-                <h5>長夾</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopShoulderbag12.png" alt=""></a>
-                <h5>PORTER FORCE</h5>
-                <h5>單肩包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBag3.png" alt=""></a>
-                <h5>BOSTON BAG</h5>
-                <h5>行李袋</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBag12.png" alt=""></a>
-                <h5>PORTER SENSES</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase1.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase2.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase3.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase4.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase5.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase6.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase7.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-            <div class="recordCard">
-                <a href="./detailBag.html"><img src="./img/shopBriefcase8.png" alt=""></a>
-                <h5>BARON</h5>
-                <h5>公事包</h5>
-            </div>
-        </div>
-        <div class="recordInform">
-            <h2>‧此頁僅會顯示20項商品。</h2>
-            <h2> ‧商品售價以訂單成立時的價格為準。</h2>
         </div>
     </div>
-
     <!-- ------------------------ -->
     <footer class="footerpage">
     </footer>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
+    </script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    records: [
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBag4.png",
+                            title: 'Liner',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopShoulderbag4.png",
+                            title: 'SLING SHOULDER',
+                            name: '單肩包'
+                        },
+                        {
+                            href:"./detailBag.html",
+                            src: "./img/shopWallet3.png",
+                            title: 'PORTER ENCHASE',
+                            name: '短夾'
+                        },
+                        {
+                            href:"./detailBag.html",
+                            src: "./img/shopWallet7.png",
+                            title: 'PORTER WALL',
+                            name: '長夾'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopShoulderbag12.png",
+                            title: 'PORTER FORCE',
+                            name: '單肩包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBag3.png",
+                            title: 'BOSTON BAG',
+                            name: '行李袋'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBag12.png",
+                            title: 'BOSTON BAG',
+                            name: '行李袋'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBag12.png",
+                            title: 'PORTER SENSES',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase1.png",
+                            title: 'BARON',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase2.png",
+                            title: 'BARON',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase3.png",
+                            title: 'BARON',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src:"./img/shopBriefcase4.png",
+                            title: 'BARON',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase6.png" ,
+                            title: 'PORTER SENSES',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase7.png",
+                            title: 'PORTER SENSES',
+                            name: '公事包'
+                        },
+                        {
+                            href: "./detailBag.html",
+                            src: "./img/shopBriefcase8.png" ,
+                            title: 'PORTER SENSES',
+                            name: '公事包'
+                        }
+                    ],
+                }
+            }
+        }).mount('#app')
     </script>
 </body>
 

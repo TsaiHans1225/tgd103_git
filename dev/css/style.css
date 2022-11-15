@@ -932,24 +932,23 @@ a:active {
   border: 1px solid #000;
   border-bottom: 0;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: start;
   font-size: 20px;
   background-color: #bcbcbc;
   font-weight: bold;
   text-align: center;
 }
 
-.checkoutTitle h4 {
-  width: calc(40% - 40px);
-  padding: 5px;
-  font-size: 15px;
+.checkoutTitle h4{
+  width: 20%;
 }
 
 .checkoutTitle h5 {
   width: 15%;
-  padding: 5px;
+  /* padding: 5px; */
   font-size: 15px;
-  text-align: left;
+  text-align: end;
+  padding-right: 20px;
 }
 
 .checkoutContent {
@@ -976,11 +975,8 @@ a:active {
 .checkoutText img {
   width: 20%;
 }
-
-.checkoutText p {
-  width: 20%;
-  display: inline;
-  font-size: 1rem;
+.checkoutText div{
+  width:10%;
 }
 
 .checkoutText span {
@@ -997,7 +993,7 @@ a:active {
 }
 
 .checkoutText input {
-  width: 15%;
+  width: 10%;
   height: 20px;
   text-align: end;
   font-size: 17px;
@@ -1163,10 +1159,11 @@ a:active {
 .collectionText img {
   width: 15%;
 }
-
-.collectionText p {
-  width: 15%;
-  display: inline;
+.collectionH {
+  display: flex;
+  flex-direction: column;
+}
+.collectionH h1 {
   font-size: 20px;
 }
 
@@ -1203,27 +1200,34 @@ a:active {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
-
+.recordCardgroup .index1 {
+  background-color: #717171;
+  width: 3%;
+  position: absolute;
+  color: #fff;
+  border-radius: 10px;
+}
 .recordCard {
   width: 13%;
   text-align: center;
-  margin: 30px;
-  border: 0.5px solid rgba(0, 0, 0, 0.081);
+  margin: 50px;
+  /* border: 0.5px solid rgba(0, 0, 0, 0.081); */
   height: 250px;
 }
 
 .recordCard img {
   width: 100%;
   margin: auto;
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
-  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  /* border-radius: 50px; */
   transition: all 0.5s;
 }
 
 .recordCard img:hover {
   opacity: 0.9;
-  border-radius: 0px;
+  /* border-radius: 0px; */
   transform: scale(1.1);
 }
 
@@ -1695,7 +1699,7 @@ a:active {
   .checkoutText img {
     width: 10%;
   }
-  .checkoutText p {
+  .checkoutText h1 {
     width: 20%;
     display: inline;
     font-size: 10px;
@@ -1737,10 +1741,8 @@ a:active {
     border-bottom: 1px solid #bcbcbc;
     background-color: #fff;
   }
-  .collectionText p {
-    width: 15%;
-    /* display: inline; */
-    font-size: 15px;
+  .collectionText h1 {
+    font-size: 19px;
   }
   .collectionTitle h5 {
     width: 30%;
@@ -1829,18 +1831,31 @@ a:active {
   /* ---------------rwd-record----------------- */
   .recordCard {
     border: 0.5px solid rgba(0, 0, 0, 0.081);
-    width: 300px;
+    width: 400px;
     margin: 10px auto;
     /* text-align: left; */
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
   }
   .recordCard img {
     max-width: 150px;
+    margin: auto;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 25px 50px -12px;
   }
   .recordCardgroup {
     margin: 0;
+    position: relative;
+  }
+  .recordCardgroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .recordCardgroup .index1 {
+    display: none;
   }
   .recordCard h5 {
     font-size: 17px;
@@ -1862,18 +1877,18 @@ a:active {
 }
 @media screen and (max-width: 1180px) {
   .fixedcheckoutField {
-    background-color: #f7f5f5;
-    width: 55%;
+    background-color: #ffffff;
+    width: 90%;
     height: auto;
     position: relative;
     top: 0px;
     right: 0px;
     float: unset;
     /* display: none; */
-    border: #000 1px solid;
+    border: rgba(0, 0, 0, 0.164) 1px solid;
     order: 1;
   }
-  .checkoutField{
+  .checkoutField {
     order: 0;
     margin: 0;
   }
@@ -1885,7 +1900,7 @@ a:active {
     justify-content: center;
     align-items: center;
   }
-  .checkoutText span{
+  .checkoutText span {
     display: none;
   }
 }

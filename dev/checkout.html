@@ -12,6 +12,8 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
 
@@ -19,183 +21,162 @@
     <header class="headerpage">
     </header>
     <!-- ------------------------ -->
-    <div class="checkout">
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page">我的購物車</li>
-            </ol>
-        </nav>
-        <div class="threeBtn">
-            <a href="./checkout.html">購物車</a>
-            <a href="./collection.html">收藏清單</a>
-            <a href="./record.html">瀏覽紀錄</a>
-        </div>
+    <div id="app">
+        <div class="checkout">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="page">我的購物車</li>
+                </ol>
+            </nav>
+            <div class="threeBtn">
+                <a href="./checkout.html">購物車</a>
+                <a href="./collection.html">收藏清單</a>
+                <a href="./record.html">瀏覽紀錄</a>
+            </div>
 
-        <div class="fixedcheckoutField">
-            <h2>共</h2><span>2</span>
-            <h2>件商品</h2>
-            <div>
-                <h2> 商品金額小計</h2><span> NT$8,300</span>
-            </div>
-            <div>
-                <span> 購物回饋紅利點數 83 點</span>
-            </div>
-            <h1>符合滿額贈 送贈品 網購獨家零錢包 x 1</h1>
-            <h1>商品金額 $8500</h1>
-            <h1>紅利點數 -$0</h1>
-            <h1>退貨保留款 -$0</h1>
-            <h1>活動折扣 -$200</h1>
-            <h1>優惠方案折扣 -$0</h1>
-            <h1>運費/保價 +$60/0</h1>
-            <div>
-                <h1>處理費 +$0</h1>
-            </div>
-            <h3>結帳金額</h3>
-            <h4>NT$8,360</h4>
-            <div class="fixedcheckoutFieldLastdiv">
-                <a href="#">送出訂單</a>
-                <a href="./shopBag.html">繼續購物</a>
-            </div>
-        </div>
-        <div class="checkoutField">
-            <div class="checkoutTitle">
-                <h5>商品資訊</h5>
-                <h5>數量</h5>
-                <h5>尺寸/顏色</h5>
-                <h5>定價</h5>
-                <h5>小計</h5>
-            </div>
-            <div class="checkoutContent">
-                <div class="checkoutText">
-                    <img src="./img/shopBag1.png" alt="">
-                    <p>Sacoche type<br>
-                        波士頓包<br>
-                        <span>新品上市</span>
-                    </p>
-                    <input type="number" name="" id="" value="1">
-                    <label for="">深藍色</label>
-                    <label for="">NT$4,250 </label>
-                    <label for="">NT$4,250 </label>
-                    <i class="fa-sharp fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-trash"></i>
+            <div class="fixedcheckoutField">
+                <h2>共</h2><span>2</span>
+                <h2>件商品</h2>
+                <div>
+                    <h2> 商品金額小計</h2><span> NT$8,300</span>
                 </div>
-                <div class="checkoutText">
-                    <img src="./img/detailpic1.png" alt="">
-                    <p>LPORTER ALOOF<br>
-                        雙肩包 <br>
-                        <span>新品上市</span>
-                    </p>
-                    <input type="number" name="" id="" value="1">
-                    <label for="">黑色</label>
-                    <label for="">NT$4,250 </label>
-                    <label for="">NT$4,250 </label>
-                    <i class="fa-sharp fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-trash"></i>
+                <div>
+                    <span> 購物回饋紅利點數 83 點</span>
                 </div>
-                <div class="checkoutText">
-                    <img src="./img/shopWallet1.png" alt="">
-                    <p>PORTER SPLENDOR<br>
-                        皮夾 <br>
-                        <span>贈品</span>
-                    </p>
-                    <input type="number" name="" id="" value="1">
-                    <label for="">深藍色</label>
-                    <label for="">NT$0 </label>
-                    <label for="">NT$0 </label>
-                    <i class="fa-sharp fa-solid fa-heart"></i>
-                    <i class="fa-solid fa-trash"></i>
+                <h1>符合滿額贈 送贈品 網購獨家零錢包 x 1</h1>
+                <h1>商品金額 $8500</h1>
+                <h1>紅利點數 -$0</h1>
+                <h1>退貨保留款 -$0</h1>
+                <h1>活動折扣 -$200</h1>
+                <h1>優惠方案折扣 -$0</h1>
+                <h1>運費/保價 +$60/0</h1>
+                <div>
+                    <h1>處理費 +$0</h1>
+                </div>
+                <h3>結帳金額</h3>
+                <h4>NT$8,360</h4>
+                <h4>NT$ {{prices}}</h4>
+                <div class="fixedcheckoutFieldLastdiv">
+                    <a href="#">送出訂單</a>
+                    <a href="./shopBag.html">繼續購物</a>
+                    <button v-on:click="add1">123</button>
                 </div>
             </div>
-        </div>
+            <div class="checkoutField">
+                <div class="checkoutTitle">
+                    <h4>商品資訊</h4>
+                    <h5>數量</h5>
+                    <h5>尺寸/顏色</h5>
+                    <h5>定價</h5>
+                    <h5>小計</h5>
+                </div>
+                <div class="checkoutContent">
+                    <div class="checkoutText" v-for="checkoutText in checkoutTexts">
+                        <img :src=checkoutText.src alt="">
+                        <div>
+                            <h1>{{checkoutText.title}}</h1>
+                            <h1>{{checkoutText.name}}</h1>
+                            <span>{{checkoutText.type}}</span>
+                        </div>
+                        <input type="number" name="quantity" min="1" max="5">
+                        <label for="">{{checkoutText.color}}</label>
+                        <label for="">NT$ {{checkoutText.price}}</label>
+                        <label for="">NT$ {{checkoutText.subtotal}}</label>
+                        <i class="fa-sharp fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+            </div>
 
-        <div class="checkoutField">
-            <div class="checkoutTitle">
-                <h4>運送方式</h4>
-            </div>
-            <div class="checkoutContent">
-                <div class="checkoutTextThree">
-                    <div>
-                        <input type="radio" name="1" value="" id="1" checked>
-                        <label for="1">宅配</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="" id="2">
-                        <label for="2">超商取貨</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="1" value="" id="3">
-                        <label for="3">超商取貨付款</label>
+            <div class="checkoutField">
+                <div class="checkoutTitle">
+                    <h4>運送方式</h4>
+                </div>
+                <div class="checkoutContent">
+                    <div class="checkoutTextThree">
+                        <div>
+                            <input type="radio" name="1" value="" id="1" checked>
+                            <label for="1">宅配</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="1" value="" id="2">
+                            <label for="2">超商取貨</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="1" value="" id="3">
+                            <label for="3">超商取貨付款</label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="checkoutField">
-            <div class="checkoutTitle">
-                <h4>付款方式</h4>
-            </div>
-            <div class="checkoutContent">
-                <div class="checkoutTextFour">
-                    <div>
-                        <input type="radio" name="2" value="" id="ATM" checked>
-                        <label for="ATM">ATM轉帳</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="2" value="" id="LINE">
-                        <label for="LINE">LINE Pay</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="2" value="" id="CARD">
-                        <label for="CARD">信用卡</label>
+            <div class="checkoutField">
+                <div class="checkoutTitle">
+                    <h4>付款方式</h4>
+                </div>
+                <div class="checkoutContent">
+                    <div class="checkoutTextFour">
+                        <div>
+                            <input type="radio" name="2" value="" id="ATM" checked>
+                            <label for="ATM">ATM轉帳</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="2" value="" id="LINE">
+                            <label for="LINE">LINE Pay</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="2" value="" id="CARD">
+                            <label for="CARD">信用卡</label>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="checkoutField">
-            <div class="checkoutTitle">
-                <h4>收件人資料</h4>
-            </div>
-            <div class="checkoutContent">
-                <div class="checkoutTextFive">
-                    <div>
-                        <label for="">姓名</label>
-                        <input type="text" name="1" value="" placeholder="*必填">
-                    </div>
-                    <div>
-                        <label for="">性別</label>
-                        <input type="radio" name="1" value="" id="man">
-                        <label for="man">先生</label>
-                        <input type="radio" name="1" value="" id="women">
-                        <label for="women">小姐</label>
-                    </div>
-                    <div>
-                        <label for="">手機號碼</label>
-                        <input type="text" name="1" value="" placeholder="*必填">
-                    </div>
-                    <div>
-                        <label for="">收件地址</label>
-                        <select>
-                            <option>請選擇</option>
-                            <option>新北市</option>
-                        </select>
-                        <select>
-                            <option>請選擇</option>
-                            <option>板橋區</option>
-                        </select>
-                        <select>
-                            <option>請選擇</option>
-                            <option>中山路一段</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="">詳細地址</label>
-                        <input type="text" name="1" value="" placeholder="*必填">
-                    </div>
-                    <div>
-                        <label for="">備註</label>
-                    </div>
-                    <div>
-                        <textarea name="" id="" cols="25" rows="3"></textarea>
+            <div class="checkoutField">
+                <div class="checkoutTitle">
+                    <h4>收件人資料</h4>
+                </div>
+                <div class="checkoutContent">
+                    <div class="checkoutTextFive">
+                        <div>
+                            <label for="">姓名</label>
+                            <input type="text" name="1" value="" placeholder="*必填">
+                        </div>
+                        <div>
+                            <label for="">性別</label>
+                            <input type="radio" name="1" value="" id="man">
+                            <label for="man">先生</label>
+                            <input type="radio" name="1" value="" id="women">
+                            <label for="women">小姐</label>
+                        </div>
+                        <div>
+                            <label for="">手機號碼</label>
+                            <input type="text" name="1" value="" placeholder="*必填">
+                        </div>
+                        <div>
+                            <label for="">收件地址</label>
+                            <select>
+                                <option>請選擇</option>
+                                <option>新北市</option>
+                            </select>
+                            <select>
+                                <option>請選擇</option>
+                                <option>板橋區</option>
+                            </select>
+                            <select>
+                                <option>請選擇</option>
+                                <option>中山路一段</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">詳細地址</label>
+                            <input type="text" name="1" value="" placeholder="*必填">
+                        </div>
+                        <div>
+                            <label for="">備註</label>
+                        </div>
+                        <div>
+                            <textarea name="" id="" cols="25" rows="3"></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,6 +188,60 @@
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
+    </script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    checkoutTexts: [
+                        {
+                            src: "./img/shopBag1.png",
+                            title: 'Sacoche type',
+                            name: '波士頓包',
+                            type: '新品上市',
+                            color: '深藍色',
+                            price: 4250,
+                            subtotal: 4250
+
+                        },
+                        {
+                            src: "./img/detailpic1.png",
+                            title: 'LPORTER ALOOF',
+                            name: '雙肩包',
+                            type: '新品上市',
+                            color: '黑色',
+                            price: 4250,
+                            subtotal: 4250
+                        },
+                        {
+                            src: "./img/shopWallet1.png",
+                            title: 'PORTER SPLENDOR',
+                            name: '皮夾',
+                            type: '贈品',
+                            color: '深藍色',
+                            price: 0,
+                            subtotal: 0
+                        }
+                    ],
+                    prices: 0,
+                }
+            },
+            methods: {
+                add1() {
+                    let total = 0;
+                    this.checkoutTexts.forEach((element) => {
+
+                        total += element.price;
+                        this.prices = total
+                        return this.prices;
+                    });
+
+                },
+            }
+        }).mount('#app')
     </script>
 </body>
 

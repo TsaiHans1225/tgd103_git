@@ -12,111 +12,114 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
 
 <body>
     <header class="headerpage">
     </header>
-    <!-- -----------start------------- -->
-    <div class="collection">
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page">收藏清單</li>
-            </ol>
-        </nav>
-        <div class="threeBtn">
-            <a href="./checkout.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
-            <a href="./collection.html" style="background-color: #000;color: #ffffff;">收藏清單</a>
-            <a href="./record.html">瀏覽紀錄</a>
-        </div>
-        
-        <!-- ------------------------ -->
-        <div class="collectionField">
-            <div class="collectionTitle">
-                <h5>商品資訊</h5>
-                <h5>尺寸/顏色</h5>
-                <h5>定價</h5>
+    <!-- ------------------------ -->
+    <div id="app">
+        <div class="collection">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="page">收藏清單</li>
+                </ol>
+            </nav>
+            <div class="threeBtn">
+                <a href="./checkout.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
+                <a href="./collection.html" style="background-color: #000;color: #ffffff;">收藏清單</a>
+                <a href="./record.html">瀏覽紀錄</a>
             </div>
-            <div class="collectionContent">
-                <div class="collectionText">
-                    <img src="./img/shopWallet9.png" alt="">
-                    <p>MULTI COIN CASE<br>
-                        錢包<br>
-                        023-03763
-                    </p>
-                    <label for="">黑色</label>          
-                    <label for="">NT$7,480</label>
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="collectionText">
-                    <img src="./img/shopBriefcase9.png" alt="">
-                    <p>BARON<br>
-                        公文包<br>
-                        11716-00479
-                    </p>
-                    <label for="">棕色</label>
-                    <label for="">NT$35,200</label>  
-                    <i class="fa-solid fa-cart-plus"></i>         
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="collectionText">
-                    <img src="./img/shopBag4.png" alt="">
-                    <p>PORTER FLEX<br>
-                        行李袋<br>
-                        11716-00479
-                    </p>
-                    <label for="">軍綠色</label>
-                    <label for="">NT$26,950</label>   
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="collectionText">
-                    <img src="./img/shopBag3.png" alt="">
-                    <p>PORTER FLEX<br>
-                        行李袋<br>
-                        11716-00479
-                    </p>
-                    <label for="">軍綠色</label>
-                    <label for="">NT$26,950</label>   
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="collectionText">
-                    <img src="./img/shopBag2.png" alt="">
-                    <p>PORTER FLEX<br>
-                        行李袋<br>
-                        11716-00479
-                    </p>
-                    <label for="">軍綠色</label>
-                    <label for="">NT$26,950</label>   
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
-                <div class="collectionText">
-                    <img src="./img/shopBag1.png" alt="">
-                    <p>PORTER FLEX<br>
-                        行李袋<br>
-                        11716-00479
-                    </p>
-                    <label for="">軍綠色</label>
-                    <label for="">NT$26,950</label>   
-                    <i class="fa-solid fa-cart-plus"></i>
-                    <i class="fa-solid fa-trash"></i>
-                </div>
 
+            <!-- ------------------------ -->
+            <div class="collectionField">
+                <div class="collectionTitle">
+                    <h5>商品資訊</h5>
+                    <h5>顏色</h5>
+                    <h5>定價</h5>
+                </div>
+                <div class="collectionContent">
+                    <div class="collectionText" v-for="collection in collections">
+                        <img :src=collection.src alt="">
+                        <div class="collectionH">
+                            <h1>{{collection.title}}</h1>
+                            <h1> {{collection.name}}</h1>
+                            <h1> {{collection.pno}}</h1>
+                        </div>
+                        <label for="">{{collection.color}}</label>
+                        <label for="">NT$ {{collection.price}}</label>
+                        <i class="fa-solid fa-cart-plus"></i>
+                        <i class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- -----------end------------- -->
+    <!-- ------------------------ -->
     <footer class="footerpage">
     </footer>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
     </script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    collections: [
+                        {
+                            src: "./img/shopBag1.png",
+                            title: 'PORTER FLEX',
+                            name: '行李袋',
+                            pno: '11716-00479',
+                            color: '軍綠色',
+                            price: 26950
+                        },
+                        {
+                            src: "./img/shopBag2.png",
+                            title: 'PORTER FLEX',
+                            name: '行李袋',
+                            pno: '11716-00479',
+                            color: '軍綠色',
+                            price: 26950
+                        },
+                        {
+                            src: "./img/shopBag3.png",
+                            title: 'PORTER FLEX',
+                            name: '行李袋',
+                            pno: '11716-00479',
+                            color: '軍綠色',
+                            price: 26950
+                        },
+                        {
+                            src: "./img/shopBag4.png",
+                            title: 'PORTER FLEX',
+                            name: '行李袋',
+                            pno: '11716-00479',
+                            color: '軍綠色',
+                            price: 26950
+                        },
+                        {
+                            src: "./img/shopBag5.png",
+                            title: 'PORTER FLEX',
+                            name: '行李袋',
+                            pno: '11716-00479',
+                            color: '軍綠色',
+                            price: 26950
+                        }
+                    ],
+                }
+            }
+        }).mount('#app')
+    </script>
+
 </body>
 
 </html>
