@@ -12,6 +12,8 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
 
@@ -19,146 +21,59 @@
     <header class="headerpage">
     </header>
     <!-- ------------------------ -->
-    <div class="rwd-shop-banner">
-        <img src="./img/2000/wallet.jpg" alt="">
-    </div>
-    <div class="main">
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="./shopWallet.html">皮夾</a></li>
-                <li class="breadcrumb-item" aria-current="page">全部皮夾</li>
-            </ol>
-        </nav>
-        <div class="shop-title">
-            <h1>
-                皮夾
-            </h1>
+    <div id="app">
+        <div class="rwd-shop-banner">
+            <img :src=banner alt="">
         </div>
-        <div class="shop-all">
-            <div class="shop-menu">
-                <ul>
-                    <li style="background-color: #002742;color: #fff;">皮夾系列</li>
-                    <li> NEW HEAT</li>
-                    <li>DUKE-X</li>
-                    <li>HARDY</li>
-                    <li> MORI</li>
-                    <li>LUXY</li>
-                    <li>SPIRIT</li>
-                    <li> BEND</li>
-                    <li>LOGIC</li>
-                    <li>LOFTY</li>
-                    <li>NEW MELODY</li>
-                    <li>PUFF</li>
-                    <li>ULTRA</li>
-                    <li>SASH</li>
-                    <li>TUX</li>
+        <div class="main">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./shopWallet.html">皮夾</a></li>
+                    <li class="breadcrumb-item" aria-current="page">全部皮夾</li>
+                </ol>
+            </nav>
+            <div class="shop-title">
+                <h1>
+                    {{title}}
+                </h1>
+            </div>
+            <div class="shop-all">
+                <div class="shop-menu">
+                    <ul>
+                        <li style="background-color: #002742;color: #fff;">{{title}}系列</li>
+                       <li v-for="list in menu">{{list}}</li>
+                    </ul>
+                </div>
+
+                <div class="shop-list">
+                    <div class="shop-card" v-for="(item,index) in product">
+                        <a href="./detailBag.html">
+                            <img :src="item.imgSrc" alt="" v-bind:title="item.name">
+                            <h1>{{item.name}}</h1>
+                            <h3>NT$ {{item.price}}</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="pagination-group">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
-            </div>
-            <div class="shop-list">
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet1.png" alt="">
-                        <h1>PORTER SPLENDOR</h1>
-                        <h3>NT$ 45,100</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet2.png" alt="">
-                        <h1>SHRINK</h1>
-                        <h3>NT$ 6,650</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet3.png" alt="">
-                        <h1>PORTER ENCHASE</h1>
-                        <h3>NT$ 29,700</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet4.png" alt="">
-                        <h1>PORTER WALL</h1>
-                        <h3>NT$ 11,000</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet5.png" alt="">
-                        <h1>PORTER SPLENDOR</h1>
-                        <h3>NT$ 45,100</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet6.png" alt="">
-                        <h1>SHRINK</h1>
-                        <h3>NT$ 6,650</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet7.png" alt="">
-                        <h1>PORTER ENCHASE</h1>
-                        <h3>NT$ 29,700</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet8.png" alt="">
-                        <h1>PORTER WALL</h1>
-                        <h3>NT$ 11,000</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet9.png" alt="">
-                        <h1>PORTER SPLENDOR</h1>
-                        <h3>NT$ 45,100</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet10.png" alt="">
-                        <h1>NEW HEAT JET BLACK</h1>
-                        <h3>NT$ 6,650</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet11.png" alt="">
-                        <h1>PORTER ENCHASE</h1>
-                        <h3>NT$ 29,700</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopWallet12.png" alt="">
-                        <h1>SHRINK</h1>
-                        <h3>NT$ 35,750</h3>
-                    </a>
-                </div>
-            </div>
+            </nav>
         </div>
-        <nav class="pagination-group">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
     <!-- ------------------------ -->
     <footer class="footerpage">
@@ -166,6 +81,105 @@
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
+    </script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    banner: "./img/2000/wallet.jpg",
+                    title:'皮夾',
+                    product: [
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SPLENDOR',
+                            imgSrc: "./img/shopWallet1.png",
+                            price: 45100,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'SHRINK',
+                            imgSrc: "./img/shopWallet2.png",
+                            price: 6650,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER ENCHASE',
+                            imgSrc: "./img/shopWallet3.png",
+                            price: 29700,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER WALL',
+                            imgSrc: "./img/shopWallet4.png",
+                            price: 11000,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SPLENDOR',
+                            imgSrc: "./img/shopWallet5.png",
+                            price: 45100,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'SHRINK',
+                            imgSrc: "./img/shopWallet6.png",
+                            price: 6650,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER ENCHASE',
+                            imgSrc: "./img/shopWallet7.png",
+                            price: 29700,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER WALL',
+                            imgSrc: "./img/shopWallet8.png",
+                            price: 11000,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SPLENDOR',
+                            imgSrc: "./img/shopWallet9.png",
+                            price: 45100,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'NEW HEAT JET BLACK',
+                            imgSrc: "./img/shopWallet10.png",
+                            price: 6650,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER ENCHASE',
+                            imgSrc: "./img/shopWallet11.png",
+                            price: 29700,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'SHRINK',
+                            imgSrc: "./img/shopWallet12.png",
+                            price: 35750,
+                        }
+                    ],
+                    show1: true,
+                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH','TUX'],
+                }
+            },
+            methods: {
+                prompt() {
+                    // alert('快來看這裡！我是新訊息！');
+                    if (this.show1 == false) {
+                        this.show1 = true
+                    } else {
+                        this.show1 = false;
+                    }
+                },
+            }
+        }).mount('#app')
     </script>
 </body>
 

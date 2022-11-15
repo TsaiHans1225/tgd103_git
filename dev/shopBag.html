@@ -12,6 +12,7 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
 
@@ -19,146 +20,58 @@
     <header class="headerpage">
     </header>
     <!-- ------------------------ -->
-    <div class="rwd-shop-banner">
-        <img src="./img/2000/bag.jpg" alt="">
-    </div>
-    <div class="main">
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
-                <li class="breadcrumb-item" aria-current="page">全部袋包</li>
-            </ol>
-        </nav>
-        <div class="shop-title">
-            <h1>
-                袋包
-            </h1>
+    <div id="app">
+        <div class="rwd-shop-banner">
+            <img :src=banner alt="">
         </div>
-        <div class="shop-all">
-            <div class="shop-menu">
-                <ul>
-                    <li><a href="#"> 袋包系列</a></li>
-                    <li> NEW HEAT</li>
-                    <li>DUKE-X</li>
-                    <li>HARDY</li>
-                    <li> MORI</li>
-                    <li>LUXY</li>
-                    <li>SPIRIT</li>
-                    <li> BEND</li>
-                    <li>LOGIC</li>
-                    <li>LOFTY</li>
-                    <li>NEW MELODY</li>
-                    <li>PUFF</li>
-                    <li>ULTRA</li>
-                    <li>SASH</li>
-                    <li>TUX</li>
+        <div class="main">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
+                    <li class="breadcrumb-item" aria-current="page">全部袋包</li>
+                </ol>
+            </nav>
+            <div class="shop-title">
+                <h1>
+                    {{title}}
+                </h1>
+            </div>
+            <div class="shop-all">
+                <div class="shop-menu">
+                    <ul>
+                        <li><a href="#"> {{title}}系列</a></li>
+                        <li v-for="list in menu">{{list}}</li>
+                    </ul>
+                </div>
+                <div class="shop-list">
+                    <div class="shop-card" v-for="(item,index) in product">
+                        <a href="./detailBag.html">
+                            <img :src="item.imgSrc" alt="" v-bind:title="item.name">
+                            <h1>{{item.name}}</h1>
+                            <h3>NT$ {{item.price}}</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <nav class="pagination-group">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
                 </ul>
-            </div>
-            <div class="shop-list">
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag1.png" alt="">
-                        <h1>PORTER SNACK PACK</h1>
-                        <h3>NT$ 17,050</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag2.png" alt="">
-                        <h1>PORTER BOOTH PACK</h1>
-                        <h3>NT$ 35,200</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag3.png" alt="">
-                        <h1>PORTER SMOKY</h1>
-                        <h3>NT$ 26,950</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag4.png" alt="">
-                        <h1>PORTER LIFT</h1>
-                        <h3>NT$ 47,300</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag5.png" alt="">
-                        <h1>PORTER SNACK PACK</h1>
-                        <h3>NT$ 17,050</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag6.png" alt="">
-                        <h1> PORTER BOOTH PACK</h1>
-                        <h3>NT$ 35,200</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag7.png" alt="">
-                        <h1>PORTER SMOKY</h1>
-                        <h3>NT$ 26,950</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag8.png" alt="">
-                        <h1>PORTER LIFT</h1>
-                        <h3>NT$ 47,300</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag9.png" alt="">
-                        <h1>PORTER SNACK PACK</h1>
-                        <h3>NT$ 17,050</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag10.png" alt="">
-                        <h1> PORTER BOOTH PACK</h1>
-                        <h3>NT$ 35,200</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag11.png" alt="">
-                        <h1>PORTER SMOKY</h1>
-                        <h3>NT$ 26,950</h3>
-                    </a>
-                </div>
-                <div class="shop-card">
-                    <a href="./detailBag.html">
-                        <img src="./img/shopBag12.png" alt="">
-                        <h1>PORTER LIFT</h1>
-                        <h3>NT$ 47,300</h3>
-                    </a>
-                </div>
-            </div>
+            </nav>
         </div>
-        <nav class="pagination-group">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
     <!-- ------------------------ -->
     <footer class="footerpage">
@@ -167,6 +80,107 @@
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
     </script>
+    <script>
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    banner: "./img/2000/bag.jpg",
+                    title:'袋包',
+                    product: [
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SNACK PACK',
+                            imgSrc: "./img/shopBag1.png",
+                            price: 17050,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER BOOTH PACK',
+                            imgSrc: "./img/shopBag2.png",
+                            price: 35200,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SMOKY',
+                            imgSrc: "./img/shopBag3.png",
+                            price: 26950,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER LIFT',
+                            imgSrc: "./img/shopBag4.png",
+                            price: 47300,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SNACK PACK',
+                            imgSrc: "./img/shopBag5.png",
+                            price: 17050,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SNACK PACK',
+                            imgSrc: "./img/shopBag6.png",
+                            price: 35200,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SMOKY',
+                            imgSrc: "./img/shopBag7.png",
+                            price: 26950,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER LIFT',
+                            imgSrc: "./img/shopBag8.png",
+                            price: 47300,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SNACK PACK',
+                            imgSrc: "./img/shopBag9.png",
+                            price: 17050,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER BOOTH PACK',
+                            imgSrc: "./img/shopBag10.png",
+                            price: 35200,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SMOKY',
+                            imgSrc: "./img/shopBag11.png",
+                            price: 26950,
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER LIFT',
+                            imgSrc: "./img/shopBag12.png",
+                            price: 47300,
+                        }
+                    ],
+                    show1: true,
+                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH','TUX'],
+                }
+            },
+            methods: {
+                prompt() {
+                    // alert('快來看這裡！我是新訊息！');
+                    if (this.show1 == false) {
+                        this.show1 = true
+                    } else {
+                        this.show1 = false;
+                    }
+                },
+            }
+        }).mount('#app')
+
+    </script>
+
 </body>
 
 </html>

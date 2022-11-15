@@ -234,7 +234,12 @@ span:hover .header-navbar-wrap {
   justify-content: center;
   align-items: center;
 }
-
+.footer-navbar-category li {
+  width: 100%;
+}
+.footer-navbar-category {
+  width: 100%;
+}
 .tibame {
   width: 25%;
   margin-top: 50px;
@@ -608,7 +613,7 @@ a:active {
 .shop-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: center;
   max-width: 1920px;
   /* width: 50%; */
@@ -626,10 +631,17 @@ a:active {
   font-size: 30px;
   font-weight: 1000;
 }
+.shop-menu {
+  font-size: 20px;
+  line-height: 40px;
+  width: 30%;
+  transition: all 1s;
+  transform: scale(1.5deg);
+}
 .shop-menu li:first-child {
   display: block;
   background-color: #ff9148;
-  width: 200px;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
   color: #fff;
@@ -640,6 +652,8 @@ a:active {
 }
 .shop-menu li:hover {
   background-color: #c3c3c3;
+  width: 80%;
+  margin: 0 auto;
 }
 .shop-card {
   /* width: 30%; */
@@ -966,7 +980,7 @@ a:active {
 .checkoutText p {
   width: 20%;
   display: inline;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .checkoutText span {
@@ -1196,7 +1210,7 @@ a:active {
   text-align: center;
   margin: 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.081);
-  height:250px;
+  height: 250px;
 }
 
 .recordCard img {
@@ -1426,12 +1440,13 @@ a:active {
   }
   .rwd-navbar-wrap {
     display: none;
+    width: 100%;
   }
 
   .rwd-list:hover .rwd-mark {
     background-color: #000;
     color: #fff;
-    transition: all 0.7s;
+    transition: all 0.3s;
   }
 
   span.fa::after {
@@ -1448,8 +1463,15 @@ a:active {
     margin-top: 5px;
     margin-right: 10px;
   }
+  .rwd-navbar-category {
+    width: 100%;
+  }
   .rwd-navbar-category li {
     background-color: #ffffff;
+    width: 100%;
+  }
+  .rwd-navbar-category li:hover {
+    background-color: #bcbcbc;
     width: 100%;
   }
   .rwd-navbar-category a {
@@ -1564,12 +1586,13 @@ a:active {
     margin: auto;
     transition: all 0.5s;
   }
-  /* ---------------------shop------------------------ */
+  /* --------------------rwd-shop------------------------ */
   .shop-menu {
     font-size: 20px;
     line-height: 40px;
-    display: none;
+    /* display: none; */
     width: 100%;
+    float: left;
   }
   .shop-list {
     margin: auto;
@@ -1638,7 +1661,7 @@ a:active {
   }
   .fixedcheckoutField a {
     display: inline-block;
-    padding: 40px;
+    padding: 20px;
     text-decoration: none;
     background-color: #000;
     color: #ffffff;
@@ -1733,7 +1756,7 @@ a:active {
     font-size: 10px;
     padding-left: 10px;
   }
-  /* ------------login------------ */
+  /* -----------rwd-login------------ */
   .LoginAndSingup {
     display: flex;
     justify-content: center;
@@ -1803,7 +1826,7 @@ a:active {
     border-radius: 3px;
     font-weight: 500;
   }
-  /* ----------------record----------------- */
+  /* ---------------rwd-record----------------- */
   .recordCard {
     border: 0.5px solid rgba(0, 0, 0, 0.081);
     width: 300px;
@@ -1819,7 +1842,7 @@ a:active {
   .recordCardgroup {
     margin: 0;
   }
-  .recordCard h5{
+  .recordCard h5 {
     font-size: 17px;
     width: 100px;
     /* border: 1px solid red; */
@@ -1829,11 +1852,40 @@ a:active {
     margin-left: 20px;
     font-size: 18px;
   }
-  /* ---------------detailBag----------------------- */
+  /* --------------rwd-detailBag----------------------- */
   .detailGroup {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .fixedcheckoutField {
+    background-color: #f7f5f5;
+    width: 55%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    float: unset;
+    /* display: none; */
+    border: #000 1px solid;
+    order: 1;
+  }
+  .checkoutField{
+    order: 0;
+    margin: 0;
+  }
+  .checkout {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkoutText span{
+    display: none;
   }
 }
