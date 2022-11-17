@@ -939,7 +939,7 @@ a:active {
   text-align: center;
 }
 
-.checkoutTitle h4{
+.checkoutTitle h4 {
   width: 20%;
 }
 
@@ -975,8 +975,8 @@ a:active {
 .checkoutText img {
   width: 20%;
 }
-.checkoutText div{
-  width:10%;
+.checkoutText div {
+  width: 10%;
 }
 
 .checkoutText span {
@@ -1389,6 +1389,127 @@ a:active {
   width: 100%;
   height: 100%;
 }
+/* -----------------member------------------------ */
+.member {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0;
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.member a {
+  display: block;
+  width: auto;
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  margin: 0 10px;
+  text-align: center;
+  font-size: 15px;
+  border: #c3c3c3 solid 1px;
+  border-bottom: 0;
+}
+.member a:hover {
+  background-color: #fff;
+}
+.member-top {
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: #c3c3c3 1px solid;
+  /* padding-left: 30px; */
+}
+.member-top a{
+  text-decoration: none;
+}
+.member-top i{
+  font-size: 30px;
+}
+.member-span1 {
+  display: inline-block;
+  width: 80px;
+  font-size: 15px;
+  background-color: #3b5fab;
+  margin-top: 10px;
+  color: #fff;
+  padding: 5px 5px;
+}
+.member-span2 {
+  display: inline-block;
+  width: 80px;
+  font-size: 15px;
+  background-color: #4dcd02;
+  margin-top: 10px;
+  color: #fff;
+  padding: 5px 5px;
+}
+.member-table1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.member-table2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  border-bottom: #c3c3c3 1px solid;
+  margin-bottom: 100px;
+  padding-bottom: 50px;
+}
+.member-table1 div {
+  width: 30%;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin: 0 30px 30px;
+  border: #000 1px solid;
+}
+.member-table2 div {
+  width: 30%;
+  height: 100px;
+  background-color: #f0f0f0;
+  margin: 0 30px 30px;
+  border: #000 1px solid;
+}
+.member-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+}
+.member-t1{
+  justify-content: flex-start;
+}
+.member-t1 h1{
+  margin-left: 100px;
+}
+.member-t1 h1:{
+  margin-left: 100px;
+}
+
+
+
+
+.member-title h1 {
+  width: auto;
+  padding: 10px;
+}
+.member-table2 p,.member-table1 p{
+  padding: 0 0 10px 0 ;
+}
+.member-a a{
+  color: #000;
+  text-decoration: none;
+  display: block;
+}
+.member-a a:hover{
+  background-color: #fff;
+}
+
 /* ---------------RWD---------------------- */
 @media screen and (max-width: 414px) {
   .header-logo img {

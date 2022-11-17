@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="./vue.js"></script>
+    <title>ShiBaInu</title>
+</head>
+
+<body>
+    <header class="headerpage">
+    </header>
+
+    <!-- ------------------------ -->
+
+    <div class="member">
+        <a href="">會員首頁</a>
+        <a href="">訂單查詢</a>
+        <a href="">我的帳戶</a>
+        <a href="">喜愛清單</a>
+        <a href="">線上客戶專區</a>
+        <a href="">我的通訊錄</a>
+        <a href="">修改會員資料</a>
+        <a href="">修改密碼</a>
+        <a href="">訂購須知</a>
+    </div>
+    <nav class="breadcrumb-group">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
+            <li class="breadcrumb-item" aria-current="page">全部袋包</li>
+        </ol>
+    </nav>
+    <div class="member-top">
+        <p>
+            XXX 您好
+        </p>
+        <p>
+            會員等級：一般會員
+        </p>
+        <a href="#">
+            <span class="member-span1">
+                <i class="fa-brands fa-square-facebook"></i>已綁定
+            </span>
+        </a>
+        <a href="#">
+            <span class="member-span2">
+                <i class="fa-brands fa-line"></i>未綁定
+            </span>
+        </a>
+    </div>
+    <div class="member-title member-t1">
+        <h1><i class="fa-regular fa-clipboard"></i> 訂單查詢</h1>
+        <h1><i class="fa-regular fa-user"></i> 我的帳戶</h1>
+    </div>
+    <div class="member-table1 member-a">
+        <div>
+            <a href="#">取消訂單</a>
+            <a href="#">訂單退換貨查詢</a>
+        </div>
+        <div>
+            <a href="#">我的購物金</a>
+            <p href="#">目前購物金</p>
+            <p href="#">您有0元購物金即將到期</p>
+        </div>
+        <div>
+            <a href="#">抵用券</a>
+            <p href="#">目前抵用券張</p>
+            <p href="#">您有1張抵用券即將到期</p>
+        </div>
+        <div>
+            <p href="#">紅利點數</p>
+            <p href="#">目前紅利點數0點</p>
+        </div>
+    </div>
+    <div class="member-title">
+        <h1><i class="fa-solid fa-cart-shopping"></i> 購物清單</h1>
+        <h1><i class="fa-regular fa-envelope"></i> 線上克服專區</h1>
+        <h1><i class="fa-solid fa-clipboard-list"></i> 個人資料修改</h1>
+    </div>
+    <div class="member-table2  member-a">
+        <div>
+            <a href="#">喜愛清單(0)</a>
+            <a href="#">瀏覽紀錄</a>
+        </div>
+        <div>
+            <a href="#">線上訊息通知(0)</a>
+            <a href="#">線上克服(0)</a>
+        </div>
+        <div>
+            <a href="#">修改會員資料</a>
+            <a href="#">修改密碼</a>
+            <a href="#">收件人通訊管理</a>
+        </div>
+    </div>
+    <!-- ------------------------ -->
+    <footer class="footerpage">
+    </footer>
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
+
+</body>
+
+</html>
