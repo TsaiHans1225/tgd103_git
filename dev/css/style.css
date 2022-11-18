@@ -1418,10 +1418,10 @@ a:active {
   border-bottom: #c3c3c3 1px solid;
   /* padding-left: 30px; */
 }
-.member-top a{
+.member-top a {
   text-decoration: none;
 }
-.member-top i{
+.member-top i {
   font-size: 30px;
 }
 .member-span1 {
@@ -1481,32 +1481,30 @@ a:active {
   align-items: center;
   margin-top: 50px;
 }
-.member-t1{
+.member-t1 {
   justify-content: flex-start;
 }
-.member-t1 h1{
+.member-t1 h1 {
   margin-left: 100px;
 }
-.member-t1 h1:{
+.member-t1 h1: {
   margin-left: 100px;
 }
-
-
-
 
 .member-title h1 {
   width: auto;
   padding: 10px;
 }
-.member-table2 p,.member-table1 p{
-  padding: 0 0 10px 0 ;
+.member-table2 p,
+.member-table1 p {
+  padding: 0 0 10px 0;
 }
-.member-a a{
+.member-a a {
   color: #000;
   text-decoration: none;
   display: block;
 }
-.member-a a:hover{
+.member-a a:hover {
   background-color: #fff;
 }
 

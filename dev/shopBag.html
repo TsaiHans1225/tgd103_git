@@ -37,6 +37,7 @@
                     {{title}}
                 </h1>
             </div>
+            <button @click='changeType'>123</button>
             <div class="shop-all">
                 <div class="shop-menu">
                     <ul>
@@ -88,7 +89,7 @@
                 return {
                     message: 'Hello Vue!',
                     banner: "./img/2000/bag.jpg",
-                    title:'袋包',
+                    title: '袋包',
                     product: [
                         {
                             detail: './detailBag.html',
@@ -164,7 +165,9 @@
                         }
                     ],
                     show1: true,
-                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH','TUX'],
+                    menu: ['DUKE-X', 'HARDY', 'MORI', 'LUXY', 'SPIRIT', 'BEND', 'LOGIC', 'LOFTY', 'NEW MELODY', 'PUFF', 'ULTRA', 'SASH', 'TUX'],
+                    sortType: "price",
+                    isReverse: false,
                 }
             },
             methods: {
@@ -176,8 +179,28 @@
                         this.show1 = false;
                     }
                 },
+                changeType: function (type) {
+                    var vm = this;
+                    if (vm.sortType == type) {
+                        vm.isReverse = !vm.isReverse;
+                    } else {
+                        vm.isReverse = false;
+                    }
+                    vm.sortType = type;
+                }
+            },
+            computed: {
+                sortData() {
+                    var vm = this;
+                    var type = vm.sortType;
+                    return vm.data.sort(function (a, b) {
+                        if (vm.isReverse) return b[type] - a[type];
+                        else return a[type] - b[type];
+                    });
+                }
             }
-        }).mount('#app')
+        }
+        ).mount('#app')
 
     </script>
 
