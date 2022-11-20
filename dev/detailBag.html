@@ -11,9 +11,11 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://use.fontawesome.com/0206006232.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
     </link>
+    <script src="./vue.js"></script>
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
     <title>ShiBaInu</title>
 </head>
@@ -22,95 +24,87 @@
     <header class="headerpage">
     </header>
     <!-- ------------------------ -->
-    <div class="detailBag">
-
-
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
-                <li class="breadcrumb-item" aria-current="page">全部袋包</li>
-            </ol>
-        </nav>
-        <div class="shop-title">
-            <h1>袋包</h1>
-        </div>
-        <div class="detailGroup">
-            <div class="detailmidPic">
-                <img src="./img/detailpic2.png" alt="">
-                <img src="./img/detailpic3.png" alt="">
-                <img src="./img/detailpic4.png" alt="">
-                <img src="./img/detailpic5.png" alt="">
+    <div id="app">
+        <div class="detailBag">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
+                    <li class="breadcrumb-item" aria-current="page">全部袋包</li>
+                </ol>
+            </nav>
+            <div class="shop-title">
+                <h1>袋包</h1>
             </div>
-            <div class="detailBigPic">
-                <img src="./img/detailpic1.png" alt="">
-            </div>
-            <div class="detailText">
-                <h3>商品描述</h3>
-                <p>零件號: 023-01082<br>
-                    品牌/系列:
-                    搬運工<br>
-                    類別:背包<br>
-                    尺寸:
-                    寬：290 毫米/高：410 毫米/深：120 毫米<br>
-                    重量:755克<br>
-                    材料:
-                    正面：小牛皮（印度進口皮革，鉻鞣）<br>
-                    &emsp;&emsp;&thinsp;&thinsp;背面：棉斜紋布</p>
-                <h2>NT$4,250</h2>
-                <h4>搜索關鍵字</h4>
-                <h5><a href="#">＃搬運工</a>
-                    <a href="#">＃雙肩包 </a>
-                    <a href="#">＃黑色</a>
-                    <a href="#">#鼠尾草綠</a>
-                </h5>
-                <div class="colorBtn">
-                    <button></button>
-                    <button></button>
-                    <button></button>
+            <div class="detailGroup">
+
+                <div class="detailBigPic">
+                    <img src="./img/detailpic1.png" alt="">
                 </div>
+                <div class="detailText">
+                    <div class="detailText-heart">
+                        <h3>商品描述</h3>
+                        <div id=heart><i class="fa fa-heart-o" aria-hidden="true"></i> </div>
+                    </div>
+                    <p>零件號: 023-01082<br>
+                        品牌/系列:
+                        搬運工<br>
+                        類別:背包<br>
+                        尺寸:
+                        寬：290 毫米/高：410 毫米/深：120 毫米<br>
+                        重量:755克<br>
+                        材料:
+                        正面：小牛皮（印度進口皮革，鉻鞣）<br>
+                        &emsp;&emsp;&thinsp;&thinsp;背面：棉斜紋布</p>
 
-                <div class="detailBtn">
-                    <a href="./checkout.html" class="btn1">結帳</a>
-                    <a href="#" id="add" class="btn2">加入購物車</a>
+                    <select name="" id="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+
+
+                    <div class="detailText-div">
+                        <h2>NT$4,250</h2> <span>新品上市</span>
+                    </div>
+                    <h4>搜索關鍵字</h4>
+                    <h5>
+                        <a href="#" v-for="item in detailtype">＃搬運工</a>
+                    </h5>
+                    <div class="detailBtn">
+                        <a href="./checkout.html" class="btn1">結帳</a>
+                        <a href="#" id="add" class="btn2" @click.prevent="">加入購物車</a>
+                    </div>
+
+                    <div class="detailmidPic">
+                        <img :src='item' alt="" v-for="item in detailpic">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="detailDetail">
-            <p>
-                這是一個皮革休閒系列“PORTER ALOOF”，奢華地使用輕盈舒適的小牛皮。
-                <br><br><br><br>
-                使用優質小牛皮的簡單設計，無論年齡大小，都可以長時間使用。
-                <br><br>
-                使用的小腿皮下脂肪少，富含穀物，具有彈性。6個月以內的小牛皮體毛很少，毛孔也不明顯，所以表面紋理細膩豐滿。
-                <br><br>
-                皮製品的包覆通常採用與主體相同的材質，但本系列採用尼龍膠帶，具有視覺上的收緊效果。
-                <br><br>
-                通過將褶襉放在前面，它被用作設計重點。為了最大限度地發揮包包本身的輕盈感，一些單品使用塑料件來提升休閒氣息。
-                <br><br>
-                拉鍊拉頭採用半自動鎖拉頭，可以固定拉頭的位置，所以拉頭在移動的時候是不動的。
-            </p>
-        </div>
+            <div class="detailDetail">
+                <p>
+                    這是一個皮革休閒系列“PORTER ALOOF”，奢華地使用輕盈舒適的小牛皮。
+                    <br><br>
+                    使用優質小牛皮的簡單設計，無論年齡大小，都可以長時間使用。
+                    <br><br>
+                    使用的小腿皮下脂肪少，富含穀物，具有彈性。6個月以內的小牛皮體毛很少，毛孔也不明顯，所以表面紋理細膩豐滿。
+                    <br><br>
+                    皮製品的包覆通常採用與主體相同的材質，但本系列採用尼龍膠帶，具有視覺上的收緊效果。
+                    <br><br>
+                    通過將褶襉放在前面，它被用作設計重點。為了最大限度地發揮包包本身的輕盈感，一些單品使用塑料件來提升休閒氣息。
+                    <br><br>
+                    拉鍊拉頭採用半自動鎖拉頭，可以固定拉頭的位置，所以拉頭在移動的時候是不動的。
+                </p>
+            </div>
 
-        <div class="detailsmallPicBtn">
-            <a href="">加價購</a>
-            <a href="">滿額贈</a>
-        </div>
-        <div class="detailsmallpic">
-            <div>
-                <a href=""><img src="./img/shopShoulderbag6.png" alt=""></a>
+            <div class="detailsmallPicBtn">
+                <a href="">加價購</a>
+                <a href="">滿額贈</a>
             </div>
-            <div>
-                <a href=""><img src="./img/shopBag9.png" alt=""></a>
-            </div>
-            <div>
-                <a href=""><img src="./img/shopWallet6.png" alt=""></a>
-            </div>
-            <div>
-                <a href=""><img src="./img/shopBriefcase6.png" alt=""></a>
-            </div>
-            <div>
-                <a href=""><img src="./img/shopShoulderbag7.png" alt=""></a>
+            <div class="detailsmallpic">
+                <div v-for="item in detailsmallpic">
+                    <a href=""><img :src='item' alt=""></a>
+                </div>
             </div>
         </div>
     </div>
@@ -120,10 +114,57 @@
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
+
+
+
+        const { createApp } = Vue
+
+        createApp({
+            data() {
+                return {
+                    detailsmallpic: [
+                        "./img/shopShoulderbag5.png",
+                        "./img/shopBag1.png",
+                        "./img/shopWallet6.png",
+                        "./img/shopBriefcase6.png",
+                        "./img/shopShoulderbag7.png"
+                    ],
+                    detailpic: [
+                        "./img/detailpic2.png",
+                        "./img/detailpic3.png",
+                        "./img/detailpic4.png",
+                        "./img/detailpic5.png",
+
+                    ],
+                    detailtype: [
+                        '＃搬運工',
+                        '＃雙肩包',
+                        '＃黑色',
+                        '#鼠尾草',
+                    ],
+
+                }
+            }
+        }).mount('#app')
+
         document.getElementById('add').addEventListener('click', () => {
             swal("已加入購物車");
         });
 
+
+        $(document).ready(function () {
+            $("#heart").click(function () {
+                if ($("#heart").hasClass("liked")) {
+                    $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+                    $("#heart").removeClass("liked");
+                    swal("已取消收藏");
+                } else {
+                    $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+                    $("#heart").addClass("liked");
+                    swal("已加入收藏");
+                }
+            });
+        });
     </script>
 </body>
 

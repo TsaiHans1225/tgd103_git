@@ -12,7 +12,6 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="./vue.js"></script>
     <title>ShiBaInu</title>
 </head>
@@ -29,7 +28,8 @@
             <nav class="breadcrumb-group">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item" aria-current="page">單肩包</li>
+                    <li class="breadcrumb-item"><a href="./shopBag.html">配件</a></li>
+                    <li class="breadcrumb-item" aria-current="page">全部配件</li>
                 </ol>
             </nav>
             <div class="shop-title">
@@ -40,7 +40,7 @@
             <div class="shop-all">
                 <div class="shop-menu">
                     <ul>
-                        <li style="background-color: #717659;;color: #fff;">{{title}}系列</li>
+                        <li  style="background-color: #c3c3c3;color: #fff;">{{title}}系列</li>
                         <li v-for="list in menu">{{list}}</li>
                     </ul>
                 </div>
@@ -95,122 +95,119 @@
             data() {
                 return {
                     message: 'Hello Vue!',
-                    title:'經典',
-                    banner: "./img/2000/slingbag.jpg",
+                    banner: "./img/2000/accessories.jpg",
+                    title: '配件',
                     product: [
                         {
                             detail: './detailBag.html',
-                            name: 'PX TANKER',
-                            imgSrc: "./img/shopShoulderbag1.png",
-                            type:'DUKE-X',
-                            price: 6650,
+                            name: 'PORTER SNACK PACK',
+                            imgSrc: "./img/shopAccessories1.png",
+                            type:'酒瓶袋',
+                            price: 17050,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER WILLOW',
-                            imgSrc: "./img/shopShoulderbag2.png",
-                            type:'HARDY',
-                            price: 30250,
+                            name: 'PORTER BOOTH PACK',
+                            imgSrc:"./img/shopAccessories2.png",
+                            type:'名片夾',
+                            price: 35200,
+                            new:'新品',
+                            
+                        },
+                        {
+                            detail: './detailBag.html',
+                            name: 'PORTER SMOKY',
+                            imgSrc:"./img/shopAccessories3.png",
+                            type:'腰掛包',
+                            price: 26950,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SENSES',
-                            imgSrc: "./img/shopShoulderbag3.png",
-                            type:'MORI',
-                            price: 26180,
+                            name: 'PORTER LIFT',
+                            imgSrc:"./img/shopAccessories4.png",
+                            type:'證件套',
+                            price: 47300,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER CISCO',
-                            imgSrc: "./img/shopShoulderbag4.png",
-                            type:'LUXY',
-                            price: 29700,
+                            name: 'PORTER SNACK PACK',
+                            imgSrc:"./img/shopAccessories5.png",
+                            type:'鑰匙包',
+                            price: 17050,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PX TANKER',
-                            imgSrc: "./img/shopShoulderbag5.png",
-                            type:'SPIRIT',
-                            price: 6650,
+                            name: 'PORTER SNACK PACK',
+                            imgSrc:"./img/shopAccessories6.png",
+                            type:'頸掛小袋',
+                            price: 35200,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER WILLOW',
-                            imgSrc: "./img/shopShoulderbag6.png",
-                            type:'BEND',
-                            price: 30250,
+                            name: 'PORTER SMOKY',
+                            imgSrc:"./img/shopAccessories7.png",
+                            type:'頸掛小袋',
+                            price: 26950,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SENSES',
-                            imgSrc: "./img/shopShoulderbag7.png",
-                            type:'LOGIC',
-                            price: 26180,
+                            name: 'PORTER LIFT',
+                            imgSrc:"./img/shopAccessories8.png",
+                            type:'名片夾',
+                            price: 47300,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER CISCO',
-                            imgSrc: "./img/shopShoulderbag8.png",
-                            type:'LOFTY',
-                            price: 29700,
+                            name: 'PORTER SNACK PACK',
+                            imgSrc:"./img/shopAccessories9.png",
+                            type:'證件套',
+                            price: 17050,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PX TANKER',
-                            imgSrc: "./img/shopShoulderbag9.png",
-                            type:'NEW MELODY',
-                            price: 6650,
+                            name: 'PORTER BOOTH PACK',
+                            imgSrc: "./img/shopAccessories10.png",
+                            type:'電腦包',
+                            price: 35200,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER WILLOW',
-                            imgSrc: "./img/shopShoulderbag10.png",
-                            type:'PUFF',
-                            price: 30250,
+                            name: 'PORTER SMOKY',
+                            imgSrc: "./img/shopAccessories11.png",
+                            type:'名片夾',
+                            price: 26950,
                             new:'新品',
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SENSES',
-                            imgSrc: "./img/shopShoulderbag11.png",
-                            type:'ULTRA',
-                            price: 26180,
-                            new:'新品',
-                        },
-                        {
-                            detail: './detailBag.html',
-                            name: 'PORTER CISCO',
-                            imgSrc: "./img/shopShoulderbag12.png",
-                            type:'SASH',
-                            price: 29700,
+                            name: 'PORTER LIFT',
+                            imgSrc: "./img/shopAccessories12.png",
+                            type:'酒瓶袋',
+                            price: 47300,
                             new:'新品',
                         }
                     ],
-                    show1: true,
-                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH'],
+                    menu: ['酒瓶袋', '腰掛包', '頸掛小袋', '證件套', '電腦包', '鑰匙包', '名片夾'],
                 }
             },
             methods: {
-                prompt() {
-                    // alert('快來看這裡！我是新訊息！');
-                    if (this.show1 == false) {
-                        this.show1 = true
-                    } else {
-                        this.show1 = false;
-                    }
-                },
-            }
-        }).mount('#app')
+
+            },
+
+        }
+        ).mount('#app')
+
     </script>
+
 </body>
 
 </html>

@@ -27,7 +27,7 @@
         <div class="main">
             <div class="wrapper">
                 <div class="slideshow-container">
-                    <a href="./shopNewproduct.html">
+                    <!-- <a href="./shopNewproduct.html">
                         <div class="mySlides fade">
                             <img src="./img/2000/2000x800-2.png" alt="">
                         </div>
@@ -51,12 +51,12 @@
                         <div class="mySlides fade">
                             <img src="./img/2000/2000x800-3.png" alt="">
                         </div>
-                    </a>
-                    <!-- <a :href="carousel.href" v-for="carousel in carousels">
+                    </a> -->
+                    <a :href="carousel.href" v-for="carousel in carousels">
                         <div class="mySlides fade">
                             <img :src="carousel.src" alt="">
                         </div>
-                    </a> -->
+                    </a>
                     <!-- Next and previous buttons -->
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -80,7 +80,7 @@
 
 
         <div class="bot">
-            
+
             <div class="card" v-for="card in bot_cards">
                 <div class="card-group" style="width: 100%;">
                     <div class="card-img">
@@ -102,45 +102,9 @@
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
-
-
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        window.setInterval(function () {
-            plusSlides(1)
-        }, 10000)
-
     </script>
     <script>
         const { createApp } = Vue
-
         createApp({
             data() {
                 return {
@@ -173,7 +137,7 @@
                             src: "./img/index4.jpg"
                         },
                         {
-                            href: "./shopBriefcase.html",
+                            href: "./shopAccessories.html",
                             src: "./img/index2.jpg"
                         },
                         {
@@ -181,7 +145,7 @@
                             src: "./img/index1.jpg"
                         },
                         {
-                            href: "./shopBriefcase.html",
+                            href: "./shopshopAccessories.html",
                             src: "./img/index6.jpg"
                         },
                         {
@@ -207,15 +171,15 @@
                             img: "./img/indexbriefcase.png",
                         },
                         {
-                            title: '肩背包',
+                            title: '配件',
                             content: `&emsp;&emsp;這是一個皮革休閒系列“PORTER CISCO”，您可以在其中享受皮革的原始質地，如何使用它，以及它如何隨環境隨時間變化。
                             <br>
                             <br>
                             它的特點是圓形，利用材料的柔軟性，主皮足夠柔軟，可以用一般的植物單寧鞣製來表現。在鞣製階段，生皮會比平時更用特殊的油浸泡，並通過加熱去除油，使皮革收縮，從而使皮革既豐滿、柔軟又輕盈。越用越有質感，可以享受自己的老化。
                            
                             肩帶的底部由不同於主體的堅硬耐用的皮革製成，因此您可以享受皮革紋理的對比。內部由堅固的滌綸面料製成，以防止面料磨損，襯料用粗白線縫製，使包看起來美觀並突出設計。`,
-                            href: "./shopShoulderbag.html",
-                            img: "./img/indexshoulderbag.png",
+                            href: "./shopAccessories.html",
+                            img: "./img/shopAccessories9.png",
                         },
                         {
                             title: '皮夾',
@@ -242,6 +206,40 @@
                 }
             }
         }).mount('#app')
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        window.setInterval(function () {
+            plusSlides(1)
+        }, 10000)
+
     </script>
 </body>
 

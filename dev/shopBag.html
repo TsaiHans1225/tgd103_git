@@ -37,11 +37,10 @@
                     {{title}}
                 </h1>
             </div>
-            <button @click='changeType'>123</button>
             <div class="shop-all">
                 <div class="shop-menu">
                     <ul>
-                        <li><a href="#"> {{title}}系列</a></li>
+                        <li>{{title}}系列</li>
                         <li v-for="list in menu">{{list}}</li>
                     </ul>
                 </div>
@@ -49,8 +48,16 @@
                     <div class="shop-card" v-for="(item,index) in product">
                         <a href="./detailBag.html">
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
-                            <h1>{{item.name}}</h1>
-                            <h3>NT$ {{item.price}}</h3>
+                            <div class="shop-card-group">
+                                <div class="shop-card-div">
+                                    <h1>{{item.name}}</h1>
+                                    <span>{{item.new}}</span>
+                                </div>
+                                <div>
+                                    <h3>{{item.type}}</h3>
+                                    <h3>NT$ {{item.price}}</h3>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -95,110 +102,107 @@
                             detail: './detailBag.html',
                             name: 'PORTER SNACK PACK',
                             imgSrc: "./img/shopBag1.png",
+                            type:'托特包',
                             price: 17050,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER BOOTH PACK',
                             imgSrc: "./img/shopBag2.png",
+                            type:'腰包',
                             price: 35200,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SMOKY',
                             imgSrc: "./img/shopBag3.png",
+                            type:'後背包',
                             price: 26950,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER LIFT',
                             imgSrc: "./img/shopBag4.png",
+                            type:'手提包',
                             price: 47300,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SNACK PACK',
                             imgSrc: "./img/shopBag5.png",
+                            type:'水桶包',
                             price: 17050,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SNACK PACK',
                             imgSrc: "./img/shopBag6.png",
+                            type:'斜背包',
                             price: 35200,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SMOKY',
                             imgSrc: "./img/shopBag7.png",
+                            type:'郵差包',
                             price: 26950,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER LIFT',
                             imgSrc: "./img/shopBag8.png",
+                            type:'斜背包',
                             price: 47300,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SNACK PACK',
                             imgSrc: "./img/shopBag9.png",
+                            type:'水桶包',
                             price: 17050,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER BOOTH PACK',
                             imgSrc: "./img/shopBag10.png",
+                            type:'手提包',
                             price: 35200,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SMOKY',
                             imgSrc: "./img/shopBag11.png",
+                            type:'後背包',
                             price: 26950,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER LIFT',
                             imgSrc: "./img/shopBag12.png",
+                            type:'腰包',
                             price: 47300,
+                            new:'新品',
                         }
                     ],
                     show1: true,
-                    menu: ['DUKE-X', 'HARDY', 'MORI', 'LUXY', 'SPIRIT', 'BEND', 'LOGIC', 'LOFTY', 'NEW MELODY', 'PUFF', 'ULTRA', 'SASH', 'TUX'],
-                    sortType: "price",
-                    isReverse: false,
+                    menu: ['托特包', '腰包', '後背包', '手提包', '水桶包', '斜背包', '郵差包'],
                 }
             },
             methods: {
-                prompt() {
-                    // alert('快來看這裡！我是新訊息！');
-                    if (this.show1 == false) {
-                        this.show1 = true
-                    } else {
-                        this.show1 = false;
-                    }
-                },
-                changeType: function (type) {
-                    var vm = this;
-                    if (vm.sortType == type) {
-                        vm.isReverse = !vm.isReverse;
-                    } else {
-                        vm.isReverse = false;
-                    }
-                    vm.sortType = type;
-                }
+
             },
-            computed: {
-                sortData() {
-                    var vm = this;
-                    var type = vm.sortType;
-                    return vm.data.sort(function (a, b) {
-                        if (vm.isReverse) return b[type] - a[type];
-                        else return a[type] - b[type];
-                    });
-                }
-            }
+
         }
         ).mount('#app')
 

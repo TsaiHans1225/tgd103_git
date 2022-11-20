@@ -41,10 +41,25 @@
             </div>
         </span>
         <span class="rwd-list">
-            <a href="./shopShoulderbag.html">單肩包</a>
+            <a href="./shopShoulderbag.html">經典系列</a>
         </span>
-        <span class="rwd-list">
-            <a href="./shopBriefcase.html">公事包</a>
+        <span class="rwd-list" id="rwd-list2">
+            <div class="rwd-mark">
+                <h2>配件</h2> <span class="fa"></span>
+            </div>
+            <div class="rwd-navbar-wrap">
+                <div class="rwd-navbar-category">
+                    <ol>
+                        <li><a href="./shopAccessories.html">酒瓶袋</a></li>
+                        <li><a href="./shopAccessories.html">腰掛包</a></li>
+                        <li><a href="./shopAccessories.html">頸掛小袋</a></li>
+                        <li><a href="./shopAccessories.html">證件套</a></li>
+                        <li><a href="./shopAccessories.html">電腦包</a></li>
+                        <li><a href="./shopAccessories.html">鑰匙包</a></li>
+                        <li><a href="./shopAccessories.html">名片夾</a></li>
+                    </ol>
+                </div>
+            </div>
         </span>
     </div>
 
@@ -66,16 +81,16 @@
                                 <li><a href="#">手提包</a></li>
                                 <li><a href="#">水桶包</a></li>
                                 <li><a href="#">斜背包</a></li>
+                                <li><a href="#">郵差包</a></li>
                                 <img src="./img/2000/2000x800-2.png" alt="">
                                 <img src="./img/2000/2000x800-5.png" alt="">
-                                <li><a href="#">郵差包</a></li>
                             </ol>
                         </div>
                     </div>
                 </span>
             </li>
             <li>
-                <span class="spam">
+                <span>
                     <a style="font-size:20px;" href="./shopWallet.html" class="fixedA">皮夾</a>
                     <div class="header-navbar-wrap">
                         <div class="header-navbar-category">
@@ -91,8 +106,28 @@
                     </div>
                 </span>
             </li>
-            <li><a style="font-size:20px;" href="./shopShoulderbag.html" class="fixedA">單肩包</a></li>
-            <li><a style="font-size:20px;" href="./shopBriefcase.html" class="fixedA">公事包</a></li>
+            <li><a style="font-size:20px;" href="./shopShoulderbag.html" class="fixedA">經典系列</a></li>
+            <li>
+                <span>
+                    <a style="font-size:20px;" href="./shopAccessories.html" class="fixedA">配件</a>
+                    <div class="header-navbar-wrap">
+                        <div class="header-navbar-category">
+                            <ol>
+                                <li><a href="./shopAccessories.html">全部配件</a></li>
+                                <li><a href="#">酒瓶袋</a></li>
+                                <li><a href="#">腰掛包</a></li>
+                                <li><a href="#">頸掛小袋</a></li>
+                                <li><a href="#">證件套</a></li>
+                                <li><a href="#">電腦包</a></li>
+                                <li><a href="#">鑰匙包</a></li>
+                                <li><a href="#">名片夾</a></li>
+                                <img src="./img/2000/Accessories2.jpg" alt="">
+                                <img src="./img/2000/2000x800-4.png" alt="">
+                            </ol>
+                        </div>
+                    </div>
+                </span>
+            </li>
         </ul>
 
         <span class="logmacbtn">
@@ -107,7 +142,8 @@
                     <ol>
                         <li><a class="btnHover" style="background-color: #717659 ;font-size: 15px;"
                                 href="./login.html">登入會員</a></li>
-                        <li><a class="btnHover" style="background-color: #002742;font-size: 15px;" href="./shopNewproduct.html">會員中心</a>
+                        <li><a class="btnHover" style="background-color: #002742;font-size: 15px;"
+                                href="./member.html">會員中心</a>
                         </li>
                         <li><a class="btnHover" style="background-color:#ff9148;font-size: 15px;"
                                 href="./checkout.html">購物車</a></li>
@@ -136,12 +172,15 @@
     })
     let rwdNav0 = document.getElementsByClassName('rwd-navbar-wrap')[0];
     let rwdNav1 = document.getElementsByClassName('rwd-navbar-wrap')[1];
+    let rwdNav2 = document.getElementsByClassName('rwd-navbar-wrap')[2];
     let rwd_list0 = document.getElementById('rwd-list0');
     let rwd_list1 = document.getElementById('rwd-list1');
+    let rwd_list2 = document.getElementById('rwd-list2');
     let rwd_mark = document.getElementsByClassName('rwd-mark')[0];
     rwd_list0.addEventListener('click', () => {
         if (rwdNav0.style.display == '') {
-            rwdNav1.style.display = '';
+            rwdNav1.style.display = ''
+            rwdNav2.style.display = ''
             rwdNav0.style.display = 'flex';
 
         }
@@ -153,12 +192,27 @@
 
     rwd_list1.addEventListener('click', () => {
         if (rwdNav1.style.display == '') {
-            rwdNav0.style.display = '';
+            rwdNav0.style.display = ''
+            rwdNav2.style.display = ''
             rwdNav1.style.display = 'flex';
         }
         else {
             rwdNav1.style.display = '';
         }
-    })
+    }
+    )
+
+    rwd_list2.addEventListener('click', () => {
+        if (rwdNav2.style.display == '') {
+            rwdNav0.style.display = ''
+            rwdNav1.style.display = ''
+            rwdNav2.style.display = 'flex';
+        }
+        else {
+            rwdNav2.style.display = '';
+        }
+    }
+
+    )
 
 </script>

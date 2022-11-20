@@ -67,12 +67,12 @@ body {
   text-align: center;
   justify-content: center;
   writing-mode: vertical-lr;
+  font-weight: 600;
 }
 .btnHover:hover {
   opacity: 0.7;
 }
 .header-navbar-position ul > li:first-child a {
-  color: #000000;
   font-weight: 600;
   width: 100%;
   text-align: center;
@@ -116,7 +116,7 @@ body {
 }
 .header-navbar-category img {
   width: 30%;
-  float: right;
+  float:left;
   margin: 3px;
 }
 .header-navbar-category a {
@@ -617,7 +617,7 @@ a:active {
   align-items: center;
   max-width: 1920px;
   /* width: 50%; */
-  text-align: center;
+  text-align: left;
 }
 
 .shop-title {
@@ -644,26 +644,40 @@ a:active {
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  color: #fff;
 }
 .shop-menu li {
   font-size: 20px;
   line-height: 40px;
+  border-radius: 30px;
 }
 .shop-menu li:hover {
   background-color: #c3c3c3;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .shop-card {
-  /* width: 30%; */
   margin: 10px;
   border: 0.5px solid rgba(0, 0, 0, 0.081);
 }
 
+.shop-card-div{
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+
+}
+.shop-card-div span,.detailText span{
+  background-color: #a11;
+  border-radius: 3px;
+  padding: 5px;
+  align-items: center;
+  height: 40%;
+  color: #fff;
+}
 .shop-card img {
   width: 250px;
   transition: all 0.7s ease-out;
+  
 }
 
 .shop-card img:hover {
@@ -673,13 +687,14 @@ a:active {
 .shop-card h1 {
   margin: 10px 0;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
   color: #000000;
 }
 
 .shop-card h3 {
-  font-size: 20px;
+  font-size: 16px;
   color: #000000;
+  text-align: left;
 }
 
 /* ------------------detailBag------------- */
@@ -706,7 +721,7 @@ a:active {
 
 .detailBigPic img {
   border-radius: 10px;
-  width: 70%;
+  width: 100%;
 }
 
 .detailText {
@@ -717,11 +732,16 @@ a:active {
   width: 30%;
   margin-left: 100px;
 }
-
+.detailText  select{
+  width: 18%;
+  margin: 20px 0 ;
+  text-align: center;
+  border-radius: 10px;
+}
 .detailText h2 {
   font-size: 35px;
   font-weight: 600;
-  margin: 40px 0;
+  margin: 40px 20px;
 }
 
 .detailText h3 {
@@ -739,7 +759,7 @@ a:active {
 }
 
 .detailText h5 {
-  width: 200px;
+  width: auto;
   font-size: 20px;
   line-height: 20px;
   margin-top: 10px;
@@ -780,15 +800,16 @@ a:active {
 
 .detailmidPic {
   display: flex;
-  flex-direction: column;
-  width: 17%;
+  flex-direction: row;
+  width: 20%;
   height: auto;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10%;
 }
 
 .detailmidPic img {
-  width: 30%;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: 50px;
   transition: 0.3s;
@@ -857,35 +878,30 @@ a:active {
   background-color: #002742;
   line-height: 25px;
 }
+.detailText-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detailText-heart{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.detailText-heart .fa{
+  font-size: 30px;
 
-.colorBtn button {
-  margin: 15px 15px 0 0;
 }
 
-.colorBtn > button:first-child {
-  border-radius: 100%;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(255, 234, 0);
+.fa-heart-o {
+  color: #a11;
+  cursor: pointer;
 }
 
-.colorBtn > button:nth-child(2) {
-  border-radius: 100%;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(158, 18, 18);
+.fa-heart {
+  color: #a11;
+  cursor: pointer;
 }
-
-.colorBtn > button:nth-child(3) {
-  border-radius: 100%;
-  border: 0;
-  width: 20px;
-  height: 20px;
-  background-color: rgb(0, 89, 255);
-}
-
 /* -------------------checkout-------------------------- */
 .threeBtn {
   display: flex;
@@ -1443,7 +1459,7 @@ a:active {
   display: inline-block;
   width: 80px;
   font-size: 15px;
-  background-color: #4dcd02;
+  background-color: #a11;
   margin-top: 10px;
   color: #fff;
   padding: 5px 5px;
@@ -1493,9 +1509,6 @@ a:active {
 .member-t1 h1 {
   margin-left: 100px;
 }
-.member-t1 h1: {
-  margin-left: 100px;
-}
 
 .member-title h1 {
   width: auto;
@@ -1513,6 +1526,14 @@ a:active {
 .member-a a:hover {
   background-color: #fff;
 }
+
+
+
+
+
+
+
+
 
 /* ---------------RWD---------------------- */
 @media screen and (max-width: 414px) {
@@ -1581,7 +1602,7 @@ a:active {
     transition: all 0.3s;
   }
 
-  span.fa::after {
+  .rwd-mark span.fa::after {
     content: "▼";
     padding: 5px;
     font-size: 15px;
@@ -1722,19 +1743,16 @@ a:active {
   .shop-menu {
     font-size: 20px;
     line-height: 40px;
-    /* display: none; */
+    display: none;
     width: 100%;
     float: left;
   }
-  .shop-list {
-    margin: auto;
-    justify-content: center;
-  }
+  
   .shop-card {
-    width: 150px;
+    width: 40%;
   }
   .shop-card img {
-    width: 70%;
+    width:100%;
   }
   .shop-title {
     margin-top: 25px;
@@ -1743,7 +1761,20 @@ a:active {
     font-size: 10px;
   }
   .shop-card h3 {
-    font-size: 10px;
+    font-size: 17px;
+  }
+  .shop-card-div span{
+    background-color: #a11;
+    border-radius: 3px;
+    padding: 1px;
+    align-items: center;
+    height: 40%;
+    color: #fff;
+    width: 10%;
+  }
+
+  .shop-card-div h1{
+    font-size: 5px;
   }
   .rwd-shop-banner {
     background-image: url(../img/2000/2000x800-3.png);
@@ -2001,11 +2032,60 @@ a:active {
   /* --------------rwd-detailBag----------------------- */
   .detailGroup {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    width: 100%;
   }
+  .detailText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    margin-left: 0px;
+    margin-top: 50px;
 }
+.detailBigPic{
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.shop-menu li:first-child {
+  display: block;
+  background-color: #ff9148;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+}
+.shop-menu li{
+  border-radius: 0;
+  border-bottom: 1px solid #bcbcbc;
+}
+.collectionH h1 {
+  font-size: 20px;
+  margin-top: 8px;
+}
+.detailBtn{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.detailBtn a{
+  width: 100%;
+}
+
+
+
+
+
+}
+
+
+/* -------------------other----------------------- */
 @media screen and (max-width: 1180px) {
   .fixedcheckoutField {
     background-color: #ffffff;
@@ -2051,7 +2131,7 @@ a:active {
   }
   .fixedcheckoutField {
     background-color: #ffffff;
-    width: 100%;
+    width: 90%;
     height: auto;
     position: relative;
     top: 0px;

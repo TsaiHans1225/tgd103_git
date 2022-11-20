@@ -50,8 +50,16 @@
                     <div class="shop-card" v-for="(item,index) in product">
                         <a href="./detailBag.html">
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
-                            <h1>{{item.name}}</h1>
-                            <h3>NT$ {{item.price}}</h3>
+                            <div class="shop-card-group">
+                                <div class="shop-card-div">
+                                    <h1>{{item.name}}</h1>
+                                    <span>{{item.new}}</span>
+                                </div>
+                                <div>
+                                    <h3>{{item.type}}</h3>
+                                    <h3>NT$ {{item.price}}</h3>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -96,77 +104,101 @@
                             detail: './detailBag.html',
                             name: 'PORTER SPLENDOR',
                             imgSrc: "./img/shopWallet1.png",
+                            type:'零錢包',
                             price: 45100,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'SHRINK',
                             imgSrc: "./img/shopWallet2.png",
+                            type:'零錢包',
                             price: 6650,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER ENCHASE',
                             imgSrc: "./img/shopWallet3.png",
+                            type:'中/短夾',
                             price: 29700,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER WALL',
                             imgSrc: "./img/shopWallet4.png",
+                            type:'零錢包',
                             price: 11000,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SPLENDOR',
                             imgSrc: "./img/shopWallet5.png",
+                            type:'中/短夾',
                             price: 45100,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'SHRINK',
                             imgSrc: "./img/shopWallet6.png",
+                            type:'中/短夾',
                             price: 6650,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER ENCHASE',
                             imgSrc: "./img/shopWallet7.png",
+                            type:'長夾',
                             price: 29700,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER WALL',
                             imgSrc: "./img/shopWallet8.png",
+                            type:'零錢包',
                             price: 11000,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER SPLENDOR',
                             imgSrc: "./img/shopWallet9.png",
+                            type:'中/短夾',
                             price: 45100,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'NEW HEAT JET BLACK',
                             imgSrc: "./img/shopWallet10.png",
+                            type:'中/短夾',
                             price: 6650,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'PORTER ENCHASE',
                             imgSrc: "./img/shopWallet11.png",
+                            type:'零錢包',
                             price: 29700,
+                            new:'新品',
                         },
                         {
                             detail: './detailBag.html',
                             name: 'SHRINK',
                             imgSrc: "./img/shopWallet12.png",
+                            type:'零錢包',
                             price: 35750,
+                            new:'新品',
                         }
                     ],
                     show1: true,
-                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH','TUX'],
+                    menu:['中/短夾','長夾','零錢包'],
                 }
             },
             methods: {
