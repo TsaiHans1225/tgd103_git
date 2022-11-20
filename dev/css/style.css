@@ -641,14 +641,15 @@ a:active {
 .shop-menu li:first-child {
   display: block;
   background-color: #ff9148;
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: 0 auto;
 }
 .shop-menu li {
   font-size: 20px;
   line-height: 40px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
+  border-bottom: 1px solid #c3c3c3;
 }
 .shop-menu li:hover {
   background-color: #c3c3c3;
@@ -909,7 +910,7 @@ a:active {
   border-bottom: #000 3px solid;
   justify-content: flex-start;
   align-items: center;
-  margin: 50px;
+  margin: 50px 0;
   width: 100%;
 }
 
@@ -1007,9 +1008,7 @@ a:active {
   font-size: 15px;
 }
 
-.checkoutText:last-child span:last-child {
-  background-color: #002742;
-}
+
 
 .checkoutText input {
   width: 5%;
@@ -1120,6 +1119,8 @@ a:active {
   background-color: #000;
   opacity: 0.5;
 }
+
+
 
 /* -------------------collection-------------------------- */
 .collection {
@@ -1791,7 +1792,7 @@ a:active {
     justify-content: center;
     align-items: center;
     margin: 10px 0 20px 0;
-    width: 100%;
+    width:100%;
   }
   .threeBtn a:first-child {
     background-color: #000;

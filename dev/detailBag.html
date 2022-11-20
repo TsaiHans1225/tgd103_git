@@ -12,9 +12,8 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://use.fontawesome.com/0206006232.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
-    </link>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./vue.js"></script>
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
     <title>ShiBaInu</title>
@@ -147,23 +146,34 @@
             }
         }).mount('#app')
 
-        document.getElementById('add').addEventListener('click', () => {
-            swal("已加入購物車");
-        });
-
-
         $(document).ready(function () {
             $("#heart").click(function () {
                 if ($("#heart").hasClass("liked")) {
                     $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
                     $("#heart").removeClass("liked");
-                    swal("已取消收藏");
+                    Swal.fire('已取消收藏')
                 } else {
                     $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
                     $("#heart").addClass("liked");
-                    swal("已加入收藏");
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: '已加入收藏',
+                        showConfirmButton: false,
+                        timer: 1000
+                    })
                 }
             });
+
+            $('#add').click(function () {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: '已加入購物車',
+                    showConfirmButton: false,
+                    timer: 1000
+                })
+            })
         });
     </script>
 </body>

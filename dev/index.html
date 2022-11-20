@@ -27,31 +27,6 @@
         <div class="main">
             <div class="wrapper">
                 <div class="slideshow-container">
-                    <!-- <a href="./shopNewproduct.html">
-                        <div class="mySlides fade">
-                            <img src="./img/2000/2000x800-2.png" alt="">
-                        </div>
-                    </a>
-                    <a href="./shopNewproduct.html">
-                        <div class="mySlides fade">
-                            <img src="./img/2000/2000x800-1.png" alt="">
-                        </div>
-                    </a>
-                    <a href="./shopNewproduct.html">
-                        <div class="mySlides fade">
-                            <img src="./img/2000/2000x800-5.png" alt="">
-                        </div>
-                    </a>
-                    <a href="./shopNewproduct.html">
-                        <div class="mySlides fade">
-                            <img src="./img/2000/2000x800-4.png" alt="">
-                        </div>
-                    </a>
-                    <a href="./shopNewproduct.html">
-                        <div class="mySlides fade">
-                            <img src="./img/2000/2000x800-3.png" alt="">
-                        </div>
-                    </a> -->
                     <a :href="carousel.href" v-for="carousel in carousels">
                         <div class="mySlides fade">
                             <img :src="carousel.src" alt="">
@@ -159,7 +134,7 @@
                     ],
                     bot_cards: [
                         {
-                            title: '公事包',
+                            title: '經典系列',
                             content: `&emsp;&emsp;“HEAT”系列結合了兩種不同的材料，具有出色的耐用性和防水性，並具有堅固而時尚的設計。
                             <br>
                             自 2001 A/W 系列發布以來，我們增加了與當時的生活方式相匹配的商品，並擁有豐富的產品陣容，從商務包到小商品，都能被廣泛的人使用。
@@ -167,7 +142,7 @@
                             主要材料是日本製造的壓敏尼龍，用66尼龍線編織而成，也用於汽車安全氣囊和防彈背心，具有優異的耐熱性、耐磨性和撕裂強度。
                             <br>
                             一些部件由高度防水的篷布織物製成，用作工業材料。雖然是單一色調的黑色，但通過將不同質地的面料組合在​​一起，具有對比鮮明的時尚設計。`,
-                            href: "./shopBriefcase.html",
+                            href:"./shopShoulderbag.html",
                             img: "./img/indexbriefcase.png",
                         },
                         {
