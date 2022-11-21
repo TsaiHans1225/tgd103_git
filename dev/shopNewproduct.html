@@ -22,6 +22,9 @@
     </header>
     <!-- ------------------------ -->
     <div id="app">
+        <div class="rwd-shop-banner">
+            <img :src=banner alt="">
+        </div>
         <div class="main">
             <nav class="breadcrumb-group">
                 <ol class="breadcrumb">
@@ -34,20 +37,27 @@
                     {{title}}
                 </h1>
             </div>
-            <button @:click="prompt">▼</button>
             <div class="shop-all">
-                <div class="shop-menu" v-show="show1">
+                <div class="shop-menu">
                     <ul>
-                        <li><a href="#"> {{title}}</a></li>
-                        <li v-for="list in menu">{{list}}</li>
+                        <li @click=filter1 style="background-color: #bc965c;color: #fff;">全部{{title}}</li>
+                        <li v-for="(list,index) in menu" @click=filter0(list,index)>{{list}}</li>
                     </ul>
                 </div>
                 <div class="shop-list">
-                    <div class="shop-card" v-for="(item,index) in product">
+                    <div class="shop-card" v-for="(item,index) in product" :id=index style="display: block;">
                         <a href="./detailBag.html">
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
-                            <h1>{{item.name}}</h1>
-                            <h3>NT$ {{item.price}}</h3>
+                            <div class="shop-card-group">
+                                <div class="shop-card-div">
+                                    <h1>{{item.name}}</h1>
+                                    <span>{{item.new}}</span>
+                                </div>
+                                <div>
+                                    <h3>{{item.type}}</h3>
+                                    <h3>NT$ {{item.price}}</h3>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -70,7 +80,6 @@
                 </ul>
             </nav>
         </div>
-
     </div>
     <!-- ------------------------ -->
     <footer class="footerpage">
@@ -86,99 +95,147 @@
             data() {
                 return {
                     message: 'Hello Vue!',
-                    title:'新品上市',
+                    title:'新品',
+                    banner: "./img/2000/2000x800-4.png",
                     product: [
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SNACK PACK',
-                            imgSrc: "./img/shopBag1.png",
-                            price: 17050,
+                            name: 'PX TANKER',
+                            imgSrc: "./img/shopShoulderbag1.png",
+                            type:'DUKE-X',
+                            price: 6650,
+                            new:'新品',
+                            pid: 0,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER BOOTH PACK',
-                            imgSrc: "./img/shopBag2.png",
-                            price: 35200,
+                            name: 'PORTER WILLOW',
+                            imgSrc: "./img/shopShoulderbag2.png",
+                            type:'HARDY',
+                            price: 30250,
+                            new:'新品',
+                            pid:1,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SMOKY',
-                            imgSrc: "./img/shopBag3.png",
-                            price: 26950,
+                            name: 'PORTER SENSES',
+                            imgSrc: "./img/shopShoulderbag3.png",
+                            type:'MORI',
+                            price: 26180,
+                            new:'新品',
+                            pid:2,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER LIFT',
-                            imgSrc: "./img/shopBag4.png",
-                            price: 47300,
+                            name: 'PORTER CISCO',
+                            imgSrc: "./img/shopShoulderbag4.png",
+                            type:'LUXY',
+                            price: 29700,
+                            new:'新品',
+                            pid:3,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SNACK PACK',
-                            imgSrc: "./img/shopBag5.png",
-                            price: 17050,
+                            name: 'PX TANKER',
+                            imgSrc: "./img/shopShoulderbag5.png",
+                            type:'SPIRIT',
+                            price: 6650,
+                            new:'新品',
+                            pid:4,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SNACK PACK',
-                            imgSrc: "./img/shopBag6.png",
-                            price: 35200,
+                            name: 'PORTER WILLOW',
+                            imgSrc: "./img/shopShoulderbag6.png",
+                            type:'DUKE-X',
+                            price: 30250,
+                            new:'新品',
+                            pid:5,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SMOKY',
-                            imgSrc: "./img/shopBag7.png",
-                            price: 26950,
+                            name: 'PORTER SENSES',
+                            imgSrc: "./img/shopShoulderbag7.png",
+                            type:'HARDY',
+                            price: 26180,
+                            new:'新品',
+                            pid:6,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER LIFT',
-                            imgSrc: "./img/shopBag8.png",
-                            price: 47300,
+                            name: 'PORTER CISCO',
+                            imgSrc: "./img/shopShoulderbag8.png",
+                            type:'MORI',
+                            price: 29700,
+                            new:'新品',
+                            pid:7,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SNACK PACK',
-                            imgSrc: "./img/shopBag9.png",
-                            price: 17050,
+                            name: 'PX TANKER',
+                            imgSrc: "./img/shopShoulderbag9.png",
+                            type:'LUXY',
+                            price: 6650,
+                            new:'新品',
+                            pid:8,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER BOOTH PACK',
-                            imgSrc: "./img/shopBag10.png",
-                            price: 35200,
+                            name: 'PORTER WILLOW',
+                            imgSrc: "./img/shopShoulderbag10.png",
+                            type:'SPIRIT',
+                            price: 30250,
+                            new:'新品',
+                            pid:9,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER SMOKY',
-                            imgSrc: "./img/shopBag11.png",
-                            price: 26950,
+                            name: 'PORTER SENSES',
+                            imgSrc: "./img/shopShoulderbag11.png",
+                            type:'DUKE-X',
+                            price: 26180,
+                            new:'新品',
+                            pid:10,
                         },
                         {
                             detail: './detailBag.html',
-                            name: 'PORTER LIFT',
-                            imgSrc: "./img/shopBag12.png",
-                            price: 47300,
+                            name: 'PORTER CISCO',
+                            imgSrc: "./img/shopShoulderbag12.png",
+                            type:'HARDY',
+                            price: 29700,
+                            new:'新品',
+                            pid:11,
                         }
                     ],
-                    show1: true,
-                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT','BEND','LOGIC','LOFTY','NEW MELODY','PUFF','ULTRA','SASH','TUX'],
+                    menu:['DUKE-X','HARDY','MORI','LUXY','SPIRIT'],
                 }
             },
             methods: {
-                prompt() {
-                    // alert('快來看這裡！我是新訊息！');
-                    if (this.show1 == false) {
-                        this.show1 = true
-                    } else {
-                        this.show1 = false;
+                filter0(e, index) {
+                    let test = document.getElementsByClassName('shop-card');
+                    // console.log(test);
+                    for (let i = 0; i < test.length; i++) {
+                        test[i].style.display = 'none';
                     }
+
+                    this.product.forEach((t) => {
+                        if (t.type == e) {
+                            let test2 = document.getElementById(t.pid);
+                            console.log(t.pid);
+                            test2.style.display = 'block';
+                        }
+                    });
                 },
-            }
+                filter1() {
+                    let test = document.getElementsByClassName('shop-card');
+                    // console.log(test);
+                    for (let i = 0; i < test.length; i++) {
+                        test[i].style.display = 'block';
+                    }
+                }
+            },
         }).mount('#app')
-
     </script>
-
 </body>
 
 </html>

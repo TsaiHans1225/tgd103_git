@@ -12,6 +12,7 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="./vue.js"></script>
     <title>ShiBaInu</title>
@@ -38,12 +39,13 @@
             <!-- ------------------------ -->
             <div class="collectionField">
                 <div class="collectionTitle">
-                    <h5>商品資訊</h5>
+                    <h4>商品資訊</h4>
                     <h5>顏色</h5>
                     <h5>定價</h5>
+                    <h5></h5>
                 </div>
                 <div class="collectionContent">
-                    <div class="collectionText" v-for="collection in collections">
+                    <div class="collectionText" v-for="(collection,index) in collections" :id=collection.clid>
                         <img :src=collection.src alt="">
                         <div class="collectionH">
                             <h1>{{collection.title}}</h1>
@@ -52,8 +54,8 @@
                         </div>
                         <label for="">{{collection.color}}</label>
                         <label for="">NT$ {{collection.price}}</label>
-                        <i class="fa-solid fa-cart-plus"></i>
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-cart-plus" @click='add1(collection,index)'></i>
+                        <i class="fa-solid fa-trash" @click='delete1(collection, index)'></i>
                     </div>
                 </div>
             </div>
@@ -76,46 +78,85 @@
                     collections: [
                         {
                             src: "./img/shopBag1.png",
-                            title: 'PORTER FLEX',
-                            name: '行李袋',
-                            pno: '11716-00479',
-                            color: '軍綠色',
-                            price: 950
+                            title: 'PORTER SNACK PACK',
+                            name: '托特包',
+                            pno: '11716-00475',
+                            color: '藍色',
+                            price: 17050,
+                            clid: 'clid0',
                         },
                         {
                             src: "./img/shopBag2.png",
-                            title: 'PORTER FLEX',
+                            title: 'PORTER BOOTH PACK',
                             name: '行李袋',
                             pno: '11716-00479',
-                            color: '軍綠色',
-                            price: 650
+                            color: '藍色',
+                            price: 35200,
+                            clid: 'clid1',
                         },
                         {
                             src: "./img/shopBag3.png",
-                            title: 'PORTER FLEX',
+                            title: 'PORTER SMOKY',
                             name: '行李袋',
-                            pno: '11716-00479',
-                            color: '軍綠色',
-                            price: 500
+                            pno: '11716-00478',
+                            color: '棕色',
+                            price: 26950,
+                            clid: 'clid2',
                         },
                         {
                             src: "./img/shopBag4.png",
-                            title: 'PORTER FLEX',
-                            name: '行李袋',
-                            pno: '11716-00479',
+                            title: 'PORTER LIFT',
+                            name: '公事包',
+                            pno: '11716-00477',
                             color: '軍綠色',
-                            price: 150
+                            price: 47300,
+                            clid: 'clid3',
                         },
                         {
                             src: "./img/shopBag5.png",
-                            title: 'PORTER FLEX',
+                            title: 'PORTER SNACK PACK',
                             name: '行李袋',
-                            pno: '11716-00479',
+                            pno: '11716-00471',
                             color: '軍綠色',
-                            price: 600
+                            price: 17050,
+                            clid: 'clid4',
                         }
                     ],
                 }
+            },
+            methods: {
+                delete1(e, r) {
+                    let temp = document.getElementById(r);
+                    // console.log(r);
+                    Swal.fire({
+                        title: '確定移除收藏?',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            Swal.fire(
+                                '已成功移除'
+                            )
+
+                            $(`#clid${r}`).remove();
+                        }
+                    })
+                },
+                add1(e, r) {
+                    // console.log(e.src);
+                    Swal.fire({
+                        imageUrl: e.src,
+                        // icon: 'success',
+                        // text: 'Modal with a custom image.',
+                        title: '成功加入購物車 !',
+                        imageWidth: 100,
+                        imageHeight: 100,
+                        imageAlt: 'Custom image',
+                    })
+                },
             }
         }).mount('#app')
     </script>

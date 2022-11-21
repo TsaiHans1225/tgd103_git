@@ -58,7 +58,7 @@
                 <h3>結帳金額</h3>
                 <h4>NT$ {{prices}}</h4>
                 <div class="fixedcheckoutFieldLastdiv">
-                    <a href="#">送出訂單</a>
+                    <a href="#" @click=tt>送出訂單</a>
                     <a href="./shopBag.html">繼續購物</a>
                 </div>
             </div>
@@ -69,6 +69,7 @@
                     <h5>尺寸/顏色</h5>
                     <h5>定價</h5>
                     <h5>小計</h5>
+                    <h3></h3>
                 </div>
                 <div class="checkoutContent">
                     <div class="checkoutText" v-for="(checkoutText,index) in checkoutTexts" :id=checkoutText.listid>
@@ -262,7 +263,10 @@
                 },
                 delete1(e, r) {
                     let temp = document.getElementById(r);
-                    console.log(r);
+                    // console.log(e.checkoutTexts[r].price);
+                    // console.log(this.prices-e.checkoutTexts[r].subtotal);
+
+                    // console.log(this.prices);
                     Swal.fire({
                         title: '確定刪除?',
 
@@ -276,14 +280,18 @@
                             Swal.fire(
                                 '已成功移除'
                             )
-
+                            this.prices = this.prices - e.checkoutTexts[r].subtotal;
+                            if (this.prices < 0) {
+                                this.prices = 0;
+                            }
                             $(`#listid${r}`).remove();
+
                         }
                     })
                 },
                 change1(e, r) {
                     let temp = document.getElementById(r).value
-                    this.num =  Number(temp)
+                    this.num = Number(temp)
                     e.checkoutTexts[r].subtotal = e.checkoutTexts[r].price * temp;
                     let total = 0;
                     this.checkoutTexts.forEach((e) => {
@@ -294,7 +302,39 @@
                     });
                 },
                 tt() {
-                    console.log(this.num++);
+                    if (this.prices == 0) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: '金額錯誤!',
+                            text: '不可以只買贈品 || 金額不可為0',
+                            footer: '<a href="./shopShoulderbag.html ">繼續購物</a>'
+                        })
+                    }
+                    else {
+                        let timerInterval
+                        Swal.fire({
+                            title: '送出訂單',
+                            html: '<b></b>',
+                            timer: 2000,
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                    b.textContent = Swal.getTimerLeft()
+                                }, 100)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                console.log('OKOK')
+                                // location.href="./shopShoulderbag.html";
+                            }
+                        })
+                    }
                 },
             }
         }).mount('#app')

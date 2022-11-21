@@ -41,13 +41,13 @@
             <div class="shop-all">
                 <div class="shop-menu">
                     <ul>
-                        <li style="background-color: #002742;color: #fff;">{{title}}系列</li>
-                       <li v-for="list in menu">{{list}}</li>
+                        <li @click=filter1 style="background-color: #002742;color: #fff;">全部{{title}}</li>
+                        <li v-for="(list,index) in menu" @click=filter0(list,index)>{{list}}</li>
                     </ul>
                 </div>
 
                 <div class="shop-list">
-                    <div class="shop-card" v-for="(item,index) in product">
+                    <div class="shop-card" v-for="(item,index) in product" :id=index style="display: block;">
                         <a href="./detailBag.html">
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
                             <div class="shop-card-group">
@@ -107,6 +107,7 @@
                             type:'零錢包',
                             price: 45100,
                             new:'新品',
+                            pid:0,
                         },
                         {
                             detail: './detailBag.html',
@@ -115,6 +116,7 @@
                             type:'零錢包',
                             price: 6650,
                             new:'新品',
+                            pid:1,
                         },
                         {
                             detail: './detailBag.html',
@@ -123,6 +125,7 @@
                             type:'中/短夾',
                             price: 29700,
                             new:'新品',
+                            pid:2,
                         },
                         {
                             detail: './detailBag.html',
@@ -131,6 +134,7 @@
                             type:'零錢包',
                             price: 11000,
                             new:'新品',
+                            pid:3,
                         },
                         {
                             detail: './detailBag.html',
@@ -139,6 +143,7 @@
                             type:'中/短夾',
                             price: 45100,
                             new:'新品',
+                            pid:4,
                         },
                         {
                             detail: './detailBag.html',
@@ -147,6 +152,7 @@
                             type:'中/短夾',
                             price: 6650,
                             new:'新品',
+                            pid:5,
                         },
                         {
                             detail: './detailBag.html',
@@ -155,6 +161,7 @@
                             type:'長夾',
                             price: 29700,
                             new:'新品',
+                            pid:6,
                         },
                         {
                             detail: './detailBag.html',
@@ -163,6 +170,7 @@
                             type:'零錢包',
                             price: 11000,
                             new:'新品',
+                            pid:7,
                         },
                         {
                             detail: './detailBag.html',
@@ -171,6 +179,7 @@
                             type:'中/短夾',
                             price: 45100,
                             new:'新品',
+                            pid:8,
                         },
                         {
                             detail: './detailBag.html',
@@ -179,6 +188,7 @@
                             type:'中/短夾',
                             price: 6650,
                             new:'新品',
+                            pid:9,
                         },
                         {
                             detail: './detailBag.html',
@@ -187,6 +197,7 @@
                             type:'零錢包',
                             price: 29700,
                             new:'新品',
+                            pid:10,
                         },
                         {
                             detail: './detailBag.html',
@@ -195,6 +206,7 @@
                             type:'零錢包',
                             price: 35750,
                             new:'新品',
+                            pid:11,
                         }
                     ],
                     show1: true,
@@ -202,15 +214,29 @@
                 }
             },
             methods: {
-                prompt() {
-                    // alert('快來看這裡！我是新訊息！');
-                    if (this.show1 == false) {
-                        this.show1 = true
-                    } else {
-                        this.show1 = false;
+                filter0(e, index) {
+                    let test = document.getElementsByClassName('shop-card');
+                    // console.log(test);
+                    for (let i = 0; i < test.length; i++) {
+                        test[i].style.display = 'none';
                     }
+
+                    this.product.forEach((t) => {
+                        if (t.type == e) {
+                            let test2 = document.getElementById(t.pid);
+                            console.log(t.pid);
+                            test2.style.display = 'block';
+                        }
+                    });
                 },
-            }
+                filter1() {
+                    let test = document.getElementsByClassName('shop-card');
+                    // console.log(test);
+                    for (let i = 0; i < test.length; i++) {
+                        test[i].style.display = 'block';
+                    }
+                }
+            },
         }).mount('#app')
     </script>
 </body>
