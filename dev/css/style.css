@@ -672,10 +672,12 @@ a:active {
 .shop-card {
   margin: 10px 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.081);
+  width: auto;
 }
-
+/* .shop-card :hover{
+  background: url("../img/2000/test.jpg");
+} */
 .shop-card-div {
-  /* border: 1px solid black; */
   display: flex;
   justify-content: space-between;
 }
@@ -868,15 +870,14 @@ a:active {
 
 .detailsmallpic div {
   margin: 20px 10px;
+  width: 15%;
 }
 
 .detailsmallpic img {
-  border-radius: 10px;
-  width: 100%;
+  max-width: 100%;
 }
 .detailsmallpic img:hover {
   opacity: 0.5;
-  transform: scale(1.01);
   transition: all 0.5s;
 }
 
@@ -1464,9 +1465,9 @@ a:active {
   margin-left: 15px;
   padding-bottom: 30px;
   border-bottom: #c3c3c3 1px solid;
-  /* padding-left: 30px; */
+  padding-left: 30px;
 }
-.member-top p{
+.member-top p {
   font-size: 17px;
 }
 .member-top a {
@@ -1500,6 +1501,19 @@ a:active {
   align-items: center;
   width: 100%;
 }
+.member-table1 a {
+  /* line-height: 30px; */
+  border-bottom: 1px dotted #aaa;
+  padding: 5px;
+}
+.member-table1 p {
+  padding: 5px;
+  font-size: 17px;
+}
+.member-table2 p {
+  padding: 5px;
+  font-size: 17px;
+}
 .member-table2 {
   display: flex;
   flex-direction: row;
@@ -1516,6 +1530,9 @@ a:active {
   background-color: #f0f0f0;
   margin: 0 30px 30px;
   border: #000 1px solid;
+}
+.member-table1 div a,.member-table2 div a{
+  font-weight: 900;
 }
 .member-table2 div {
   width: 30%;
@@ -1543,16 +1560,12 @@ a:active {
   width: auto;
   padding: 10px;
 }
-.member-table2 p,
-.member-table1 p {
-  padding: 0 0 10px 0;
-  font-size: 17px;
-}
 .member-a a {
   color: #000;
   text-decoration: none;
   display: block;
   font-size: 17px;
+  padding: 5px;
 }
 .member-a a:hover {
   background-color: #fff;
@@ -1599,7 +1612,7 @@ a:active {
   text-align: center;
 }
 /* ---------------RWD---------------------- */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 428px) {
   body {
     width: 100%;
   }
@@ -1622,7 +1635,7 @@ a:active {
     justify-content: flex-start;
     align-items: center;
     margin-top: 60px;
-    width: 414px;
+    width: 428px;
     height: 900px;
     background-color: #fff;
     z-index: 1000000;
@@ -2173,8 +2186,39 @@ a:active {
     align-items: center;
     display: none;
   }
-}
+  .detailsmallpic {
+    width: 98%;
+  }
 
+  /* ----------------rwd-orderdetail---------------------- */
+  .orderdetail {
+    text-align: center;
+  }
+  .orderdetail img {
+    width: 50%;
+  }
+  /* -----------------------rwd-member--------------- */
+  .member {
+    display: none;
+  }
+  .member-title {
+    display: none;
+  }
+  .member-table1 {
+    flex-direction: column;
+  }
+  .member-table1 div {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .member-table2 {
+    flex-direction: column;
+  }
+  .member-table2 div {
+    width: 90%;
+    margin-top: 30px;
+  }
+}
 /* -------------------other----------------------- */
 @media screen and (max-width: 1180px) {
   .fixedcheckoutField {

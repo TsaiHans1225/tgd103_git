@@ -97,12 +97,12 @@
             </div>
 
             <div class="detailsmallPicBtn">
-                <a href="">加價購</a>
-                <a href="">滿額贈</a>
+                <a href="#" @click.prevent="zukokann2">加價購</a>
+                <a href="#" @click.prevent="zukokann">滿額贈</a>
             </div>
             <div class="detailsmallpic">
-                <div v-for="(item,index) in detailsmallpic">
-                    <a href=""><img :src='item' alt="" :id=index @click.prevent=''></a>
+                <div v-for="(item,index) in detailsmallpic" :id=item.sid style="display: block;">
+                    <a href=""><img :src='item.src' alt="" @click.prevent=''></a>
                 </div>
             </div>
         </div>
@@ -122,14 +122,16 @@
             data() {
                 return {
                     detailsmallpic: [
-                        "./img/shopShoulderbag5.png",
-                        "./img/shopBag1.png",
-                        "./img/shopWallet6.png",
-                        "./img/shopBriefcase6.png",
-                        "./img/shopShoulderbag7.png"
+                        { src: "./img/shopShoulderbag5.png", sid: 10 },
+                        { src: "./img/shopBag1.png", sid: 11 },
+                        { src: "./img/shopWallet6.png", sid: 12 },
+                        { src: "./img/shopBriefcase6.png", sid: 13 },
+                        { src: "./img/shopShoulderbag7.png", sid: 14 },
+                        // { src: "./img/shopShoulderbag7.png", sid: 15 },
+                        // { src: "./img/shopShoulderbag7.png", sid: 16 }
                     ],
                     detailpic: [
-                        
+
                         "./img/detailpic1-2.png",
                         "./img/detailpic2.png",
                         "./img/detailpic3.png",
@@ -159,9 +161,51 @@
                     if (this.num > 4) {
                         this.num = 0;
                         this.bigpic = this.detailpic[this.num];
-                    } 
+                    }
                     else {
                         this.bigpic = this.detailpic[this.num];
+                    }
+
+                },
+                zukokann() {
+
+                    if (document.getElementById('10').style.display == 'block') {
+
+                        for (i = 10; i <= 13; i++) {
+                            let aaa = document.getElementById(i)
+                            let ccc = document.getElementById(14).childNodes[0].childNodes[0];
+                            // console.log(ccc.src);
+                            aaa.style.display = 'none';
+                            ccc.src = './img/shopWallet1.png';
+                        }
+
+                    }
+
+                },
+                zukokann2() {
+                    if (document.getElementById('10').style.display == 'none') {
+                        for (i = 10; i <= 14; i++) {
+                            let aaa = document.getElementById(i);
+                            let bbb = document.getElementById(14).childNodes[0].childNodes[0];
+                            let ccc = document.getElementById(13).childNodes[0].childNodes[0];
+                            let ddd = document.getElementById(12).childNodes[0].childNodes[0];
+                            let eee = document.getElementById(11).childNodes[0].childNodes[0];
+                            let fff = document.getElementById(10).childNodes[0].childNodes[0];
+
+
+                            let reds = String(Math.floor(Math.random() * 11));
+                            if(reds=='0')
+                            {
+                                reds='1';
+                                // console.log(reds);
+                            }
+                            aaa.style.display = 'block';
+                            bbb.src = `./img/shopBriefcase${reds}.png`;
+                            ccc.src=`./img/shopWallet${reds}.png`;
+                            ddd.src=`./img/shopBag${reds}.png`;
+                            eee.src=`./img/shopAccessories${reds}.png`;
+                            fff.src=`./img/shopShoulderbag${reds}.png`;
+                        }
                     }
 
                 }
