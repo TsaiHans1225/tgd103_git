@@ -59,7 +59,7 @@
                 <h4>NT$ {{prices}}</h4>
                 <div class="fixedcheckoutFieldLastdiv">
                     <a href="#" @click=tt>送出訂單</a>
-                    <a href="./shopBag.html">繼續購物</a>
+                    <a href="./shopBag.html" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
                 </div>
             </div>
             <div class="checkoutField">
@@ -314,7 +314,7 @@
                         let timerInterval
                         Swal.fire({
                             title: '送出訂單',
-                            html: '<b></b>',
+                            html: '',
                             timer: 2000,
                             timerProgressBar: true,
                             didOpen: () => {
@@ -331,7 +331,7 @@
                             /* Read more about handling dismissals below */
                             if (result.dismiss === Swal.DismissReason.timer) {
                                 console.log('OKOK')
-                                // location.href="./shopShoulderbag.html";
+                                location.href="./orderdetail.html";
                             }
                         })
                     }

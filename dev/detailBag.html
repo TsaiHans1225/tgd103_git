@@ -38,7 +38,7 @@
             <div class="detailGroup">
 
                 <div class="detailBigPic">
-                    <img src="./img/detailpic1.png" alt="">
+                    <img :src=bigpic alt="" @click="kann2">
                 </div>
                 <div class="detailText">
                     <div class="detailText-heart">
@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="detailmidPic">
-                        <img :src='item' alt="" v-for="item in detailpic">
+                        <img :src='item' alt="" v-for="(item,index) in detailpic" :id=index @click="kann(index)">
                     </div>
                 </div>
             </div>
@@ -101,8 +101,8 @@
                 <a href="">滿額贈</a>
             </div>
             <div class="detailsmallpic">
-                <div v-for="item in detailsmallpic">
-                    <a href=""><img :src='item' alt=""></a>
+                <div v-for="(item,index) in detailsmallpic">
+                    <a href=""><img :src='item' alt="" :id=index @click.prevent=''></a>
                 </div>
             </div>
         </div>
@@ -129,6 +129,8 @@
                         "./img/shopShoulderbag7.png"
                     ],
                     detailpic: [
+                        
+                        "./img/detailpic1-2.png",
                         "./img/detailpic2.png",
                         "./img/detailpic3.png",
                         "./img/detailpic4.png",
@@ -141,6 +143,26 @@
                         '＃黑色',
                         '#鼠尾草',
                     ],
+                    bigpic: "./img/detailpic1.png",
+                    num: 0,
+
+                }
+            },
+            methods: {
+                kann(e) {
+
+                    this.bigpic = this.detailpic[e];
+                },
+                kann2() {
+                    // console.log(this.num);
+                    this.num++
+                    if (this.num > 4) {
+                        this.num = 0;
+                        this.bigpic = this.detailpic[this.num];
+                    } 
+                    else {
+                        this.bigpic = this.detailpic[this.num];
+                    }
 
                 }
             }
