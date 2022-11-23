@@ -630,7 +630,7 @@ a:active {
   justify-content: start;
   align-items: center;
   max-width: 1920px;
-  width: 70%;
+  width: 100%;
   text-align: left;
   padding-left: 150px;
 }
@@ -668,19 +668,17 @@ a:active {
   border-bottom: 1px solid #c3c3c3;
 }
 .shop-menu li:hover {
-  background-color: #c3c3c3;
-  width: 100%;
+  background-color: #bc965c;
+  width: 35%;
   margin: 0 auto;
   cursor: pointer;
+  color: #fff;
 }
 .shop-card {
   margin: 10px 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.081);
   width: auto;
 }
-/* .shop-card :hover{
-  background: url("../img/2000/test.jpg");
-} */
 .shop-card-div {
   display: flex;
   justify-content: space-between;
@@ -979,22 +977,17 @@ a:active {
 .checkoutTitle h4 {
   width: 40%;
   font-size: 15px;
-  /* margin-left: 10px; */
 }
 
 .checkoutTitle h5 {
   width: 12%;
-  /* padding: 5px; */
   font-size: 15px;
-  /* text-align: end; */
-  /* padding-right: 20px; */
+
 }
 .checkoutTitle h3 {
   width: 12%;
-  /* padding: 5px; */
   font-size: 15px;
-  /* text-align: end; */
-  /* padding-right: 20px; */
+
 }
 
 .checkoutContent {
@@ -1012,7 +1005,6 @@ a:active {
 .checkoutText {
   display: flex;
   width: 100%;
-  /* margin: 5px; */
   text-align: center;
   align-items: center;
   justify-content: stretch;
@@ -1034,19 +1026,12 @@ a:active {
   font-size: 15px;
 }
 
-/* .checkoutText input {
-  width: 5%;
-  height: 10px;
-  text-align: end;
-  font-size: 17px;
-} */
 .checkoutText select {
   width: 12%;
 }
 .checkoutText label {
   width: 12%;
   font-size: 17px;
-  /* padding: 15px; */
 }
 
 .fa-heart {
@@ -1057,7 +1042,6 @@ a:active {
 }
 
 .fa-trash {
-  /* margin-right: 7px; */
   color: #000;
   font-size: 15px;
   width: 6%;
@@ -1824,21 +1808,22 @@ a:active {
   .shop-menu {
     font-size: 20px;
     line-height: 40px;
-    display: none;
+    /* display: none; */
     width: 100%;
-    float: left;
+    float:none;
   }
   .shop-all {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
+    flex-direction: column;
     width: 100%;
   }
   .shop-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     max-width: 1920px;
     width: 100%;
@@ -1847,10 +1832,11 @@ a:active {
   }
   .shop-card {
     width: 40%;
-    margin: 0;
+    margin: 20px 20px;
   }
   .shop-card img {
     width: 100%;
+    
   }
   .shop-title {
     margin-top: 25px;
@@ -1881,6 +1867,7 @@ a:active {
     width: 414px;
     height: 100px;
     margin-top: 50px;
+    display: none;
   }
   .threeBtn {
     display: flex;
@@ -2159,16 +2146,26 @@ a:active {
   }
 
   .shop-menu li:first-child {
-    display: block;
+    display: none;
     background-color: #ff9148;
     width: 100%;
     text-align: center;
     margin: 0 auto;
     color: #fff;
   }
+  .shop-menu ul{
+    display: flex;
+    /* overflow: scroll; */
+  }
   .shop-menu li {
     border-radius: 0;
-    border-bottom: 1px solid #bcbcbc;
+    /* border-bottom: 1px solid #bcbcbc; */
+    font-size: 15px;
+    line-height: 30px;
+    width: 30%;
+    border: 1px solid #bcbcbc;
+    border-right: 0;
+    background-color: #bcbcbc;
   }
   .collectionH h1 {
     font-size: 10px;

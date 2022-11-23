@@ -32,13 +32,13 @@
                     <li class="breadcrumb-item" aria-current="page">全部袋包</li>
                 </ol>
             </nav>
-            <div class="shop-title">
+            <div class="shop-title" @click="test">
                 <h1>
                     {{title}}
                 </h1>
             </div>
             <div class="shop-all">
-                <div class="shop-menu">
+                <div class="shop-menu" style="display: block;">
                     <ul>
                         <li @click=filter1 style="background-color: #ff9148;color: #fff;">全部{{title}}</li>
                         <li v-for="(list,index) in menu" @click=filter0(list,index)>{{list}}</li>
@@ -244,7 +244,22 @@
                     for (let i = 0; i < test.length; i++) {
                         test[i].style.display = 'block';
                     }
+                },
+                test() {
+
+                    if (document.getElementsByClassName('shop-menu')[0].style.display == 'block') {
+                        document.getElementsByClassName('shop-menu')[0].style.display = 'none'
+                        // console.log(1);
+                    }
+                   else
+                    {
+                        document.getElementsByClassName('shop-menu')[0].style.display = 'block';
+                        // console.log(2);
+                    }
+
+
                 }
+
             },
         }
         ).mount('#app')
