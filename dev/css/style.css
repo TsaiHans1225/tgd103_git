@@ -2155,11 +2155,10 @@ a:active {
   }
   .shop-menu ul{
     display: flex;
-    /* overflow: scroll; */
   }
   .shop-menu li {
     border-radius: 0;
-    /* border-bottom: 1px solid #bcbcbc; */
+
     font-size: 15px;
     line-height: 30px;
     width: 30%;
@@ -2231,7 +2230,6 @@ a:active {
     top: 0px;
     right: 0px;
     float: unset;
-    /* display: none; */
     border: rgba(0, 0, 0, 0.164) 1px solid;
     order: 1;
   }
@@ -2247,13 +2245,7 @@ a:active {
     justify-content: center;
     align-items: center;
   }
-  .breadcrumb {
-    /* width: 85%; */
-    /* display: none; */
-  }
-  .breadcrumb-group {
-    /* width: 100%; */
-  }
+
   .checkoutText span {
     display: none;
   }
@@ -2277,7 +2269,6 @@ a:active {
     top: 0px;
     right: 0px;
     float: unset;
-    /* display: none; */
     border: rgba(0, 0, 0, 0.164) 1px solid;
     order: 1;
   }
