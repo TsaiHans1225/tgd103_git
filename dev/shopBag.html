@@ -62,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            <nav class="pagination-group">
+            <!-- <nav class="pagination-group">
                 <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
@@ -78,7 +78,7 @@
                         </a>
                     </li>
                 </ul>
-            </nav>
+            </nav> -->
         </div>
     </div>
     <!-- ------------------------ -->
@@ -244,6 +244,12 @@
                     for (let i = 0; i < test.length; i++) {
                         test[i].style.display = 'block';
                     }
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: "smooth",
+                    });
+                    
                 },
                 test() {
 
@@ -251,8 +257,7 @@
                         document.getElementsByClassName('shop-menu')[0].style.display = 'none'
                         // console.log(1);
                     }
-                   else
-                    {
+                    else {
                         document.getElementsByClassName('shop-menu')[0].style.display = 'block';
                         // console.log(2);
                     }

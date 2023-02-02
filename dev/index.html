@@ -33,22 +33,22 @@
                         </div>
                     </a>
                     <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+                    <a class="next" @click="plusSlides(1)">&#10095;</a>
                 </div>
                 <!-- The dots/circles -->
                 <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
-                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" @click="currentSlide(1)"></span>
+                    <span class="dot" @click="currentSlide(2)"></span>
+                    <span class="dot" @click="currentSlide(3)"></span>
+                    <span class="dot" @click="currentSlide(4)"></span>
+                    <span class="dot" @click="currentSlide(5)"></span>
                 </div>
             </div>
 
             <div class="mid">
                 <div class="midDiv" v-for="mid in mids">
-                    <a :href=mid.href><img :src=mid.src alt=""></a>
+                    <a :href=mid.href><img :src=mid.src alt="" v-show="mid.if"></a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
                         <p v-html="card.content">
                         </p>
                         <a :href=card.href>View all</a>
-                       
+
                     </div>
                 </div>
             </div>
@@ -109,28 +109,44 @@
                     ],
                     mids: [
                         {
-                            href:"./shopShoulderbag.html",
-                            src: "./img/index4.jpg"
-                        },
-                        {
-                            href:"./shopShoulderbag.html",
-                            src: "./img/index2.jpg"
-                        },
-                        {
-                            href:"./shopShoulderbag.html",
-                            src: "./img/index1.jpg"
-                        },
-                        {
-                            href:"./shopShoulderbag.html",
-                            src: "./img/index6.jpg"
-                        },
-                        {
-                            href:"./shopShoulderbag.html",
-                            src: "./img/index3.jpg"
+                            href: "./shopShoulderbag.html",
+                            src: "./img/index4.jpg",
+                            if: true,
                         },
                         {
                             href: "./shopShoulderbag.html",
-                            src: "./img/index5.png"
+                            src: "./img/index2.jpg",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/index1.jpg",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/index6.jpg",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/index3.jpg",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/index5.png",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/other2.jpg",
+                            if: true,
+                        },
+                        {
+                            href: "./shopShoulderbag.html",
+                            src: "./img/other3.jpg",
+                            if: true,
                         }
                     ],
                     bot_cards: [
@@ -143,7 +159,7 @@
                             主要材料是日本製造的壓敏尼龍，用66尼龍線編織而成，也用於汽車安全氣囊和防彈背心，具有優異的耐熱性、耐磨性和撕裂強度。
                             <br>
                             一些部件由高度防水的篷布織物製成，用作工業材料。雖然是單一色調的黑色，但通過將不同質地的面料組合在​​一起，具有對比鮮明的時尚設計。`,
-                            href:"./shopShoulderbag.html",
+                            href: "./shopShoulderbag.html",
                             img: "./img/indexbriefcase.png",
                         },
                         {
@@ -179,43 +195,71 @@
                             img: "./img/shopBag8.png",
                         }
                     ],
+                    slideIndex:1,
                 }
-            }
+            },
+            methods: {
+                winsize() {
+                    this.size_check();
+                },
+                resize() {
+                    _this = this;
+                    window.addEventListener("resize", function () {
+                        _this.size_check();
+                    });
+                },
+                size_check() {
+                    _this = this;
+                    let temp = window.innerWidth;
+                    if (temp <= 1616) {
+                        _this.mids[6].if = false;
+                        _this.mids[7].if = false;
+
+                    }
+                    if (temp <= 1216) {
+                        _this.mids[0].if = false;
+                        _this.mids[2].if = false;
+                    }
+                    if (temp > 1216) {
+                        _this.mids[0].if = true;
+                        _this.mids[2].if = true;
+                    }
+                    if (temp > 1616) {
+                        _this.mids[0].if = true;
+                        _this.mids[2].if = true;
+                        _this.mids[6].if = true;
+                        _this.mids[7].if = true;
+                    }
+                },
+                plusSlides(n) {
+                    this.showSlides(this.slideIndex += n);
+                },
+                currentSlide(n) {
+                    this.showSlides(this.slideIndex = n);
+                },
+                showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { this.slideIndex = 1 }
+                    if (n < 1) { this.slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[this.slideIndex - 1].style.display = "block";
+                    dots[this.slideIndex - 1].className += " active";
+                },
+
+            },
+            mounted() {
+                this.winsize();
+                this.resize();
+                this.showSlides(1);
+            },
         }).mount('#app')
-    </script>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-        }
-
-        window.setInterval(function () {
-            plusSlides(1)
-        }, 10000)
-
     </script>
 </body>
 

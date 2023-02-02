@@ -669,7 +669,7 @@ a:active {
 }
 .shop-menu li:hover {
   background-color: #bc965c;
-  width: 35%;
+  /* width: 35%; */
   margin: 0 auto;
   cursor: pointer;
   color: #fff;
@@ -1831,8 +1831,8 @@ a:active {
     padding-left: 0px;
   }
   .shop-card {
-    width: 40%;
-    margin: 20px 20px;
+    width: 70%;
+    margin: 10px auto;
   }
   .shop-card img {
     width: 100%;
@@ -1846,15 +1846,18 @@ a:active {
   }
   .shop-card h3 {
     font-size: 17px;
+    margin-top: 10px;
   }
   .shop-card-div span {
     background-color: #a11;
     border-radius: 3px;
     padding: 1px;
     align-items: center;
-    height: 40%;
+    /* height: 40%; */
     color: #fff;
-    width: 10%;
+    width: 50px;
+    text-align: center;
+    line-height: 20px;
   }
 
   .shop-card-div h1 {
