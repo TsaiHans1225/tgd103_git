@@ -8,13 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <script src="./vue.js"></script>
-    <title>ShiBaInu</title>
+    <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./wwwroot/css/style.css">
+    <title>瀏覽紀錄 - SHIBAINU</title>
 </head>
 
 <body>
@@ -51,112 +47,14 @@
     <!-- ------------------------ -->
     <footer class="footerpage">
     </footer>
+    <script src="./wwwroot/lib/vue.js"></script>
+    <script src="./wwwroot/lib/jquery-3.6.1.js"></script>
+    <script src="https://use.fontawesome.com/0206006232.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./wwwroot/js/record.js"></script>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
-    </script>
-    <script>
-        const { createApp } = Vue
-
-        createApp({
-            data() {
-                return {
-                    message: 'Hello Vue!',
-                    records: [
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBag4.png",
-                            title: 'Liner',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopShoulderbag4.png",
-                            title: 'SLING SHOULDER',
-                            name: '單肩包'
-                        },
-                        {
-                            href:"./detailBag.html",
-                            src: "./img/shopWallet3.png",
-                            title: 'PORTER ENCHASE',
-                            name: '短夾'
-                        },
-                        {
-                            href:"./detailBag.html",
-                            src: "./img/shopWallet7.png",
-                            title: 'PORTER WALL',
-                            name: '長夾'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopShoulderbag12.png",
-                            title: 'PORTER FORCE',
-                            name: '單肩包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBag3.png",
-                            title: 'BOSTON BAG',
-                            name: '行李袋'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBag12.png",
-                            title: 'BOSTON BAG',
-                            name: '行李袋'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBag12.png",
-                            title: 'PORTER SENSES',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase1.png",
-                            title: 'BARON',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase2.png",
-                            title: 'BARON',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase3.png",
-                            title: 'BARON',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src:"./img/shopBriefcase4.png",
-                            title: 'BARON',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase6.png" ,
-                            title: 'PORTER SENSES',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase7.png",
-                            title: 'PORTER SENSES',
-                            name: '公事包'
-                        },
-                        {
-                            href: "./detailBag.html",
-                            src: "./img/shopBriefcase8.png" ,
-                            title: 'PORTER SENSES',
-                            name: '公事包'
-                        }
-                    ],
-                }
-            }
-        }).mount('#app')
     </script>
 </body>
 

@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
-    <script src="https://use.fontawesome.com/0206006232.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
-    <script src="./vue.js"></script>
-    <title>ShiBaInu</title>
+    <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./wwwroot/css/style.css">
+    <title>購物車 - SHIBAINU</title>
 </head>
 
 <body>
@@ -59,7 +53,7 @@
                 <h4>NT$ {{prices}}</h4>
                 <div class="fixedcheckoutFieldLastdiv">
                     <a href="#" @click=tt style="color: #fff;">送出訂單</a>
-                    <a href="./shopBag.html" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
+                    <a href="./shop.html?type=1" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
                 </div>
             </div>
             <div class="checkoutField">
@@ -188,156 +182,14 @@
     <!-- ------------------------ -->
     <footer class="footerpage">
     </footer>
+    <script src="./wwwroot/lib/vue.js"></script>
+    <script src="./wwwroot/lib/jquery-3.6.1.js"></script>
+    <script src="https://use.fontawesome.com/0206006232.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./wwwroot/js/checkout.js"></script>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
-    </script>
-    <script>
-        const { createApp } = Vue
-
-        createApp({
-            data() {
-                return {
-                    message: 'Hello Vue!',
-                    checkoutTexts: [
-                        {
-                            src: "./img/shopBag1.png",
-                            title: 'Sacoche type',
-                            name: '波士頓包',
-                            type: '新品上市',
-                            color: '深藍色',
-                            price: 4250,
-                            subtotal: 4250,
-                            amount: [{ val: 1 }, { val: 2 }, { val: 3 }, { val: 4 }, { val: 5 }],
-                            dis: true,
-                            listid: "listid0",
-
-
-                        },
-                        {
-                            src: "./img/detailpic1.png",
-                            title: 'LPORTER ALOOF',
-                            name: '雙肩包',
-                            type: '新品上市',
-                            color: '黑色',
-                            price: 5250,
-                            subtotal: 5250,
-                            amount: [{ val: 1 }, { val: 2 }, { val: 3 }],
-                            dis: true,
-                            listid: "listid1",
-
-                        },
-                        {
-                            src: "./img/shopWallet1.png",
-                            title: 'PORTER SPLENDOR',
-                            name: '皮夾',
-                            type: '贈品',
-                            color: '深藍色',
-                            price: 0,
-                            subtotal: 0,
-                            amount: [{ val: 1 }],
-                            dis: true,
-                            listid: "listid2",
-
-                        }
-                    ],
-                    prices: 9360,
-                    productPrice: 9500,
-                    dis: true,
-                    num: 3,
-                }
-            },
-            methods: {
-                add1(e, r) {
-
-                    Swal.fire({
-                        position: 'top-center',
-                        icon: 'success',
-                        title: '已加入收藏',
-                        showConfirmButton: false,
-                        timer: 1000
-                    })
-
-                    // $(`#listid${r}`).remove();
-
-                },
-                delete1(e, r) {
-                    let temp = document.getElementById(r);
-                    // console.log(e.checkoutTexts[r].price);
-                    // console.log(this.prices-e.checkoutTexts[r].subtotal);
-
-                    // console.log(this.prices);
-                    Swal.fire({
-                        title: '確定刪除?',
-
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            Swal.fire(
-                                '已成功移除'
-                            )
-                            this.prices = this.prices - e.checkoutTexts[r].subtotal;
-                            if (this.prices < 0) {
-                                this.prices = 0;
-                            }
-                            $(`#listid${r}`).remove();
-
-                        }
-                    })
-                },
-                change1(e, r) {
-                    let temp = document.getElementById(r).value
-                    this.num = Number(temp)
-                    e.checkoutTexts[r].subtotal = e.checkoutTexts[r].price * temp;
-                    let total = 0;
-                    this.checkoutTexts.forEach((e) => {
-                        total += e.subtotal;
-                        this.prices = total - 140;
-                        this.productPrice = total;
-                        return this.prices;
-                    });
-                },
-                tt() {
-                    if (this.prices == 0) {
-                        Swal.fire({
-                            icon: 'error',
-                            title: '金額錯誤!',
-                            text: '不可以只買贈品 || 金額不可為0',
-                            footer: '<a href="./shopShoulderbag.html ">繼續購物</a>'
-                        })
-                    }
-                    else {
-                        let timerInterval
-                        Swal.fire({
-                            title: '送出訂單',
-                            html: '',
-                            timer: 2000,
-                            timerProgressBar: true,
-                            didOpen: () => {
-                                Swal.showLoading()
-                                const b = Swal.getHtmlContainer().querySelector('b')
-                                timerInterval = setInterval(() => {
-                                    b.textContent = Swal.getTimerLeft()
-                                }, 100)
-                            },
-                            willClose: () => {
-                                clearInterval(timerInterval)
-                            }
-                        }).then((result) => {
-                            /* Read more about handling dismissals below */
-                            if (result.dismiss === Swal.DismissReason.timer) {
-                                console.log('OKOK')
-                                location.href="./orderdetail.html";
-                            }
-                        })
-                    }
-                },
-            }
-        }).mount('#app')
     </script>
 </body>
 

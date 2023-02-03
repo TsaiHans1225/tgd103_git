@@ -8,15 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.6.1.js"
-        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://use.fontawesome.com/0206006232.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./vue.js"></script>
-    <link rel="shortcut icon" href="./img/logo2.png" type="image/x-icon">
-    <title>ShiBaInu</title>
+    <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./wwwroot/css/style.css">
+    <title>PORTER ALOOF - SHIBAINU</title>
 </head>
 
 <body>
@@ -28,8 +22,8 @@
             <nav class="breadcrumb-group">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="./shopBag.html">袋包</a></li>
-                    <li class="breadcrumb-item" aria-current="page">全部袋包</li>
+                    <li class="breadcrumb-item"><a href="./shop.html?type=1">袋包</a></li>
+                    <li class="breadcrumb-item" aria-current="page">PORTER ALOOF</li>
                 </ol>
             </nav>
             <div class="shop-title">
@@ -110,137 +104,15 @@
     <!-- ------------------------ -->
     <footer class="footerpage">
     </footer>
+    <script src="./wwwroot/lib/vue.js"></script>
+    <script src="./wwwroot/lib/jquery-3.6.1.js"></script>
+    <script src="https://use.fontawesome.com/0206006232.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./wwwroot/js/detailBag.js"></script>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
-
-
-
-        const { createApp } = Vue
-
-        createApp({
-            data() {
-                return {
-                    detailsmallpic: [
-                        { src: "./img/shopShoulderbag5.png", sid: 10 },
-                        { src: "./img/shopBag1.png", sid: 11 },
-                        { src: "./img/shopWallet6.png", sid: 12 },
-                        { src: "./img/shopBriefcase6.png", sid: 13 },
-                        { src: "./img/shopShoulderbag7.png", sid: 14 },
-                        // { src: "./img/shopShoulderbag7.png", sid: 15 },
-                        // { src: "./img/shopShoulderbag7.png", sid: 16 }
-                    ],
-                    detailpic: [
-
-                        "./img/detailpic1-2.png",
-                        "./img/detailpic2.png",
-                        "./img/detailpic3.png",
-                        "./img/detailpic4.png",
-                        "./img/detailpic5.png",
-
-                    ],
-                    detailtype: [
-                        '＃搬運工',
-                        '＃雙肩包',
-                        '＃黑色',
-                        '#鼠尾草',
-                    ],
-                    bigpic: "./img/detailpic1.png",
-                    num: 0,
-
-                }
-            },
-            methods: {
-                kann(e) {
-
-                    this.bigpic = this.detailpic[e];
-                },
-                kann2() {
-                    // console.log(this.num);
-                    this.num++
-                    if (this.num > 4) {
-                        this.num = 0;
-                        this.bigpic = this.detailpic[this.num];
-                    }
-                    else {
-                        this.bigpic = this.detailpic[this.num];
-                    }
-
-                },
-                zukokann() {
-
-                    if (document.getElementById('10').style.display == 'block') {
-
-                        for (i = 10; i <= 13; i++) {
-                            let aaa = document.getElementById(i)
-                            let ccc = document.getElementById(14).childNodes[0].childNodes[0];
-                            // console.log(ccc.src);
-                            aaa.style.display = 'none';
-                            ccc.src = './img/shopWallet1.png';
-                        }
-
-                    }
-
-                },
-                zukokann2() {
-                    if (document.getElementById('10').style.display == 'none') {
-                        for (i = 10; i <= 14; i++) {
-                            let aaa = document.getElementById(i);
-                            let bbb = document.getElementById(14).childNodes[0].childNodes[0];
-                            let ccc = document.getElementById(13).childNodes[0].childNodes[0];
-                            let ddd = document.getElementById(12).childNodes[0].childNodes[0];
-                            let eee = document.getElementById(11).childNodes[0].childNodes[0];
-                            let fff = document.getElementById(10).childNodes[0].childNodes[0];
-
-
-                            let reds = String(Math.floor(Math.random() * 11));
-                            if(reds=='0')
-                            {
-                                reds='1';
-                                // console.log(reds);
-                            }
-                            aaa.style.display = 'block';
-                            bbb.src = `./img/shopBriefcase${reds}.png`;
-                            ccc.src=`./img/shopWallet${reds}.png`;
-                            ddd.src=`./img/shopBag${reds}.png`;
-                            eee.src=`./img/shopAccessories${reds}.png`;
-                            fff.src=`./img/shopShoulderbag${reds}.png`;
-                        }
-                    }
-
-                }
-            }
-        }).mount('#app')
-
-        $(document).ready(function () {
-            $("#heart").click(function () {
-                if ($("#heart").hasClass("liked")) {
-                    $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-                    $("#heart").removeClass("liked");
-                    Swal.fire('已取消收藏')
-                } else {
-                    $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-                    $("#heart").addClass("liked");
-                    Swal.fire({
-                        position: 'top-center',
-                        icon: 'success',
-                        title: '已加入收藏',
-                        showConfirmButton: false,
-                        timer: 1000
-                    })
-                }
-            });
-
-            $('#add').click(function () {
-                Swal.fire({
-                    position: 'top-center',
-                    icon: 'success',
-                    title: '已加入購物車',
-                    showConfirmButton: false,
-                    timer: 1000
-                })
-            })
-        });
     </script>
 </body>
 

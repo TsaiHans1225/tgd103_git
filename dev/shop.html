@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./wwwroot/css/style.css">
+    <title>SHIBAINU</title>
+</head>
+
+<body>
+    <header class="headerpage">
+    </header>
+    <!-- ------------------------ -->
+    <div id="app">
+        <div class="rwd-shop-banner">
+            <img :src=banner alt="">
+        </div>
+        <div class="main">
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a :href=`./shop.html?type=${pageNum}`>{{title}}</a></li>
+                    <li class="breadcrumb-item" aria-current="page">全部{{title}}</li>
+                </ol>
+            </nav>
+            <div class="shop-title" @click="test">
+                <h1>
+                    {{title}}
+                </h1>
+            </div>
+            <div class="shop-all">
+                <div class="shop-menu" style="display: block;">
+                    <ul>
+                        <li @click=filter1 style="background-color: #ff9148;color: #fff;">全部{{title}}</li>
+                        <li v-for="(list,index) in menu" @click=filter0(list,index)>{{list}}</li>
+                    </ul>
+                </div>
+                <div class="shop-list">
+                    <div class="shop-card" v-for="(item,index) in shop" :id=index style="display: block;">
+                        <a href="./detailBag.html">
+                            <img :src="item.imgSrc" alt="" v-bind:title="item.name">
+                            <div class="shop-card-group">
+                                <div class="shop-card-div">
+                                    <h1>{{item.name}}</h1>
+                                    <span>{{item.new}}</span>
+                                </div>
+                                <div>
+                                    <h3>{{item.type}}</h3>
+                                    <h3>NT$ {{item.price}}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <nav class="pagination-group">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> -->
+        </div>
+    </div>
+    <!-- ------------------------ -->
+    <footer class="footerpage">
+    </footer>
+    <script src="./wwwroot/lib/vue.js"></script>
+    <script src="./wwwroot/lib/jquery-3.6.1.js"></script>
+    <script src="https://use.fontawesome.com/0206006232.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./wwwroot/js/shop.js"></script>
+    <script>
+        $(".headerpage").load("header.html");
+        $(".footerpage").load("footer.html");
+    </script>
+</body>
+
+</html>
