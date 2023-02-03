@@ -37,8 +37,8 @@
             <div class="shop-all">
                 <div class="shop-menu" style="display: block;">
                     <ul>
-                        <li @click=filter1 style="background-color: #ff9148;color: #fff;">全部{{title}}</li>
-                        <li v-for="(list,index) in menu" @click=filter0(list,index)>{{list}}</li>
+                        <li @click=filter_all :style="titlebgc">全部{{title}}</li>
+                        <li v-for="(list,index) in menu" @click=filter_type(list,index)>{{list}}</li>
                     </ul>
                 </div>
                 <div class="shop-list">

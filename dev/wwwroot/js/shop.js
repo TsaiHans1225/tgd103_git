@@ -1,6 +1,4 @@
-const { createApp } = Vue;
-
-createApp({
+const app = Vue.createApp({
   data() {
     return {
       message: "Hello Vue!",
@@ -17,6 +15,7 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 0,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -27,6 +26,7 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 1,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -37,6 +37,7 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 2,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -47,6 +48,7 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 3,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -57,6 +59,7 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 4,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -67,6 +70,7 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 5,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -77,6 +81,7 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 6,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -87,6 +92,7 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 7,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -97,6 +103,7 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 8,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -107,6 +114,7 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 9,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -117,6 +125,7 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 10,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -127,6 +136,7 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 11,
+          pdisplay:true,
         },
       ],
       shopWallet: [
@@ -138,6 +148,7 @@ createApp({
           price: 45100,
           new: "新品",
           pid: 0,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -147,6 +158,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 1,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -156,6 +168,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 2,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -165,6 +178,7 @@ createApp({
           price: 11000,
           new: "新品",
           pid: 3,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -174,6 +188,7 @@ createApp({
           price: 45100,
           new: "新品",
           pid: 4,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -183,6 +198,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 5,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -192,6 +208,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 6,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -201,6 +218,7 @@ createApp({
           price: 11000,
           new: "新品",
           pid: 7,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -210,6 +228,7 @@ createApp({
           price: 45100,
           new: "新品",
           pid: 8,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -219,6 +238,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 9,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -228,6 +248,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 10,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -237,6 +258,7 @@ createApp({
           price: 35750,
           new: "新品",
           pid: 11,
+          pdisplay:true,
         },
       ],
       shopShoulderbag: [
@@ -248,6 +270,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 0,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -257,6 +280,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 1,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -266,6 +290,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 2,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -275,6 +300,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 3,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -284,6 +310,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 4,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -293,6 +320,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 5,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -302,6 +330,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 6,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -311,6 +340,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 7,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -320,6 +350,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 8,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -329,6 +360,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 9,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -338,6 +370,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 10,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -347,6 +380,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 11,
+          pdisplay:true,
         },
       ],
       shopAccessories: [
@@ -358,6 +392,8 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 0,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -367,6 +403,8 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 1,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -376,6 +414,8 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 2,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -385,6 +425,8 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 3,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -394,6 +436,8 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 4,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -403,6 +447,8 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 5,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -412,6 +458,8 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 6,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -421,6 +469,8 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 7,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -430,6 +480,8 @@ createApp({
           price: 17050,
           new: "新品",
           pid: 8,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -439,6 +491,8 @@ createApp({
           price: 35200,
           new: "新品",
           pid: 9,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -448,6 +502,8 @@ createApp({
           price: 26950,
           new: "新品",
           pid: 10,
+          pdisplay:true,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -457,6 +513,8 @@ createApp({
           price: 47300,
           new: "新品",
           pid: 11,
+          pdisplay:true,
+          pdisplay:true,
         },
       ],
       shopNewproduct: [
@@ -468,6 +526,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 0,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -477,6 +536,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 1,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -486,6 +546,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 2,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -495,6 +556,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 3,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -504,6 +566,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 4,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -513,6 +576,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 5,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -522,6 +586,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 6,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -531,6 +596,7 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 7,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -540,6 +606,7 @@ createApp({
           price: 6650,
           new: "新品",
           pid: 8,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -549,6 +616,7 @@ createApp({
           price: 30250,
           new: "新品",
           pid: 9,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -558,6 +626,7 @@ createApp({
           price: 26180,
           new: "新品",
           pid: 10,
+          pdisplay:true,
         },
         {
           detail: "./detailBag.html",
@@ -567,14 +636,16 @@ createApp({
           price: 29700,
           new: "新品",
           pid: 11,
+          pdisplay:true,
         },
       ],
       menu: [],
-      pageNum:1,
+      pageNum: 1,
+      titlebgc:"background-color: #ff9148;color: #fff;",
     };
   },
   methods: {
-    filter0(e, index) {
+    filter_type(e, index) {
       let test = document.getElementsByClassName("shop-card");
       // console.log(test);
       for (let i = 0; i < test.length; i++) {
@@ -589,22 +660,22 @@ createApp({
         }
       });
     },
-    filter1() {
+    filter_all() {
       let test = document.getElementsByClassName("shop-card");
       // console.log(test);
       for (let i = 0; i < test.length; i++) {
         test[i].style.display = "block";
       }
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
+      // window.scrollTo({
+      //   top: 0,
+      //   left: 0,
+      //   behavior: "smooth",
+      // });
     },
     url_fun() {
       let urlParams = new URLSearchParams(window.location.search);
       num = urlParams.get("type");
-      this.pageNum=num;
+      this.pageNum = num;
       console.log(num);
       if (num == 1) {
         this.shop = this.shopBag;
@@ -618,22 +689,24 @@ createApp({
           "斜背包",
           "郵差包",
         ];
-        this.banner="./wwwroot/img/2000/bag.jpg";
+        this.banner = "./wwwroot/img/2000/bag.jpg";
         document.title = `${this.title} - SHIBAINU`;
       }
       if (num == 2) {
         this.shop = this.shopWallet;
         this.title = "皮夾";
         this.menu = ["中/短夾", "長夾", "零錢包"];
-        this.banner="./wwwroot/img/2000/wallet.jpg";
+        this.banner = "./wwwroot/img/2000/wallet.jpg";
         document.title = `${this.title} - SHIBAINU`;
+        this.titlebgc="background-color: #002742;color: #fff;";
       }
       if (num == 3) {
         this.shop = this.shopShoulderbag;
         this.title = "經典系列";
         this.menu = ["DUKE-X", "HARDY", "MORI", "LUXY", "SPIRIT"];
-        this.banner="./wwwroot/img/2000/slingbag.jpg";
+        this.banner = "./wwwroot/img/2000/slingbag.jpg";
         document.title = `${this.title} - SHIBAINU`;
+        this.titlebgc="background-color: #717659;color: #fff;";
       }
       if (num == 4) {
         this.shop = this.shopAccessories;
@@ -647,15 +720,17 @@ createApp({
           "鑰匙包",
           "名片夾",
         ];
-        this.banner="./wwwroot/img/2000/accessories.jpg";
+        this.banner = "./wwwroot/img/2000/accessories.jpg";
         document.title = `${this.title} - SHIBAINU`;
+        this.titlebgc="background-color: #c3c3c3;color: #fff;";
       }
       if (num == 5) {
         this.shop = this.shopNewproduct;
         this.title = "新品";
         this.menu = ["DUKE-X", "HARDY", "MORI", "LUXY", "SPIRIT"];
-        this.banner="./wwwroot/img/2000/new.jpg";
+        this.banner = "./wwwroot/img/2000/new.jpg";
         document.title = `${this.title} - SHIBAINU`;
+        this.titlebgc="background-color: #bc965c;color: #fff;";
       }
     },
     test() {
@@ -673,4 +748,5 @@ createApp({
   mounted() {
     this.url_fun();
   },
-}).mount("#app");
+});
+app.mount("#app");

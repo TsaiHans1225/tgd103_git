@@ -628,11 +628,12 @@ a:active {
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1920px;
   width: 100%;
   text-align: left;
   padding-left: 150px;
+  min-height: 686px;
 }
 
 .shop-title {
@@ -678,6 +679,7 @@ a:active {
   margin: 10px 30px;
   border: 0.5px solid rgba(0, 0, 0, 0.081);
   width: auto;
+  height: 100%;
 }
 .shop-card-div {
   display: flex;

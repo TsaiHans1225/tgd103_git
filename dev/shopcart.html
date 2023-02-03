@@ -26,7 +26,7 @@
                 </ol>
             </nav>
             <div class="threeBtn">
-                <a href="./checkout.html">購物車</a>
+                <a href="./shopcart.html">購物車</a>
                 <a href="./collection.html">收藏清單</a>
                 <a href="./record.html">瀏覽紀錄</a>
             </div>
@@ -52,7 +52,7 @@
                 <h3>結帳金額</h3>
                 <h4>NT$ {{prices}}</h4>
                 <div class="fixedcheckoutFieldLastdiv">
-                    <a href="#" @click=tt style="color: #fff;">送出訂單</a>
+                    <a href="#" @click=check_fun style="color: #fff;">送出訂單</a>
                     <a href="./shop.html?type=1" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
                 </div>
             </div>
@@ -73,15 +73,15 @@
                             <h1>{{checkoutText.name}}</h1>
                             <span>{{checkoutText.type}}</span>
                         </div>
-                        <select name="change1" @change="change1(this,index)" :id=index>
-                            <option :value=item.val v-for="(item,index) in checkoutText.amount">{{item.val}}
+                        <select name="change1" @change="select_fun(this,index)" :id=index>
+                            <option :value=item v-for="(item,index) in checkoutText.amount">{{item}}
                             </option>
                         </select>
                         <label for="">{{checkoutText.color}}</label>
                         <label for="">NT$ {{checkoutText.price}}</label>
                         <label for="">NT$ {{checkoutText.subtotal}}</label>
-                        <i class="fa-sharp fa-solid fa-heart" @click="add1(this,index)"></i>
-                        <i class="fa-solid fa-trash" @click="delete1(this,index)"></i>
+                        <i class="fa-sharp fa-solid fa-heart" @click="heart_fun(this)"></i>
+                        <i class="fa-solid fa-trash" @click="delete_fun(this,index)"></i>
                     </div>
                 </div>
             </div>
@@ -93,15 +93,15 @@
                 <div class="checkoutContent">
                     <div class="checkoutTextThree">
                         <div>
-                            <input type="radio" name="1" value="" id="a1" checked>
+                            <input type="radio" name="1" value="one" id="a1" checked>
                             <label for="a1">宅配</label>
                         </div>
                         <div>
-                            <input type="radio" name="1" value="" id="a2">
+                            <input type="radio" name="1" value="two" id="a2">
                             <label for="a2">超商取貨</label>
                         </div>
                         <div>
-                            <input type="radio" name="1" value="" id="a3">
+                            <input type="radio" name="1" value="three" id="a3">
                             <label for="a3">超商取貨付款</label>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
     <script src="./wwwroot/lib/jquery-3.6.1.js"></script>
     <script src="https://use.fontawesome.com/0206006232.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./wwwroot/js/checkout.js"></script>
+    <script src="./wwwroot/js/shopcart.js"></script>
     <script>
         $(".headerpage").load("header.html");
         $(".footerpage").load("footer.html");
