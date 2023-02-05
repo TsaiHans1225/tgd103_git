@@ -1,6 +1,4 @@
-const { createApp } = Vue;
-
-createApp({
+const app = Vue.createApp({
   data() {
     return {
       detailsmallpic: [
@@ -9,8 +7,6 @@ createApp({
         { src: "./wwwroot/img/shopWallet6.png", sid: 12 },
         { src: "./wwwroot/img/shopBriefcase6.png", sid: 13 },
         { src: "./wwwroot/img/shopShoulderbag7.png", sid: 14 },
-        // { src: "./wwwroot/img/shopShoulderbag7.png", sid: 15 },
-        // { src: "./wwwroot/img/shopShoulderbag7.png", sid: 16 }
       ],
       detailpic: [
         "./wwwroot/img/detailpic1-2.png",
@@ -19,9 +15,13 @@ createApp({
         "./wwwroot/img/detailpic4.png",
         "./wwwroot/img/detailpic5.png",
       ],
-      detailtype: ["＃搬運工", "＃雙肩包", "＃黑色", "#鼠尾草"],
+      detailtype: ["＃ALOOF", "＃雙肩包", "＃黑色", "#PORTER"],
       bigpic: "./wwwroot/img/detailpic1.png",
       num: 0,
+      pdnum: 1,
+      pdprice: 4250,
+      faHeartO: true,
+      faHeart: false,
     };
   },
   methods: {
@@ -73,35 +73,50 @@ createApp({
         }
       }
     },
-  },
-}).mount("#app");
-
-$(document).ready(function () {
-  $("#heart").click(function () {
-    if ($("#heart").hasClass("liked")) {
-      $("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
-      $("#heart").removeClass("liked");
-      Swal.fire("已取消收藏");
-    } else {
-      $("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
-      $("#heart").addClass("liked");
+    cart_fun() {
       Swal.fire({
         position: "top-center",
         icon: "success",
-        title: "已加入收藏",
+        title: "已加入購物車",
         showConfirmButton: false,
         timer: 1000,
       });
-    }
-  });
+    },
+    heart_fun() {
+      let temp=sessionStorage.getItem('heart');
+      if (this.faHeartO == true) {
+        this.faHeartO = false;
+        this.faHeart = true;
+        sessionStorage.setItem("heart", 'isReds');
+        Swal.fire("已加入收藏");
+      } else {
+        this.faHeartO = true;
+        this.faHeart = false;
+        sessionStorage.removeItem("heart");
+        Swal.fire("已取消收藏");
+      }
+    },
+    heart_show_fun(){
+      let temp=sessionStorage.getItem('heart');
+      if (temp=="isReds")
+      {
+        this.faHeartO = false;
+        this.faHeart = true;
+        console.log(sessionStorage);
+      }
+    },
+  },
+  computed: {
+    total() {
+      return this.pdprice * this.pdnum;
+    },
+  },
+  mounted(){
+    this.heart_show_fun()
+  }
+});
+app.mount("#app");
 
-  $("#add").click(function () {
-    Swal.fire({
-      position: "top-center",
-      icon: "success",
-      title: "已加入購物車",
-      showConfirmButton: false,
-      timer: 1000,
-    });
-  });
+$(document).ready(function () {
+  $("#heart").click(function () {});
 });

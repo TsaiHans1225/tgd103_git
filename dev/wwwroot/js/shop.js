@@ -15,7 +15,7 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 0,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -26,7 +26,7 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 1,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -37,7 +37,7 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 2,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -48,7 +48,7 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 3,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -59,7 +59,7 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 4,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -70,7 +70,7 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 5,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -81,7 +81,7 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 6,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -92,7 +92,7 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 7,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -103,7 +103,7 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 8,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -114,7 +114,7 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 9,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -125,7 +125,7 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 10,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -136,7 +136,7 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 11,
-          pdisplay:true,
+          pdisplay: true,
         },
       ],
       shopWallet: [
@@ -148,7 +148,7 @@ const app = Vue.createApp({
           price: 45100,
           new: "新品",
           pid: 0,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -158,7 +158,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 1,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -168,7 +168,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 2,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -178,7 +178,7 @@ const app = Vue.createApp({
           price: 11000,
           new: "新品",
           pid: 3,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -188,7 +188,7 @@ const app = Vue.createApp({
           price: 45100,
           new: "新品",
           pid: 4,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -198,7 +198,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 5,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -208,7 +208,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 6,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -218,7 +218,7 @@ const app = Vue.createApp({
           price: 11000,
           new: "新品",
           pid: 7,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -228,7 +228,7 @@ const app = Vue.createApp({
           price: 45100,
           new: "新品",
           pid: 8,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -238,7 +238,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 9,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -248,7 +248,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 10,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -258,7 +258,7 @@ const app = Vue.createApp({
           price: 35750,
           new: "新品",
           pid: 11,
-          pdisplay:true,
+          pdisplay: true,
         },
       ],
       shopShoulderbag: [
@@ -270,7 +270,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 0,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -280,7 +280,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 1,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -290,7 +290,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 2,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -300,7 +300,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 3,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -310,7 +310,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 4,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -320,7 +320,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 5,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -330,7 +330,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 6,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -340,7 +340,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 7,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -350,7 +350,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 8,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -360,7 +360,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 9,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -370,7 +370,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 10,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -380,7 +380,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 11,
-          pdisplay:true,
+          pdisplay: true,
         },
       ],
       shopAccessories: [
@@ -392,8 +392,8 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 0,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -403,8 +403,8 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 1,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -414,8 +414,8 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 2,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -425,8 +425,8 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 3,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -436,8 +436,8 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 4,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -447,8 +447,8 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 5,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -458,8 +458,8 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 6,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -469,8 +469,8 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 7,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -480,8 +480,8 @@ const app = Vue.createApp({
           price: 17050,
           new: "新品",
           pid: 8,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -491,8 +491,8 @@ const app = Vue.createApp({
           price: 35200,
           new: "新品",
           pid: 9,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -502,8 +502,8 @@ const app = Vue.createApp({
           price: 26950,
           new: "新品",
           pid: 10,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -513,8 +513,8 @@ const app = Vue.createApp({
           price: 47300,
           new: "新品",
           pid: 11,
-          pdisplay:true,
-          pdisplay:true,
+          pdisplay: true,
+          pdisplay: true,
         },
       ],
       shopNewproduct: [
@@ -526,7 +526,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 0,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -536,7 +536,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 1,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -546,7 +546,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 2,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -556,7 +556,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 3,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -566,7 +566,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 4,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -576,7 +576,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 5,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -586,7 +586,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 6,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -596,7 +596,7 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 7,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -606,7 +606,7 @@ const app = Vue.createApp({
           price: 6650,
           new: "新品",
           pid: 8,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -616,7 +616,7 @@ const app = Vue.createApp({
           price: 30250,
           new: "新品",
           pid: 9,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -626,7 +626,7 @@ const app = Vue.createApp({
           price: 26180,
           new: "新品",
           pid: 10,
-          pdisplay:true,
+          pdisplay: true,
         },
         {
           detail: "./detailBag.html",
@@ -636,47 +636,35 @@ const app = Vue.createApp({
           price: 29700,
           new: "新品",
           pid: 11,
-          pdisplay:true,
+          pdisplay: true,
         },
       ],
       menu: [],
       pageNum: 1,
-      titlebgc:"background-color: #ff9148;color: #fff;",
+      titlebgc: "background-color: #ff9148;color: #fff;",
     };
   },
   methods: {
-    filter_type(e, index) {
-      let test = document.getElementsByClassName("shop-card");
-      // console.log(test);
-      for (let i = 0; i < test.length; i++) {
-        test[i].style.display = "none";
-      }
+    filter_type(list) {
+      this.shop.forEach(function (item) {
+        item.pdisplay = false;
+      });
+      this.shop.forEach((menu) => {
+        if (menu.type == list) {
 
-      this.shop.forEach((t) => {
-        if (t.type == e) {
-          let test2 = document.getElementById(t.pid);
-          console.log(t.pid);
-          test2.style.display = "block";
+          menu.pdisplay=true;
         }
       });
     },
     filter_all() {
-      let test = document.getElementsByClassName("shop-card");
-      // console.log(test);
-      for (let i = 0; i < test.length; i++) {
-        test[i].style.display = "block";
-      }
-      // window.scrollTo({
-      //   top: 0,
-      //   left: 0,
-      //   behavior: "smooth",
-      // });
+      this.shop.forEach(function (item) {
+        item.pdisplay = true;
+      });
     },
     url_fun() {
       let urlParams = new URLSearchParams(window.location.search);
       num = urlParams.get("type");
       this.pageNum = num;
-      console.log(num);
       if (num == 1) {
         this.shop = this.shopBag;
         this.title = "袋包";
@@ -698,7 +686,7 @@ const app = Vue.createApp({
         this.menu = ["中/短夾", "長夾", "零錢包"];
         this.banner = "./wwwroot/img/2000/wallet.jpg";
         document.title = `${this.title} - SHIBAINU`;
-        this.titlebgc="background-color: #002742;color: #fff;";
+        this.titlebgc = "background-color: #002742;color: #fff;";
       }
       if (num == 3) {
         this.shop = this.shopShoulderbag;
@@ -706,7 +694,7 @@ const app = Vue.createApp({
         this.menu = ["DUKE-X", "HARDY", "MORI", "LUXY", "SPIRIT"];
         this.banner = "./wwwroot/img/2000/slingbag.jpg";
         document.title = `${this.title} - SHIBAINU`;
-        this.titlebgc="background-color: #717659;color: #fff;";
+        this.titlebgc = "background-color: #717659;color: #fff;";
       }
       if (num == 4) {
         this.shop = this.shopAccessories;
@@ -722,7 +710,7 @@ const app = Vue.createApp({
         ];
         this.banner = "./wwwroot/img/2000/accessories.jpg";
         document.title = `${this.title} - SHIBAINU`;
-        this.titlebgc="background-color: #c3c3c3;color: #fff;";
+        this.titlebgc = "background-color: #c3c3c3;color: #fff;";
       }
       if (num == 5) {
         this.shop = this.shopNewproduct;
@@ -730,18 +718,7 @@ const app = Vue.createApp({
         this.menu = ["DUKE-X", "HARDY", "MORI", "LUXY", "SPIRIT"];
         this.banner = "./wwwroot/img/2000/new.jpg";
         document.title = `${this.title} - SHIBAINU`;
-        this.titlebgc="background-color: #bc965c;color: #fff;";
-      }
-    },
-    test() {
-      if (
-        document.getElementsByClassName("shop-menu")[0].style.display == "block"
-      ) {
-        document.getElementsByClassName("shop-menu")[0].style.display = "none";
-        // console.log(1);
-      } else {
-        document.getElementsByClassName("shop-menu")[0].style.display = "block";
-        // console.log(2);
+        this.titlebgc = "background-color: #bc965c;color: #fff;";
       }
     },
   },

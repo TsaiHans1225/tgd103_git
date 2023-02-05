@@ -29,7 +29,7 @@
                     <li class="breadcrumb-item" aria-current="page">全部{{title}}</li>
                 </ol>
             </nav>
-            <div class="shop-title" @click="test">
+            <div class="shop-title">
                 <h1>
                     {{title}}
                 </h1>
@@ -38,11 +38,11 @@
                 <div class="shop-menu" style="display: block;">
                     <ul>
                         <li @click=filter_all :style="titlebgc">全部{{title}}</li>
-                        <li v-for="(list,index) in menu" @click=filter_type(list,index)>{{list}}</li>
+                        <li v-for="(list,index) in menu" @click=filter_type(list)>{{list}}</li>
                     </ul>
                 </div>
                 <div class="shop-list">
-                    <div class="shop-card" v-for="(item,index) in shop" :id=index style="display: block;">
+                    <div class="shop-card" v-for="(item,index) in shop" :id=index style="display: block;" v-show="item.pdisplay">
                         <a href="./detailBag.html">
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
                             <div class="shop-card-group">
