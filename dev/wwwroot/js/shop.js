@@ -14,7 +14,7 @@ const app = Vue.createApp({
           typenum: 0,
           price: 17050,
           new: "新品",
-          pid: 0,
+          pid: 1,
           pdisplay: true,
         },
         {
@@ -25,7 +25,7 @@ const app = Vue.createApp({
           typenum: 1,
           price: 35200,
           new: "新品",
-          pid: 1,
+          pid: 2,
           pdisplay: true,
         },
         {
@@ -36,7 +36,7 @@ const app = Vue.createApp({
           typenum: 2,
           price: 26950,
           new: "新品",
-          pid: 2,
+          pid: 3,
           pdisplay: true,
         },
         {
@@ -47,7 +47,7 @@ const app = Vue.createApp({
           typenum: 3,
           price: 47300,
           new: "新品",
-          pid: 3,
+          pid: 4,
           pdisplay: true,
         },
         {
@@ -58,7 +58,7 @@ const app = Vue.createApp({
           typenum: 4,
           price: 17050,
           new: "新品",
-          pid: 4,
+          pid: 5,
           pdisplay: true,
         },
         {
@@ -69,7 +69,7 @@ const app = Vue.createApp({
           typenum: 5,
           price: 35200,
           new: "新品",
-          pid: 5,
+          pid: 6,
           pdisplay: true,
         },
         {
@@ -80,7 +80,7 @@ const app = Vue.createApp({
           typenum: 6,
           price: 26950,
           new: "新品",
-          pid: 6,
+          pid: 7,
           pdisplay: true,
         },
         {
@@ -91,7 +91,7 @@ const app = Vue.createApp({
           typenum: 5,
           price: 47300,
           new: "新品",
-          pid: 7,
+          pid: 8,
           pdisplay: true,
         },
         {
@@ -102,7 +102,7 @@ const app = Vue.createApp({
           typenum: 4,
           price: 17050,
           new: "新品",
-          pid: 8,
+          pid: 9,
           pdisplay: true,
         },
         {
@@ -113,7 +113,7 @@ const app = Vue.createApp({
           typenum: 3,
           price: 35200,
           new: "新品",
-          pid: 9,
+          pid: 10,
           pdisplay: true,
         },
         {
@@ -124,7 +124,7 @@ const app = Vue.createApp({
           typenum: 2,
           price: 26950,
           new: "新品",
-          pid: 10,
+          pid: 11,
           pdisplay: true,
         },
         {
@@ -135,7 +135,7 @@ const app = Vue.createApp({
           typenum: 1,
           price: 47300,
           new: "新品",
-          pid: 11,
+          pid: 12,
           pdisplay: true,
         },
       ],
@@ -147,7 +147,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 45100,
           new: "新品",
-          pid: 0,
+          pid: 13,
           pdisplay: true,
         },
         {
@@ -157,7 +157,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 6650,
           new: "新品",
-          pid: 1,
+          pid: 14,
           pdisplay: true,
         },
         {
@@ -167,7 +167,7 @@ const app = Vue.createApp({
           type: "中/短夾",
           price: 29700,
           new: "新品",
-          pid: 2,
+          pid: 15,
           pdisplay: true,
         },
         {
@@ -177,7 +177,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 11000,
           new: "新品",
-          pid: 3,
+          pid: 16,
           pdisplay: true,
         },
         {
@@ -187,7 +187,7 @@ const app = Vue.createApp({
           type: "中/短夾",
           price: 45100,
           new: "新品",
-          pid: 4,
+          pid: 17,
           pdisplay: true,
         },
         {
@@ -197,7 +197,7 @@ const app = Vue.createApp({
           type: "中/短夾",
           price: 6650,
           new: "新品",
-          pid: 5,
+          pid: 18,
           pdisplay: true,
         },
         {
@@ -207,7 +207,7 @@ const app = Vue.createApp({
           type: "長夾",
           price: 29700,
           new: "新品",
-          pid: 6,
+          pid: 19,
           pdisplay: true,
         },
         {
@@ -217,7 +217,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 11000,
           new: "新品",
-          pid: 7,
+          pid: 20,
           pdisplay: true,
         },
         {
@@ -227,7 +227,7 @@ const app = Vue.createApp({
           type: "中/短夾",
           price: 45100,
           new: "新品",
-          pid: 8,
+          pid: 21,
           pdisplay: true,
         },
         {
@@ -237,7 +237,7 @@ const app = Vue.createApp({
           type: "中/短夾",
           price: 6650,
           new: "新品",
-          pid: 9,
+          pid: 22,
           pdisplay: true,
         },
         {
@@ -247,7 +247,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 29700,
           new: "新品",
-          pid: 10,
+          pid: 23,
           pdisplay: true,
         },
         {
@@ -257,7 +257,7 @@ const app = Vue.createApp({
           type: "零錢包",
           price: 35750,
           new: "新品",
-          pid: 11,
+          pid: 24,
           pdisplay: true,
         },
       ],
@@ -269,7 +269,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 6650,
           new: "新品",
-          pid: 0,
+          pid: 25,
           pdisplay: true,
         },
         {
@@ -279,7 +279,7 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 30250,
           new: "新品",
-          pid: 1,
+          pid: 26,
           pdisplay: true,
         },
         {
@@ -289,7 +289,7 @@ const app = Vue.createApp({
           type: "MORI",
           price: 26180,
           new: "新品",
-          pid: 2,
+          pid: 27,
           pdisplay: true,
         },
         {
@@ -299,7 +299,7 @@ const app = Vue.createApp({
           type: "LUXY",
           price: 29700,
           new: "新品",
-          pid: 3,
+          pid: 28,
           pdisplay: true,
         },
         {
@@ -309,7 +309,7 @@ const app = Vue.createApp({
           type: "SPIRIT",
           price: 6650,
           new: "新品",
-          pid: 4,
+          pid: 29,
           pdisplay: true,
         },
         {
@@ -319,7 +319,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 30250,
           new: "新品",
-          pid: 5,
+          pid: 30,
           pdisplay: true,
         },
         {
@@ -329,7 +329,7 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 26180,
           new: "新品",
-          pid: 6,
+          pid: 31,
           pdisplay: true,
         },
         {
@@ -339,7 +339,7 @@ const app = Vue.createApp({
           type: "MORI",
           price: 29700,
           new: "新品",
-          pid: 7,
+          pid: 32,
           pdisplay: true,
         },
         {
@@ -349,7 +349,7 @@ const app = Vue.createApp({
           type: "LUXY",
           price: 6650,
           new: "新品",
-          pid: 8,
+          pid: 33,
           pdisplay: true,
         },
         {
@@ -359,7 +359,7 @@ const app = Vue.createApp({
           type: "SPIRIT",
           price: 30250,
           new: "新品",
-          pid: 9,
+          pid: 34,
           pdisplay: true,
         },
         {
@@ -369,7 +369,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 26180,
           new: "新品",
-          pid: 10,
+          pid: 35,
           pdisplay: true,
         },
         {
@@ -379,7 +379,7 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 29700,
           new: "新品",
-          pid: 11,
+          pid: 36,
           pdisplay: true,
         },
       ],
@@ -391,7 +391,7 @@ const app = Vue.createApp({
           type: "酒瓶袋",
           price: 17050,
           new: "新品",
-          pid: 0,
+          pid: 37,
           pdisplay: true,
           pdisplay: true,
         },
@@ -402,7 +402,7 @@ const app = Vue.createApp({
           type: "名片夾",
           price: 35200,
           new: "新品",
-          pid: 1,
+          pid: 38,
           pdisplay: true,
           pdisplay: true,
         },
@@ -413,7 +413,7 @@ const app = Vue.createApp({
           type: "腰掛包",
           price: 26950,
           new: "新品",
-          pid: 2,
+          pid: 39,
           pdisplay: true,
           pdisplay: true,
         },
@@ -424,7 +424,7 @@ const app = Vue.createApp({
           type: "證件套",
           price: 47300,
           new: "新品",
-          pid: 3,
+          pid: 40,
           pdisplay: true,
           pdisplay: true,
         },
@@ -435,7 +435,7 @@ const app = Vue.createApp({
           type: "鑰匙包",
           price: 17050,
           new: "新品",
-          pid: 4,
+          pid: 41,
           pdisplay: true,
           pdisplay: true,
         },
@@ -446,7 +446,7 @@ const app = Vue.createApp({
           type: "頸掛小袋",
           price: 35200,
           new: "新品",
-          pid: 5,
+          pid: 42,
           pdisplay: true,
           pdisplay: true,
         },
@@ -457,7 +457,7 @@ const app = Vue.createApp({
           type: "頸掛小袋",
           price: 26950,
           new: "新品",
-          pid: 6,
+          pid: 43,
           pdisplay: true,
           pdisplay: true,
         },
@@ -468,7 +468,7 @@ const app = Vue.createApp({
           type: "名片夾",
           price: 47300,
           new: "新品",
-          pid: 7,
+          pid: 44,
           pdisplay: true,
           pdisplay: true,
         },
@@ -479,7 +479,7 @@ const app = Vue.createApp({
           type: "證件套",
           price: 17050,
           new: "新品",
-          pid: 8,
+          pid: 45,
           pdisplay: true,
           pdisplay: true,
         },
@@ -490,7 +490,7 @@ const app = Vue.createApp({
           type: "電腦包",
           price: 35200,
           new: "新品",
-          pid: 9,
+          pid: 46,
           pdisplay: true,
           pdisplay: true,
         },
@@ -501,7 +501,7 @@ const app = Vue.createApp({
           type: "名片夾",
           price: 26950,
           new: "新品",
-          pid: 10,
+          pid: 47,
           pdisplay: true,
           pdisplay: true,
         },
@@ -512,7 +512,7 @@ const app = Vue.createApp({
           type: "酒瓶袋",
           price: 47300,
           new: "新品",
-          pid: 11,
+          pid: 48,
           pdisplay: true,
           pdisplay: true,
         },
@@ -525,7 +525,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 6650,
           new: "新品",
-          pid: 0,
+          pid: 49,
           pdisplay: true,
         },
         {
@@ -535,7 +535,7 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 30250,
           new: "新品",
-          pid: 1,
+          pid: 50,
           pdisplay: true,
         },
         {
@@ -545,7 +545,7 @@ const app = Vue.createApp({
           type: "MORI",
           price: 26180,
           new: "新品",
-          pid: 2,
+          pid: 51,
           pdisplay: true,
         },
         {
@@ -555,7 +555,7 @@ const app = Vue.createApp({
           type: "LUXY",
           price: 29700,
           new: "新品",
-          pid: 3,
+          pid: 52,
           pdisplay: true,
         },
         {
@@ -565,7 +565,7 @@ const app = Vue.createApp({
           type: "SPIRIT",
           price: 6650,
           new: "新品",
-          pid: 4,
+          pid: 53,
           pdisplay: true,
         },
         {
@@ -575,7 +575,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 30250,
           new: "新品",
-          pid: 5,
+          pid: 54,
           pdisplay: true,
         },
         {
@@ -585,7 +585,7 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 26180,
           new: "新品",
-          pid: 6,
+          pid: 55,
           pdisplay: true,
         },
         {
@@ -595,7 +595,7 @@ const app = Vue.createApp({
           type: "MORI",
           price: 29700,
           new: "新品",
-          pid: 7,
+          pid: 56,
           pdisplay: true,
         },
         {
@@ -605,7 +605,7 @@ const app = Vue.createApp({
           type: "LUXY",
           price: 6650,
           new: "新品",
-          pid: 8,
+          pid: 57,
           pdisplay: true,
         },
         {
@@ -615,7 +615,7 @@ const app = Vue.createApp({
           type: "SPIRIT",
           price: 30250,
           new: "新品",
-          pid: 9,
+          pid: 58,
           pdisplay: true,
         },
         {
@@ -625,7 +625,7 @@ const app = Vue.createApp({
           type: "DUKE-X",
           price: 26180,
           new: "新品",
-          pid: 10,
+          pid: 59,
           pdisplay: true,
         },
         {
@@ -635,12 +635,13 @@ const app = Vue.createApp({
           type: "HARDY",
           price: 29700,
           new: "新品",
-          pid: 11,
+          pid: 60,
           pdisplay: true,
         },
       ],
       menu: [],
       pageNum: 1,
+      id: 1,
       titlebgc: "background-color: #ff9148;color: #fff;",
     };
   },
@@ -651,8 +652,7 @@ const app = Vue.createApp({
       });
       this.shop.forEach((menu) => {
         if (menu.type == list) {
-
-          menu.pdisplay=true;
+          menu.pdisplay = true;
         }
       });
     },
@@ -664,6 +664,9 @@ const app = Vue.createApp({
     url_fun() {
       let urlParams = new URLSearchParams(window.location.search);
       num = urlParams.get("type");
+      if (num == null) {
+        num = 1;
+      }
       this.pageNum = num;
       if (num == 1) {
         this.shop = this.shopBag;

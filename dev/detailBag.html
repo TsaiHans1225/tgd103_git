@@ -22,17 +22,17 @@
             <nav class="breadcrumb-group">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="./shop.html?type=1">袋包</a></li>
-                    <li class="breadcrumb-item" aria-current="page">PORTER ALOOF</li>
+                    <li class="breadcrumb-item"><a href="./shop.html?type=1">{{detailtitle}}</a></li>
+                    <li class="breadcrumb-item" aria-current="page">{{detailobj.name}}</li>
                 </ol>
             </nav>
             <div class="shop-title">
-                <h1>袋包</h1>
+                <h1>{{detailtitle}}</h1>
             </div>
             <div class="detailGroup">
 
                 <div class="detailBigPic">
-                    <img :src=bigpic alt="" @click="kann2">
+                    <img :src=detailobj.imgSrc alt="" @click="kann2">
                 </div>
                 <div class="detailText">
                     <div class="detailText-heart">
@@ -40,18 +40,18 @@
                         <div id=heart><i class="fa" :class="{'fa-heart-o': faHeartO, 'fa-heart': faHeart}" aria-hidden="true"
                                 @click="heart_fun"></i> </div>
                     </div>
-                    <p>商品名稱: PORTER ALOOF 1</p>
-                    <p>品牌/系列: ALOOF</p>
-                    <p>類別: 斜背包</p>
+                    <p>商品名稱:  {{detailobj.name}}</p>
+                    <p>品牌/系列: {{detailobj.series}}</p>
+                    <p>類別: {{detailobj.type}}</p>
                     <p>尺寸:
-                        寬：290 毫米/高：410 毫米/深：120 毫米<br>
-                        重量:755克</p>
+                        寬：{{detailobj.x}} 毫米/高：{{detailobj.y}} 毫米/深：{{detailobj.z}} 毫米<br>
+                        重量:{{detailobj.w}}克</p>
                     <p>材料:
                         正面：小牛皮（印度進口皮革，鉻鞣）<br>
                         &emsp;&emsp;&thinsp;&thinsp;背面：棉斜紋布</p>
 
                     <select v-model="pdnum">
-                        <option v-for="i in 3" :value="i">{{i}}</option>
+                        <option v-for="i in detailobj.stock" :value="i">{{i}}</option>
                     </select>
 
 
@@ -67,14 +67,14 @@
                         <a href="#" id="add" class="btn2" @click.prevent="cart_fun" style="color: #fff;">加入購物車</a>
                     </div>
 
-                    <div class="detailmidPic">
+                    <!-- <div class="detailmidPic">
                         <img :src='item' alt="" v-for="(item,index) in detailpic" :id=index @click="kann(index)">
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="detailDetail">
                 <p>
-                    這是一個皮革休閒系列“PORTER ALOOF”，奢華地使用輕盈舒適的小牛皮。
+                    這是一個{{detailobj.series}}系列“{{detailobj.type}}”，奢華地使用輕盈舒適的小牛皮。
                     <br><br>
                     使用優質小牛皮的簡單設計，無論年齡大小，都可以長時間使用。
                     <br><br>

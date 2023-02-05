@@ -124,6 +124,14 @@ const app = Vue.createApp({
         });
       }
     },
+    cart_fun() {
+      let temp= document.cookie;
+      let obj=JSON.parse(temp.slice(5, 1000));
+      console.log(obj);
+    },
+  },
+  mounted() {
+    this.cart_fun();
   },
 });
 app.mount("#app");

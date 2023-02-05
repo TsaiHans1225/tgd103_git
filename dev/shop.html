@@ -42,8 +42,8 @@
                     </ul>
                 </div>
                 <div class="shop-list">
-                    <div class="shop-card" v-for="(item,index) in shop" :id=index style="display: block;" v-show="item.pdisplay">
-                        <a href="./detailBag.html">
+                    <div class="shop-card" v-for="(item,index) in shop" :id=item.pid style="display: block;" v-show="item.pdisplay" :key="item.pid">
+                        <a :href=`./detailBag.html?type=${pageNum}&id=${item.pid}`>
                             <img :src="item.imgSrc" alt="" v-bind:title="item.name">
                             <div class="shop-card-group">
                                 <div class="shop-card-div">
