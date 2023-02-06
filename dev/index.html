@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="./wwwroot/css/style.css">
     <title>SHIBAINU</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,49 +23,50 @@
     </header>
     <!-- ------------------------------------------------------->
     <div id="app">
-        <div class="main">
-            <div class="wrapper">
-                <div class="slideshow-container">
-                    <a :href="carousel.href" v-for="carousel in carousels">
-                        <div class="mySlides fade">
-                            <img :src="carousel.src" alt="">
-                        </div>
-                    </a>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" @click="plusSlides(-1)">&#10094;</a>
-                    <a class="next" @click="plusSlides(1)">&#10095;</a>
-                </div>
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" @click="currentSlide(1)"></span>
-                    <span class="dot" @click="currentSlide(2)"></span>
-                    <span class="dot" @click="currentSlide(3)"></span>
-                    <span class="dot" @click="currentSlide(4)"></span>
-                    <span class="dot" @click="currentSlide(5)"></span>
-                </div>
-            </div>
-
-            <div class="mid">
-                <div class="midDiv" v-for="mid in mids">
-                    <a :href=mid.href><img :src=mid.src alt="" v-show="mid.if"></a>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="bot">
-
-            <div class="card" v-for="card in bot_cards">
-                <div class="card-group" style="width: 100%;">
-                    <div class="card-img">
-                        <img :src=card.img alt="">
+        <div v-cloak>
+            <div class="main">
+                <div class="wrapper">
+                    <div class="slideshow-container">
+                        <a :href="carousel.href" v-for="carousel in carousels">
+                            <div class="mySlides fade">
+                                <img :src="carousel.src" alt="">
+                            </div>
+                        </a>
+                        <!-- Next and previous buttons -->
+                        <a class="prev" @click="plusSlides(-1)">&#10094;</a>
+                        <a class="next" @click="plusSlides(1)">&#10095;</a>
                     </div>
-                    <div class="card-text">
-                        <h6>{{card.title}}</h6>
-                        <p v-html="card.content">
-                        </p>
-                        <a :href=card.href>View all</a>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" @click="currentSlide(1)"></span>
+                        <span class="dot" @click="currentSlide(2)"></span>
+                        <span class="dot" @click="currentSlide(3)"></span>
+                        <span class="dot" @click="currentSlide(4)"></span>
+                        <span class="dot" @click="currentSlide(5)"></span>
+                    </div>
+                </div>
 
+                <div class="mid">
+                    <div class="midDiv" v-for="mid in mids">
+                        <a :href=mid.href><img :src=mid.src alt="" v-show="mid.if"></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="bot">
+                <div class="card" v-for="card in bot_cards">
+                    <div class="card-group" style="width: 100%;">
+                        <div class="card-img">
+                            <img :src=card.img alt="">
+                        </div>
+                        <div class="card-text">
+                            <h6>{{card.title}}</h6>
+                            <p v-html="card.content">
+                            </p>
+                            <a :href=card.href>View all</a>
+
+                        </div>
                     </div>
                 </div>
             </div>

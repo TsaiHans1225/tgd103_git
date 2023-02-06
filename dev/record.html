@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="./wwwroot/css/style.css">
     <title>瀏覽紀錄 - SHIBAINU</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,29 +23,31 @@
     </header>
     <!-- ------------------------ -->
     <div id="app">
-        <nav class="breadcrumb-group">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item" aria-current="page">瀏覽紀錄</li>
-            </ol>
-        </nav>
-        <div class="record">
-            <div class="threeBtn">
-                <a href="./shopcart.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
-                <a href="./collection.html">收藏清單</a>
-                <a href="./record.html" style="background-color: #000;color: #ffffff;">瀏覽紀錄</a>
-            </div>
-            <div class="recordCardgroup">
-                <div class="recordCard" v-for="(record,index) in records">
-                    <div class="index1">{{index+1}}</div>
-                    <a :href='record.href'><img :src='record.src' alt=""></a>
-                    <h5>{{record.title}}</h5>
-                    <h5>{{record.name}}</h5>
+        <div v-cloak>
+            <nav class="breadcrumb-group">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                    <li class="breadcrumb-item" aria-current="page">瀏覽紀錄</li>
+                </ol>
+            </nav>
+            <div class="record">
+                <div class="threeBtn">
+                    <a href="./shopcart.html" style="background-color: #BCBCBC;color: #000;">購物車</a>
+                    <a href="./collection.html">收藏清單</a>
+                    <a href="./record.html" style="background-color: #000;color: #ffffff;">瀏覽紀錄</a>
                 </div>
-            </div>
-            <div class="recordInform">
-                <h2>‧此頁僅會顯示20項商品。</h2>
-                <h2> ‧商品售價以訂單成立時的價格為準。</h2>
+                <div class="recordCardgroup">
+                    <div class="recordCard" v-for="(record,index) in records">
+                        <div class="index1">{{index+1}}</div>
+                        <a :href='record.href'><img :src='record.src' alt=""></a>
+                        <h5>{{record.title}}</h5>
+                        <h5>{{record.name}}</h5>
+                    </div>
+                </div>
+                <div class="recordInform">
+                    <h2>‧此頁僅會顯示20項商品。</h2>
+                    <h2> ‧商品售價以訂單成立時的價格為準。</h2>
+                </div>
             </div>
         </div>
     </div>

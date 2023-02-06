@@ -711,12 +711,30 @@ const app = Vue.createApp({
       }
     },
     cart_fun() {
-      let arr = [];
-      let obj = this.detailobj;
-      arr.push(obj);
-      document.cookie = `Cart=${JSON.stringify(arr)}`;
-      let aaa = document.cookie;
-      console.log(JSON.parse(aaa.slice(5, 1000)));
+      let oldarr = document.cookie;
+      if (oldarr == "") {
+        let newarr = [];
+        let obj = this.detailobj;
+        newarr.push(obj);
+        document.cookie = `Cart=${JSON.stringify(newarr)}`;
+        // let show = document.cookie;
+        // console.log(JSON.parse(show.slice(5, 1000)));
+      }
+      else{
+        let newarr = JSON.parse(oldarr.slice(5, 1000));
+        let obj = this.detailobj;
+        newarr.push(obj);
+        document.cookie = `Cart=${JSON.stringify(newarr)}`;
+        // let show = document.cookie;
+        // console.log(JSON.parse(show.slice(5, 1000)));
+      }
+      console.log(this.pdnum);
+      let show = document.cookie;
+      let obj = JSON.parse(show.slice(5, 1000));
+      console.log(obj);
+      obj.forEach((e)=>{
+        console.log(e);
+      })
       Swal.fire({
         position: "top-center",
         icon: "success",
@@ -761,7 +779,7 @@ const app = Vue.createApp({
         this.detailtitle = "袋包";
         this.shopBag.forEach((e) => {
           if (e.pid == this.pageid) {
-            console.log(e);
+            // console.log(e);
             this.pageobj_fun(e);
           }
         });
@@ -770,7 +788,7 @@ const app = Vue.createApp({
         this.detailtitle = "皮夾";
         this.shopWallet.forEach((e) => {
           if (e.pid == this.pageid) {
-            console.log(e);
+            // console.log(e);
             this.pageobj_fun(e);
           }
         });
@@ -779,7 +797,7 @@ const app = Vue.createApp({
         this.detailtitle = "經典系列";
         this.shopShoulderbag.forEach((e) => {
           if (e.pid == this.pageid) {
-            console.log(e);
+            // console.log(e);
             this.pageobj_fun(e);
           }
         });
@@ -788,7 +806,7 @@ const app = Vue.createApp({
         this.detailtitle = "配件";
         this.shopAccessories.forEach((e) => {
           if (e.pid == this.pageid) {
-            console.log(e);
+            // console.log(e);
             this.pageobj_fun(e);
           }
         });
@@ -797,7 +815,7 @@ const app = Vue.createApp({
         this.detailtitle = "新品";
         this.shopNewproduct.forEach((e) => {
           if (e.pid == this.pageid) {
-            console.log(e);
+            // console.log(e);
             this.pageobj_fun(e);
           }
         });
@@ -811,9 +829,10 @@ const app = Vue.createApp({
       this.detailobj.price = e.price;
       let arr = this.detailobj.name.split(" ");
       this.detailobj.series = arr[arr.length - 1];
-      console.log(this.detailobj.price.toString().split(""));
+      this.detailobj.color='亞麻色';
+      // console.log(this.detailobj.price.toString().split(""));
       let xyzw = this.detailobj.price.toString().split("");
-      console.log(xyzw);
+      // console.log(xyzw);
       this.detailobj.x = xyzw[0] + xyzw[1] + xyzw[2];
       this.detailobj.y = xyzw[0] + xyzw[2] + xyzw[1];
       this.detailobj.z = xyzw[0] + xyzw[1];

@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="./wwwroot/css/style.css">
     <title>SHIBAINU</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,48 +23,50 @@
     </header>
     <!-- ------------------------ -->
     <div id="app">
-        <div class="rwd-shop-banner">
-            <img :src=banner alt="">
-        </div>
-        <div class="main">
-            <nav class="breadcrumb-group">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a :href=`./shop.html?type=${pageNum}`>{{title}}</a></li>
-                    <li class="breadcrumb-item" aria-current="page">全部{{title}}</li>
-                </ol>
-            </nav>
-            <div class="shop-title">
-                <h1>
-                    {{title}}
-                </h1>
+        <div v-cloak>
+            <div class="rwd-shop-banner">
+                <img :src=banner alt="">
             </div>
-            <div class="shop-all">
-                <div class="shop-menu" style="display: block;">
-                    <ul>
-                        <li @click=filter_all :style="titlebgc">全部{{title}}</li>
-                        <li v-for="(list,index) in menu" @click=filter_type(list)>{{list}}</li>
-                    </ul>
+            <div class="main">
+                <nav class="breadcrumb-group">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a :href=`./shop.html?type=${pageNum}`>{{title}}</a></li>
+                        <li class="breadcrumb-item" aria-current="page">全部{{title}}</li>
+                    </ol>
+                </nav>
+                <div class="shop-title">
+                    <h1>
+                        {{title}}
+                    </h1>
                 </div>
-                <div class="shop-list">
-                    <div class="shop-card" v-for="(item,index) in shop" :id=item.pid style="display: block;" v-show="item.pdisplay" :key="item.pid">
-                        <a :href=`./detailBag.html?type=${pageNum}&id=${item.pid}`>
-                            <img :src="item.imgSrc" alt="" v-bind:title="item.name">
-                            <div class="shop-card-group">
-                                <div class="shop-card-div">
-                                    <h1>{{item.name}}</h1>
-                                    <span>{{item.new}}</span>
+                <div class="shop-all">
+                    <div class="shop-menu" style="display: block;">
+                        <ul>
+                            <li @click=filter_all :style="titlebgc">全部{{title}}</li>
+                            <li v-for="(list,index) in menu" @click=filter_type(list)>{{list}}</li>
+                        </ul>
+                    </div>
+                    <div class="shop-list">
+                        <div class="shop-card" v-for="(item,index) in shop" :id=item.pid style="display: block;"
+                            v-show="item.pdisplay" :key="item.pid">
+                            <a :href=`./detailBag.html?type=${pageNum}&id=${item.pid}`>
+                                <img :src="item.imgSrc" alt="" v-bind:title="item.name">
+                                <div class="shop-card-group">
+                                    <div class="shop-card-div">
+                                        <h1>{{item.name}}</h1>
+                                        <span>{{item.new}}</span>
+                                    </div>
+                                    <div>
+                                        <h3>{{item.type}}</h3>
+                                        <h3>NT$ {{item.price}}</h3>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3>{{item.type}}</h3>
-                                    <h3>NT$ {{item.price}}</h3>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- <nav class="pagination-group">
+                <!-- <nav class="pagination-group">
                 <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" href="#" aria-label="Previous">
@@ -76,6 +83,7 @@
                     </li>
                 </ul>
             </nav> -->
+            </div>
         </div>
     </div>
     <!-- ------------------------ -->

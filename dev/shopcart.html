@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="./wwwroot/css/style.css">
     <title>購物車 - SHIBAINU</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,161 +23,164 @@
     </header>
     <!-- ------------------------ -->
     <div id="app">
-        <div class="checkout">
-            <nav class="breadcrumb-group" style="display:flex;width: 100%;">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item" aria-current="page">我的購物車</li>
-                </ol>
-            </nav>
-            <div class="threeBtn">
-                <a href="./shopcart.html">購物車</a>
-                <a href="./collection.html">收藏清單</a>
-                <a href="./record.html">瀏覽紀錄</a>
-            </div>
-            <div class="fixedcheckoutField">
-                <!-- <h2>共</h2><span>{{num}}</span> -->
-                <!-- <h2>件商品</h2> -->
-                <div>
-                    <h2> 商品金額小計</h2><span> NT${{productPrice}}</span>
+        <div v-cloak>
+            <div class="checkout">
+                <nav class="breadcrumb-group" style="display:flex;width: 100%;">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item" aria-current="page">我的購物車</li>
+                    </ol>
+                </nav>
+                <div class="threeBtn">
+                    <a href="./shopcart.html">購物車</a>
+                    <a href="./collection.html">收藏清單</a>
+                    <a href="./record.html">瀏覽紀錄</a>
                 </div>
-                <div>
-                    <span> 購物回饋紅利點數 83 點</span>
-                </div>
-                <h1>符合滿額贈 送贈品 網購獨家零錢包 x 1</h1>
-                <h1>商品金額 ${{productPrice}}</h1>
-                <h1>紅利點數 -$0</h1>
-                <h1>退貨保留款 -$0</h1>
-                <h1>活動折扣 -$200</h1>
-                <h1>優惠方案折扣 -$0</h1>
-                <h1>運費/保價 +$60/0</h1>
-                <div>
-                    <h1>處理費 +$0</h1>
-                </div>
-                <h3>結帳金額</h3>
-                <h4>NT$ {{prices}}</h4>
-                <div class="fixedcheckoutFieldLastdiv">
-                    <a href="#" @click=check_fun style="color: #fff;">送出訂單</a>
-                    <a href="./shop.html?type=1" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
-                </div>
-            </div>
-            <div class="checkoutField">
-                <div class="checkoutTitle">
-                    <h4>商品資訊</h4>
-                    <h5>數量</h5>
-                    <h5>尺寸/顏色</h5>
-                    <h5>定價</h5>
-                    <h5>小計</h5>
-                    <h3></h3>
-                </div>
-                <div class="checkoutContent">
-                    <div class="checkoutText" v-for="(checkoutText,index) in checkoutTexts" :id=checkoutText.listid>
-                        <img :src=checkoutText.src alt="">
-                        <div>
-                            <h1>{{checkoutText.title}}</h1>
-                            <h1>{{checkoutText.name}}</h1>
-                            <span>{{checkoutText.type}}</span>
-                        </div>
-                        <select name="change1" @change="select_fun(this,index)" :id=index>
-                            <option :value=item v-for="(item,index) in checkoutText.amount">{{item}}
-                            </option>
-                        </select>
-                        <label for="">{{checkoutText.color}}</label>
-                        <label for="">NT$ {{checkoutText.price}}</label>
-                        <label for="">NT$ {{checkoutText.subtotal}}</label>
-                        <i class="fa-sharp fa-solid fa-heart" @click="heart_fun(this)"></i>
-                        <i class="fa-solid fa-trash" @click="delete_fun(this,index)"></i>
+                <div class="fixedcheckoutField">
+                    <!-- <h2>共</h2><span>{{num}}</span> -->
+                    <!-- <h2>件商品</h2> -->
+                    <div>
+                        <h2> 商品金額小計</h2><span> NT${{productPrice}}</span>
+                    </div>
+                    <div>
+                        <span> 購物回饋紅利點數 83 點</span>
+                    </div>
+                    <h1>符合滿額贈 送贈品 網購獨家零錢包 x 1</h1>
+                    <h1>商品金額 ${{productPrice}}</h1>
+                    <h1>紅利點數 -$0</h1>
+                    <h1>退貨保留款 -$0</h1>
+                    <h1>活動折扣 -$200</h1>
+                    <h1>優惠方案折扣 -$0</h1>
+                    <h1>運費/保價 +$60/0</h1>
+                    <div>
+                        <h1>處理費 +$0</h1>
+                    </div>
+                    <h3>結帳金額</h3>
+                    <h4>NT$ {{prices}}</h4>
+                    <div class="fixedcheckoutFieldLastdiv">
+                        <a href="#" @click=check_fun style="color: #fff;">送出訂單</a>
+                        <a href="./shop.html?type=1" style="background-color: #bc965c;color: #ffffff;">繼續購物</a>
                     </div>
                 </div>
-            </div>
+                <div class="checkoutField">
+                    <div class="checkoutTitle">
+                        <h4>商品資訊</h4>
+                        <h5>數量</h5>
+                        <h5>尺寸/顏色</h5>
+                        <h5>定價</h5>
+                        <h5>小計</h5>
+                        <h3></h3>
+                    </div>
+                    <div class="checkoutContent">
+                        <div class="checkoutText" v-for="(checkoutText,index) in checkoutTexts" :id=checkoutText.listid
+                            :key="checkoutText.listid">
+                            <img :src=checkoutText.imgSrc alt="">
+                            <div>
+                                <h1>{{checkoutText.name}}</h1>
+                                <h1>{{checkoutText.type}}</h1>
+                                <span>{{checkoutText.new}}</span>
+                            </div>
+                            <select name="change1" @change="select_fun(this,index)" :id=index>
+                                <option :value=item v-for="(item,index) in checkoutText.stock">{{item}}
+                                </option>
+                            </select>
+                            <label for="">{{checkoutText.color}}</label>
+                            <label for="">NT$ {{checkoutText.price}}</label>
+                            <label for="">NT$ {{checkoutText.subtotal}}</label>
+                            <i class="fa-sharp fa-solid fa-heart" @click="heart_fun(this)"></i>
+                            <i class="fa-solid fa-trash" @click="delete_fun(index)"></i>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="checkoutField">
-                <div class="checkoutTitle">
-                    <h4>運送方式</h4>
-                </div>
-                <div class="checkoutContent">
-                    <div class="checkoutTextThree">
-                        <div>
-                            <input type="radio" name="1" value="one" id="a1" checked>
-                            <label for="a1">宅配</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="1" value="two" id="a2">
-                            <label for="a2">超商取貨</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="1" value="three" id="a3">
-                            <label for="a3">超商取貨付款</label>
+                <div class="checkoutField">
+                    <div class="checkoutTitle">
+                        <h4>運送方式</h4>
+                    </div>
+                    <div class="checkoutContent">
+                        <div class="checkoutTextThree">
+                            <div>
+                                <input type="radio" name="1" value="one" id="a1" checked>
+                                <label for="a1">宅配</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="1" value="two" id="a2">
+                                <label for="a2">超商取貨</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="1" value="three" id="a3">
+                                <label for="a3">超商取貨付款</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="checkoutField">
-                <div class="checkoutTitle">
-                    <h4>付款方式</h4>
-                </div>
-                <div class="checkoutContent">
-                    <div class="checkoutTextFour">
-                        <div>
-                            <input type="radio" name="2" value="" id="ATM" checked>
-                            <label for="ATM">ATM轉帳</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="2" value="" id="LINE">
-                            <label for="LINE">LINE Pay</label>
-                        </div>
-                        <div>
-                            <input type="radio" name="2" value="" id="CARD">
-                            <label for="CARD">信用卡</label>
+                <div class="checkoutField">
+                    <div class="checkoutTitle">
+                        <h4>付款方式</h4>
+                    </div>
+                    <div class="checkoutContent">
+                        <div class="checkoutTextFour">
+                            <div>
+                                <input type="radio" name="2" value="" id="ATM" checked>
+                                <label for="ATM">ATM轉帳</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2" value="" id="LINE">
+                                <label for="LINE">LINE Pay</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="2" value="" id="CARD">
+                                <label for="CARD">信用卡</label>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="checkoutField">
-                <div class="checkoutTitle">
-                    <h4>收件人資料</h4>
-                </div>
-                <div class="checkoutContent">
-                    <div class="checkoutTextFive">
-                        <div>
-                            <label for="">姓名</label>
-                            <input type="text" name="1" value="" placeholder="*必填">
-                        </div>
-                        <div>
-                            <label for="">性別</label>
-                            <input type="radio" name="1" value="" id="man">
-                            <label for="man">先生</label>
-                            <input type="radio" name="1" value="" id="women">
-                            <label for="women">小姐</label>
-                        </div>
-                        <div>
-                            <label for="">手機號碼</label>
-                            <input type="text" name="1" value="" placeholder="*必填">
-                        </div>
-                        <div>
-                            <label for="">收件地址</label>
-                            <select>
-                                <option>請選擇</option>
-                                <option>新北市</option>
-                            </select>
-                            <select>
-                                <option>請選擇</option>
-                                <option>板橋區</option>
-                            </select>
-                            <select>
-                                <option>請選擇</option>
-                                <option>中山路一段</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="">詳細地址</label>
-                            <input type="text" name="1" value="" placeholder="*必填">
-                        </div>
-                        <div>
-                            <label for="">備註</label>
-                        </div>
-                        <div>
-                            <textarea name="" id="" cols="25" rows="3"></textarea>
+                <div class="checkoutField">
+                    <div class="checkoutTitle">
+                        <h4>收件人資料</h4>
+                    </div>
+                    <div class="checkoutContent">
+                        <div class="checkoutTextFive">
+                            <div>
+                                <label for="">姓名</label>
+                                <input type="text" name="1" value="" placeholder="*必填">
+                            </div>
+                            <div>
+                                <label for="">性別</label>
+                                <input type="radio" name="1" value="" id="man">
+                                <label for="man">先生</label>
+                                <input type="radio" name="1" value="" id="women">
+                                <label for="women">小姐</label>
+                            </div>
+                            <div>
+                                <label for="">手機號碼</label>
+                                <input type="text" name="1" value="" placeholder="*必填">
+                            </div>
+                            <div>
+                                <label for="">收件地址</label>
+                                <select>
+                                    <option>請選擇</option>
+                                    <option>新北市</option>
+                                </select>
+                                <select>
+                                    <option>請選擇</option>
+                                    <option>板橋區</option>
+                                </select>
+                                <select>
+                                    <option>請選擇</option>
+                                    <option>中山路一段</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="">詳細地址</label>
+                                <input type="text" name="1" value="" placeholder="*必填">
+                            </div>
+                            <div>
+                                <label for="">備註</label>
+                            </div>
+                            <div>
+                                <textarea name="" id="" cols="25" rows="3"></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>

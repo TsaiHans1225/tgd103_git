@@ -11,6 +11,11 @@
     <link rel="shortcut icon" href="./wwwroot/img/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="./wwwroot/css/style.css">
     <title>PORTER ALOOF - SHIBAINU</title>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,83 +23,85 @@
     </header>
     <!-- ------------------------ -->
     <div id="app">
-        <div class="detailBag">
-            <nav class="breadcrumb-group">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="./shop.html?type=1">{{detailtitle}}</a></li>
-                    <li class="breadcrumb-item" aria-current="page">{{detailobj.name}}</li>
-                </ol>
-            </nav>
-            <div class="shop-title">
-                <h1>{{detailtitle}}</h1>
-            </div>
-            <div class="detailGroup">
-
-                <div class="detailBigPic">
-                    <img :src=detailobj.imgSrc alt="" @click="kann2">
+        <div v-cloak>
+            <div class="detailBag">
+                <nav class="breadcrumb-group">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="./shop.html?type=1">{{detailtitle}}</a></li>
+                        <li class="breadcrumb-item" aria-current="page">{{detailobj.name}}</li>
+                    </ol>
+                </nav>
+                <div class="shop-title">
+                    <h1>{{detailtitle}}</h1>
                 </div>
-                <div class="detailText">
-                    <div class="detailText-heart">
-                        <h3>商品描述</h3>
-                        <div id=heart><i class="fa" :class="{'fa-heart-o': faHeartO, 'fa-heart': faHeart}" aria-hidden="true"
-                                @click="heart_fun"></i> </div>
+                <div class="detailGroup">
+
+                    <div class="detailBigPic">
+                        <img :src=detailobj.imgSrc alt="" @click="kann2">
                     </div>
-                    <p>商品名稱:  {{detailobj.name}}</p>
-                    <p>品牌/系列: {{detailobj.series}}</p>
-                    <p>類別: {{detailobj.type}}</p>
-                    <p>尺寸:
-                        寬：{{detailobj.x}} 毫米/高：{{detailobj.y}} 毫米/深：{{detailobj.z}} 毫米<br>
-                        重量:{{detailobj.w}}克</p>
-                    <p>材料:
-                        正面：小牛皮（印度進口皮革，鉻鞣）<br>
-                        &emsp;&emsp;&thinsp;&thinsp;背面：棉斜紋布</p>
+                    <div class="detailText">
+                        <div class="detailText-heart">
+                            <h3>商品描述</h3>
+                            <div id=heart><i class="fa" :class="{'fa-heart-o': faHeartO, 'fa-heart': faHeart}"
+                                    aria-hidden="true" @click="heart_fun"></i> </div>
+                        </div>
+                        <p>商品名稱: {{detailobj.name}}</p>
+                        <p>品牌/系列: {{detailobj.series}}</p>
+                        <p>類別: {{detailobj.type}}</p>
+                        <p>尺寸:
+                            寬：{{detailobj.x}} 毫米/高：{{detailobj.y}} 毫米/深：{{detailobj.z}} 毫米<br>
+                            重量:{{detailobj.w}}克</p>
+                        <p>材料:
+                            正面：小牛皮（印度進口皮革，鉻鞣）<br>
+                            &emsp;&emsp;&thinsp;&thinsp;背面：棉斜紋布</p>
 
-                    <select v-model="pdnum">
-                        <option v-for="i in detailobj.stock" :value="i">{{i}}</option>
-                    </select>
+                        <select v-model="pdnum">
+                            <option v-for="i in detailobj.stock" :value="i">{{i}}</option>
+                        </select>
 
 
-                    <div class="detailText-div">
-                        <h2>NT${{total}}</h2> <span>新品上市</span>
-                    </div>
-                    <h4>搜索關鍵字</h4>
-                    <h5>
-                        <a href="#" v-for="item in detailtype"> &thinsp;{{item}}</a>
-                    </h5>
-                    <div class="detailBtn">
-                        <a href="./shopcart.html" class="btn1" style="color: #fff;">結帳</a>
-                        <a href="#" id="add" class="btn2" @click.prevent="cart_fun" style="color: #fff;">加入購物車</a>
-                    </div>
+                        <div class="detailText-div">
+                            <h2>NT${{total}}</h2> <span>新品上市</span>
+                        </div>
+                        <h4>搜索關鍵字</h4>
+                        <h5>
+                            <a href="#" v-for="item in detailtype"> &thinsp;{{item}}</a>
+                        </h5>
+                        <div class="detailBtn">
+                            <a href="./shopcart.html" class="btn1" style="color: #fff;">結帳</a>
+                            <a href="#" id="add" class="btn2" @click.prevent="cart_fun" style="color: #fff;">加入購物車</a>
+                        </div>
 
-                    <!-- <div class="detailmidPic">
+                        <!-- <div class="detailmidPic">
                         <img :src='item' alt="" v-for="(item,index) in detailpic" :id=index @click="kann(index)">
                     </div> -->
+                    </div>
                 </div>
-            </div>
-            <div class="detailDetail">
-                <p>
-                    這是一個{{detailobj.series}}系列“{{detailobj.type}}”，奢華地使用輕盈舒適的小牛皮。
-                    <br><br>
-                    使用優質小牛皮的簡單設計，無論年齡大小，都可以長時間使用。
-                    <br><br>
-                    使用的小腿皮下脂肪少，富含穀物，具有彈性。6個月以內的小牛皮體毛很少，毛孔也不明顯，所以表面紋理細膩豐滿。
-                    <br><br>
-                    皮製品的包覆通常採用與主體相同的材質，但本系列採用尼龍膠帶，具有視覺上的收緊效果。
-                    <br><br>
-                    通過將褶襉放在前面，它被用作設計重點。為了最大限度地發揮包包本身的輕盈感，一些單品使用塑料件來提升休閒氣息。
-                    <br><br>
-                    拉鍊拉頭採用半自動鎖拉頭，可以固定拉頭的位置，所以拉頭在移動的時候是不動的。
-                </p>
-            </div>
+                <div class="detailDetail">
+                    <p>
+                        這是一個{{detailobj.series}}系列“{{detailobj.type}}”，奢華地使用輕盈舒適的小牛皮。
+                        <br><br>
+                        使用優質小牛皮的簡單設計，無論年齡大小，都可以長時間使用。
+                        <br><br>
+                        使用的小腿皮下脂肪少，富含穀物，具有彈性。6個月以內的小牛皮體毛很少，毛孔也不明顯，所以表面紋理細膩豐滿。
+                        <br><br>
+                        皮製品的包覆通常採用與主體相同的材質，但本系列採用尼龍膠帶，具有視覺上的收緊效果。
+                        <br><br>
+                        通過將褶襉放在前面，它被用作設計重點。為了最大限度地發揮包包本身的輕盈感，一些單品使用塑料件來提升休閒氣息。
+                        <br><br>
+                        拉鍊拉頭採用半自動鎖拉頭，可以固定拉頭的位置，所以拉頭在移動的時候是不動的。
+                    </p>
+                </div>
 
-            <div class="detailsmallPicBtn">
-                <a href="#" @click.prevent="zukokann2" style="color: #fff;">加價購</a>
-                <a href="#" @click.prevent="zukokann">滿額贈</a>
-            </div>
-            <div class="detailsmallpic">
-                <div v-for="(item,index) in detailsmallpic" :id=item.sid style="display: block;">
-                    <a href=""><img :src='item.src' alt="" @click.prevent=''></a>
+                <div class="detailsmallPicBtn">
+                    <a href="#" @click.prevent="zukokann2" style="color: #fff;">加價購</a>
+                    <a href="#" @click.prevent="zukokann">滿額贈</a>
+                </div>
+                <div class="detailsmallpic">
+                    <div v-for="(item,index) in detailsmallpic" :id=item.sid style="display: block;">
+                        <a href=""><img :src='item.src' alt="" @click.prevent=''></a>
+                    </div>
                 </div>
             </div>
         </div>
